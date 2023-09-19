@@ -1,0 +1,1720 @@
+{
+  "customer": {
+    "-N_TeX8S6ZLUpWv1yYZG": {
+      "addAt": "27/07/2023, 15:29:25",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/25.jpg",
+      "editAt": "27/07/2023, 21:50:15",
+      "email": "danielingram@jourrapide.com",
+      "feedback": 4,
+      "fullAddress": {
+        "address1": "4052 McDowell Street",
+        "address2": "Nashville, TN 37210"
+      },
+      "fullName": {
+        "firstName": "Daniel",
+        "lastName": "Ingram"
+      },
+      "gender": "Male",
+      "id": "-N_TeX8S6ZLUpWv1yYZG",
+      "phone": "+38(076)-542-34-56"
+    },
+    "-N_TewEWkUomeXVLbKKk": {
+      "addAt": "27/07/2023, 15:01:27",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/2.jpg",
+      "editAt": "27/07/2023, 15:34:15",
+      "email": "charlesgregory@armyspy.com",
+      "feedback": 3,
+      "fullAddress": {
+        "address1": "1082 Kinney Street",
+        "address2": "Westfield, MA 01085"
+      },
+      "fullName": {
+        "firstName": "Charles",
+        "lastName": "Gregory"
+      },
+      "gender": "Male",
+      "id": "-N_TewEWkUomeXVLbKKk",
+      "phone": "+38(034)-568-76-55"
+    },
+    "-N_TfiEwLkL6haAtRRjJ": {
+      "addAt": "27/07/2023, 15:01:34",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/19.jpg",
+      "editAt": "Not",
+      "email": "madeleinemiah@rhyta.com",
+      "feedback": 3,
+      "fullAddress": {
+        "address1": "929 Lochmere Lane",
+        "address2": "Hartford, CT 06103"
+      },
+      "fullName": {
+        "firstName": "Madeleine",
+        "lastName": "Miah"
+      },
+      "gender": "Female",
+      "id": "-N_TfiEwLkL6haAtRRjJ",
+      "phone": "+38(098)-764-56-78"
+    },
+    "-N_TqgH8tx1KZCoC9SBv": {
+      "addAt": "27/07/2023, 15:01:40",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/3.jpg",
+      "editAt": "Not",
+      "email": "jacobtodd@dayrep.com",
+      "feedback": 3,
+      "fullAddress": {
+        "address1": "3395 Briarwood Drive",
+        "address2": "Mantua, NJ 08090"
+      },
+      "fullName": {
+        "firstName": "Jacob",
+        "lastName": "Todd"
+      },
+      "gender": "Male",
+      "id": "-N_TqgH8tx1KZCoC9SBv",
+      "phone": "+38(076)-345-60-98"
+    },
+    "-N_Tr6KX4JE4zLSzKtSw": {
+      "addAt": "27/07/2023, 15:01:46",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/4.jpg",
+      "editAt": "Not",
+      "email": "chelseahunter@rhyta.com",
+      "feedback": 2,
+      "fullAddress": {
+        "address1": "2983 Flynn Street",
+        "address2": "Cleveland, OH 44115"
+      },
+      "fullName": {
+        "firstName": "Chelsea",
+        "lastName": "Hunter"
+      },
+      "gender": "Female",
+      "id": "-N_Tr6KX4JE4zLSzKtSw",
+      "phone": "+38(047)-856-56-78"
+    },
+    "-N_TreL7AKvmdWJdM8g-": {
+      "addAt": "27/07/2023, 15:01:51",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/5.jpg",
+      "editAt": "Not",
+      "email": "siennaburrows@teleworm.us",
+      "feedback": 5,
+      "fullAddress": {
+        "address1": "298 Gordon Street",
+        "address2": "Claremont, CA 91711"
+      },
+      "fullName": {
+        "firstName": "Sienna",
+        "lastName": "Burrows"
+      },
+      "gender": "Third",
+      "id": "-N_TreL7AKvmdWJdM8g-",
+      "phone": "+38(087)-546-65-47"
+    },
+    "-N_TtSVQHqHtPC6foa-a": {
+      "addAt": "27/07/2023, 15:01:57",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/9.jpg",
+      "editAt": "Not",
+      "email": "chloechadwick@armyspy.com",
+      "feedback": 4,
+      "fullAddress": {
+        "address1": "844 John Daniel Drive",
+        "address2": "Jefferson City, MO 65101"
+      },
+      "fullName": {
+        "firstName": "Chloe",
+        "lastName": "Chadwick"
+      },
+      "gender": "Female",
+      "id": "-N_TtSVQHqHtPC6foa-a",
+      "phone": "+38(098)-734-56-78"
+    },
+    "-N_TtqXn9n8H1rMif5WO": {
+      "addAt": "27/07/2023, 15:02:04",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/10.jpg",
+      "editAt": "Not",
+      "email": "georginasheppard@rhyta.com",
+      "feedback": 2,
+      "fullAddress": {
+        "address1": "3137 Central Avenue",
+        "address2": "Jersey City, NJ 07304"
+      },
+      "fullName": {
+        "firstName": "Georgina",
+        "lastName": "Sheppard"
+      },
+      "gender": "Female",
+      "id": "-N_TtqXn9n8H1rMif5WO",
+      "phone": "+38(087)-652-34-56"
+    },
+    "-N_TuH9sbxqkFei0a9ou": {
+      "addAt": "27/07/2023, 15:02:08",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/12.jpg",
+      "editAt": "Not",
+      "email": "aliceahmed@jourrapide.com",
+      "feedback": 3,
+      "fullAddress": {
+        "address1": "4378 Rosewood Lane",
+        "address2": "New York, NY 10016"
+      },
+      "fullName": {
+        "firstName": "Alice",
+        "lastName": "Ahmed"
+      },
+      "gender": "Third",
+      "id": "-N_TuH9sbxqkFei0a9ou",
+      "phone": "+38(045)-678-76-54"
+    },
+    "-N_Tvx6pLadLRbViX-XU": {
+      "addAt": "27/07/2023, 15:02:14",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/13.jpg",
+      "editAt": "Not",
+      "email": "samanthaowens@dayrep.com",
+      "feedback": 3,
+      "fullAddress": {
+        "address1": "4262 Flynn Street",
+        "address2": "Cleveland, OH 44115"
+      },
+      "fullName": {
+        "firstName": "Samantha",
+        "lastName": "Owens"
+      },
+      "gender": "Female",
+      "id": "-N_Tvx6pLadLRbViX-XU",
+      "phone": "+38(043)-649-65-56"
+    },
+    "-N_TxPK1PcxUzLk1sCZS": {
+      "addAt": "27/07/2023, 15:03:14",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/20.jpg",
+      "editAt": "Not",
+      "email": "jasminecollins@jourrapide.com",
+      "feedback": 4,
+      "fullAddress": {
+        "address1": "2190 Saint James Drive",
+        "address2": "York, PA 17401"
+      },
+      "fullName": {
+        "firstName": "Jasmine",
+        "lastName": "Collins"
+      },
+      "gender": "Female",
+      "id": "-N_TxPK1PcxUzLk1sCZS",
+      "phone": "+38(023)-456-87-56"
+    },
+    "-N_Txs14QkKwMWP3Tbx2": {
+      "addAt": "27/07/2023, 15:03:07",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/22.jpg",
+      "editAt": "Not",
+      "email": "brandonnolan@jourrapide.com",
+      "feedback": 2,
+      "fullAddress": {
+        "address1": "2786 Wilson Street",
+        "address2": "Benton, CA 93512"
+      },
+      "fullName": {
+        "firstName": "Brandon",
+        "lastName": "Nolan"
+      },
+      "gender": "Male",
+      "id": "-N_Txs14QkKwMWP3Tbx2",
+      "phone": "+38(067)-876-54-32"
+    },
+    "-N_Tz2_f08V6rgKVP-ho": {
+      "addAt": "27/07/2023, 15:03:01",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/23.jpg",
+      "editAt": "Not",
+      "email": "finleyblake@rhyta.com",
+      "feedback": 1,
+      "fullAddress": {
+        "address1": "2186 Lost Creek Road",
+        "address2": "Phoenixville, PA 19460"
+      },
+      "fullName": {
+        "firstName": "Finley",
+        "lastName": "Blake"
+      },
+      "gender": "Male",
+      "id": "-N_Tz2_f08V6rgKVP-ho",
+      "phone": "+38(098)-765-34-56"
+    },
+    "-N_TzkSpQD9oiyKb3CiR": {
+      "addAt": "27/07/2023, 15:02:56",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/15.jpg",
+      "editAt": "Not",
+      "email": "zoechandler@dayrep.com",
+      "feedback": 2,
+      "fullAddress": {
+        "address1": "2516 Olive Street",
+        "address2": "Bowling Green, OH 43402"
+      },
+      "fullName": {
+        "firstName": "Zoe",
+        "lastName": "Chandler"
+      },
+      "gender": "Female",
+      "id": "-N_TzkSpQD9oiyKb3CiR",
+      "phone": "+38(076)-543-23-45"
+    },
+    "-N_U-By1yvRq821ph1PT": {
+      "addAt": "27/07/2023, 15:02:50",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/14.jpg",
+      "editAt": "Not",
+      "email": "sarahlaw@dayrep.com",
+      "feedback": 5,
+      "fullAddress": {
+        "address1": "2275 Rafe Lane",
+        "address2": "Greenwood, MS 38930"
+      },
+      "fullName": {
+        "firstName": "Sarah",
+        "lastName": "Law"
+      },
+      "gender": "Female",
+      "id": "-N_U-By1yvRq821ph1PT",
+      "phone": "+38(045)-678-98-76"
+    },
+    "-N_U-cOchQuo15R4Rrq2": {
+      "addAt": "27/07/2023, 15:02:44",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/16.jpg",
+      "editAt": "Not",
+      "email": "sofiamahmood@armyspy.com",
+      "feedback": 1,
+      "fullAddress": {
+        "address1": "2843 Calico Drive",
+        "address2": "Spokane, WA 99202"
+      },
+      "fullName": {
+        "firstName": "Sofia",
+        "lastName": "Mahmood"
+      },
+      "gender": "Female",
+      "id": "-N_U-cOchQuo15R4Rrq2",
+      "phone": "+38(054)-568-97-65"
+    },
+    "-N_U09FkglYF8MjrzM59": {
+      "addAt": "27/07/2023, 15:02:39",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/17.jpg",
+      "editAt": "Not",
+      "email": "skyevaughan@jourrapide.com",
+      "feedback": 5,
+      "fullAddress": {
+        "address1": "1824 Limer Street",
+        "address2": "Dawsonville, GA 30534"
+      },
+      "fullName": {
+        "firstName": "Skye",
+        "lastName": "Vaughan"
+      },
+      "gender": "Female",
+      "id": "-N_U09FkglYF8MjrzM59",
+      "phone": "+38(064)-455-66-34"
+    },
+    "-N_U1LmJh-_zAxxfUcBL": {
+      "addAt": "27/07/2023, 15:02:26",
+      "avatar": "https://mdbootstrap.com/img/new/avatars/18.jpg",
+      "editAt": "Not",
+      "email": "emilykelly@dayrep.com",
+      "feedback": 2,
+      "fullAddress": {
+        "address1": "1047 Young Road",
+        "address2": "Twin Falls, ID 83301"
+      },
+      "fullName": {
+        "firstName": "Emily",
+        "lastName": "Kelly"
+      },
+      "gender": "Female",
+      "id": "-N_U1LmJh-_zAxxfUcBL",
+      "phone": "+38(034)-568-76-54"
+    }
+  },
+  "mainAnalytics": {
+    "advancedAnnual": [
+      {
+        "annualProfit": 10,
+        "country": "GB",
+        "employees": 122,
+        "sales": 452,
+        "salesIncrease": 12,
+        "units": [
+          {
+            "label": "GB-01",
+            "x": 474,
+            "y": 294
+          }
+        ]
+      },
+      {
+        "annualProfit": 49,
+        "country": "PL",
+        "employees": 34,
+        "sales": 280,
+        "salesIncrease": 60,
+        "units": [
+          {
+            "label": "PL-01",
+            "x": 533,
+            "y": 290
+          }
+        ]
+      },
+      {
+        "annualProfit": 3,
+        "country": "US",
+        "employees": 124,
+        "sales": 1200,
+        "salesIncrease": 6,
+        "units": [
+          {
+            "label": "US-01",
+            "x": 267,
+            "y": 337
+          },
+          {
+            "label": "US-02",
+            "x": 180,
+            "y": 320
+          },
+          {
+            "label": "US-03",
+            "x": 160,
+            "y": 340
+          }
+        ]
+      },
+      {
+        "annualProfit": 32,
+        "country": "CN",
+        "employees": 100,
+        "sales": 800,
+        "salesIncrease": 40,
+        "units": [
+          {
+            "label": "CN-01",
+            "x": 800,
+            "y": 338
+          },
+          {
+            "label": "CN-02",
+            "x": 700,
+            "y": 350
+          }
+        ]
+      },
+      {
+        "annualProfit": 8,
+        "country": "NO",
+        "employees": 23,
+        "sales": 340,
+        "salesIncrease": 10,
+        "units": [
+          {
+            "label": "NO-01",
+            "x": 505,
+            "y": 252
+          }
+        ]
+      },
+      {
+        "annualProfit": 9,
+        "country": "SE",
+        "employees": 120,
+        "sales": 360,
+        "salesIncrease": 13,
+        "units": [
+          {
+            "label": "SE-01",
+            "x": 515,
+            "y": 242
+          }
+        ]
+      },
+      {
+        "annualProfit": 2,
+        "country": "FI",
+        "employees": 40,
+        "sales": 450,
+        "salesIncrease": 5,
+        "units": [
+          {
+            "label": "FI-01",
+            "x": 545,
+            "y": 242
+          }
+        ]
+      },
+      {
+        "annualProfit": 2,
+        "country": "FR",
+        "employees": 130,
+        "sales": 645,
+        "salesIncrease": 4,
+        "units": [
+          {
+            "label": "FR-01",
+            "x": 481,
+            "y": 308
+          }
+        ]
+      },
+      {
+        "annualProfit": 9,
+        "country": "DE",
+        "employees": 80,
+        "sales": 645,
+        "salesIncrease": 12,
+        "units": [
+          {
+            "label": "DE-01",
+            "x": 510,
+            "y": 308
+          },
+          {
+            "label": "DE-02",
+            "x": 510,
+            "y": 290
+          }
+        ]
+      },
+      {
+        "annualProfit": 67,
+        "country": "BE",
+        "employees": 24,
+        "sales": 400,
+        "salesIncrease": 80,
+        "units": [
+          {
+            "label": "BE-01",
+            "x": 490,
+            "y": 298
+          }
+        ]
+      },
+      {
+        "annualProfit": 0.2,
+        "country": "IT",
+        "employees": 140,
+        "sales": 245,
+        "salesIncrease": 0.4,
+        "units": [
+          {
+            "label": "IT-01",
+            "x": 510,
+            "y": 320
+          }
+        ]
+      },
+      {
+        "annualProfit": 0.2,
+        "country": "UA",
+        "employees": 140,
+        "sales": 745,
+        "salesIncrease": 0.4,
+        "units": [
+          {
+            "label": "UA-01",
+            "x": 567,
+            "y": 305
+          }
+        ]
+      },
+      {
+        "annualProfit": 19,
+        "country": "CA",
+        "employees": 230,
+        "sales": 945,
+        "salesIncrease": 24,
+        "units": [
+          {
+            "label": "CA-01",
+            "x": 267,
+            "y": 307
+          },
+          {
+            "label": "CA-02",
+            "x": 180,
+            "y": 260
+          }
+        ]
+      }
+    ],
+    "analyticsAnnual": [
+      195,
+      203,
+      198,
+      193,
+      179,
+      153,
+      162,
+      154,
+      184,
+      218,
+      234,
+      214
+    ],
+    "devAnnual": [
+      190,
+      145,
+      131,
+      143,
+      160,
+      155,
+      119,
+      144,
+      157,
+      176,
+      169,
+      164
+    ],
+    "serviceAnnual": [
+      259,
+      241,
+      219,
+      255,
+      245,
+      240,
+      257,
+      263,
+      245,
+      251,
+      261,
+      282
+    ],
+    "totalAnnual": [
+      644,
+      589,
+      548,
+      591,
+      584,
+      548,
+      538,
+      561,
+      586,
+      645,
+      664,
+      660
+    ]
+  },
+  "price": {
+    "-NcCirURxGMHHRavKkpD": {
+      "addAt": "28/02/2020, 08:26:45",
+      "annualSales": [
+        36,
+        26,
+        16,
+        26,
+        36,
+        26,
+        16,
+        22,
+        12,
+        19,
+        9,
+        19
+      ],
+      "annualTotal": 263,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpD?alt=media&token=37bbf5e1-4f9c-4444-9d61-2866167021ce",
+      "description": "ProductThis could include a comprehensive e-commerce website package, including web design, shopping cart integration, payment gateway setup, product management, and customization options.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpD",
+      "monthly": {
+        "new": 2,
+        "complete": 19,
+        "pending": 17
+      },
+      "price": "$200",
+      "quantity": "per year",
+      "section": "Development",
+      "title": "Pro Package 4"
+    },
+    "-NcCirURxGMHHRavKkpE": {
+      "addAt": "21/05/2020, 17:34:20",
+      "annualSales": [
+        31,
+        22,
+        13,
+        22,
+        26,
+        17,
+        8,
+        17,
+        26,
+        17,
+        8,
+        11
+      ],
+      "annualTotal": 218,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpE?alt=media&token=968c27f4-f9c5-4e7a-bca9-6e0e33451a16",
+      "description": "This service offers hosting for an e-commerce website, ensuring that the website is accessible online and has reliable server support.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpE",
+      "monthly": {
+        "new": 3,
+        "complete": 11,
+        "pending": 11
+      },
+      "price": "$10",
+      "quantity": "per year",
+      "section": "Service",
+      "title": "Web Hosting 1"
+    },
+    "-NcCirURxGMHHRavKkpF": {
+      "addAt": "29/10/2020, 11:23:00",
+      "annualSales": [
+        7,
+        10,
+        13,
+        16,
+        19,
+        22,
+        25,
+        28,
+        31,
+        34,
+        36,
+        33
+      ],
+      "annualTotal": 274,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpF?alt=media&token=ce7c05ff-70e0-44a2-86dd-97ea6a7cb6be",
+      "description": "This service focuses on improving the search engine visibility of an e-commerce website, including keyword research, on-page optimization, link building, and content strategy.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpF",
+      "monthly": {
+        "new": 2,
+        "complete": 33,
+        "pending": 10
+      },
+      "price": "$500",
+      "quantity": "per year",
+      "section": "Service",
+      "title": "SEO Optimization"
+    },
+    "-NcCirURxGMHHRavKkpH": {
+      "addAt": "29/11/2020, 03:12:54",
+      "annualSales": [
+        31,
+        38,
+        30,
+        22,
+        14,
+        22,
+        30,
+        22,
+        14,
+        22,
+        14,
+        22
+      ],
+      "annualTotal": 281,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpH?alt=media&token=ded1aab2-3aa4-48d1-bf93-10276dcf4df1",
+      "description": "This service involves integrating secure payment gateways into an e-commerce website, allowing customers to make online purchases using various payment methods.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpH",
+      "monthly": {
+        "new": 1,
+        "complete": 22,
+        "pending": 10
+      },
+      "price": "$100",
+      "quantity": "one-time",
+      "section": "Service",
+      "title": "Payment Gateway Integration"
+    },
+    "-NcCirURxGMHHRavKkpI": {
+      "addAt": "07/09/2021, 20:03:32",
+      "annualSales": [
+        13,
+        11,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27
+      ],
+      "annualTotal": 204,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpI?alt=media&token=43099a7c-fd03-4875-8f46-b36a603046ea",
+      "description": "Creating a dedicated mobile app for an e-commerce business, providing customers with a convenient platform to browse and purchase products.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpI",
+      "monthly": {
+        "new": 2,
+        "complete": 27,
+        "pending": 17
+      },
+      "price": "$1,500",
+      "quantity": "one-time",
+      "section": "Development",
+      "title": "Mobile App Development"
+    },
+    "-NcCirURxGMHHRavKkpJ": {
+      "addAt": "18/12/2020, 23:13:54",
+      "annualSales": [
+        19,
+        15,
+        11,
+        13,
+        9,
+        13,
+        17,
+        19,
+        15,
+        11,
+        15,
+        16
+      ],
+      "annualTotal": 173,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpJ?alt=media&token=4ebe93fa-fa29-450a-b3b6-b958ccaa05e9",
+      "description": "Managing social media accounts and running targeted advertising campaigns to drive traffic and increase brand awareness for the e-commerce store.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpJ",
+      "monthly": {
+        "new": 0,
+        "complete": 16,
+        "pending": 10
+      },
+      "price": "$300",
+      "quantity": "per month",
+      "section": "Service",
+      "title": "Social Media Management"
+    },
+    "-NcCirURxGMHHRavKkpK": {
+      "addAt": "31/03/2021, 08:47:08",
+      "annualSales": [
+        29,
+        23,
+        17,
+        11,
+        17,
+        22,
+        16,
+        10,
+        15,
+        9,
+        15,
+        9
+      ],
+      "annualTotal": 193,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpK?alt=media&token=964e46a1-35b6-46da-a934-73ac3a891ad3",
+      "description": "Implementing an AI-powered chatbot to handle customer inquiries, provide support, and offer personalized recommendations.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpK",
+      "monthly": {
+        "new": 0,
+        "complete": 9,
+        "pending": 14
+      },
+      "price": "$300",
+      "quantity": "one-time",
+      "section": "Development",
+      "title": "Customer Support Chatbot"
+    },
+    "-NcCirURxGMHHRavKkpL": {
+      "addAt": "07/04/2021, 03:50:35",
+      "annualSales": [
+        14,
+        7,
+        11,
+        18,
+        22,
+        15,
+        8,
+        15,
+        22,
+        29,
+        33,
+        26
+      ],
+      "annualTotal": 220,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpL?alt=media&token=db8af874-1f9e-4055-9690-34104a6cb4be",
+      "description": "Developing or integrating an inventory management system to track product availability, automate stock replenishment, and manage order fulfillment.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpL",
+      "monthly": {
+        "new": 4,
+        "complete": 26,
+        "pending": 5
+      },
+      "price": "$500",
+      "quantity": "one-time",
+      "section": "Development",
+      "title": "Inventory Management System"
+    },
+    "-NcCirURxGMHHRavKkpM": {
+      "addAt": "02/08/2021, 19:03:32",
+      "annualSales": [
+        19,
+        23,
+        16,
+        23,
+        30,
+        32,
+        25,
+        18,
+        11,
+        18,
+        25,
+        32
+      ],
+      "annualTotal": 272,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpM?alt=media&token=fed33698-2a39-44a7-b502-375153eb3cc6",
+      "description": "Creating and executing email marketing campaigns to engage customers, promote new products, and drive repeat sales.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpM",
+      "monthly": {
+        "new": 1,
+        "complete": 32,
+        "pending": 12
+      },
+      "price": "$200",
+      "quantity": "one-time",
+      "section": "Service",
+      "title": "Email Marketing Campaign"
+    },
+    "-NcCirURxGMHHRavKkpN": {
+      "addAt": "08/09/2021, 09:27:13",
+      "annualSales": [
+        27,
+        18,
+        9,
+        18,
+        27,
+        29,
+        20,
+        11,
+        20,
+        29,
+        33,
+        24
+      ],
+      "annualTotal": 265,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpN?alt=media&token=f8cdd4ef-7b94-4032-881c-9541988fe8da",
+      "description": "Analyzing website performance, user behavior, and implementing strategies to optimize the conversion rate, ultimately increasing sales and revenue.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpN",
+      "monthly": {
+        "new": 3,
+        "complete": 24,
+        "pending": 17
+      },
+      "price": "$400",
+      "quantity": "one-time",
+      "section": "Analytics",
+      "title": "Conversion Rate Optimization"
+    },
+    "-NcCirURxGMHHRavKkpO": {
+      "addAt": "22/09/2021, 00:26:20",
+      "annualSales": [
+        40,
+        32,
+        24,
+        16,
+        21,
+        13,
+        21,
+        24,
+        16,
+        24,
+        30,
+        22
+      ],
+      "annualTotal": 283,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpO?alt=media&token=12603402-52dc-409d-99c6-d03ddb0c01c4",
+      "description": "Outsourcing the storage, packaging, and shipping of products, ensuring timely and efficient delivery to customers.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpO",
+      "monthly": {
+        "new": 2,
+        "complete": 22,
+        "pending": 16
+      },
+      "price": "$11",
+      "quantity": "per order",
+      "section": "Service",
+      "title": "Order Fulfillment Service"
+    },
+    "-NcCirURxGMHHRavKkpP": {
+      "addAt": "19/10/2021, 01:43:30",
+      "annualSales": [
+        22,
+        30,
+        35,
+        27,
+        19,
+        11,
+        17,
+        9,
+        17,
+        25,
+        33,
+        36
+      ],
+      "annualTotal": 281,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpP?alt=media&token=963e2532-7d94-4888-98e9-9774bda274a4",
+      "description": "Conducting a comprehensive security audit to identify vulnerabilities, protect customer data, and prevent potential cyber threats.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpP",
+      "monthly": {
+        "new": 3,
+        "complete": 36,
+        "pending": 11
+      },
+      "price": "$250",
+      "quantity": "one-time",
+      "section": "Analytics",
+      "title": "Website Security Audit"
+    },
+    "-NcCirURxGMHHRavKkpQ": {
+      "addAt": "25/12/2021, 19:40:47",
+      "annualSales": [
+        24,
+        32,
+        35,
+        27,
+        19,
+        11,
+        19,
+        23,
+        15,
+        23,
+        15,
+        23
+      ],
+      "annualTotal": 266,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpQ?alt=media&token=daaf3c38-3cb0-4f1d-ad7d-c34e916b0df0",
+      "description": "Collaborating with influential individuals on social media to promote products and reach a wider audience.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpQ",
+      "monthly": {
+        "new": 4,
+        "complete": 23,
+        "pending": 6
+      },
+      "price": "$500",
+      "quantity": "one-time",
+      "section": "Analytics",
+      "title": "Social Media Influencer Collaboration"
+    },
+    "-NcCirURxGMHHRavKkpR": {
+      "addAt": "12/01/2022, 16:35:25",
+      "annualSales": [
+        20,
+        10,
+        17,
+        27,
+        37,
+        27,
+        17,
+        27,
+        37,
+        27,
+        17,
+        25
+      ],
+      "annualTotal": 288,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpR?alt=media&token=0e6446c8-8b79-4e39-bbef-401f00cf0928",
+      "description": "Providing translation and localization services to cater to customers from different language backgrounds.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpR",
+      "monthly": {
+        "new": 4,
+        "complete": 25,
+        "pending": 9
+      },
+      "price": "$200",
+      "quantity": "one-time",
+      "section": "Service",
+      "title": "Multilingual Support"
+    },
+    "-NcCirURxGMHHRavKkpS": {
+      "addAt": "21/01/2022, 16:42:04",
+      "annualSales": [
+        23,
+        24,
+        15,
+        21,
+        12,
+        21,
+        30,
+        21,
+        12,
+        21,
+        26,
+        17
+      ],
+      "annualTotal": 243,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpS?alt=media&token=c1e2744d-4a81-4d86-987f-49ec91eaaa2c",
+      "description": "Setting up an affiliate program to encourage individuals or other businesses to promote and sell products, earning a commission for each successful referral.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpS",
+      "monthly": {
+        "new": 0,
+        "complete": 17,
+        "pending": 6
+      },
+      "price": "$100 ",
+      "quantity": "one-time",
+      "section": "Service",
+      "title": "Affiliate Marketing Program"
+    },
+    "-NcCirURxGMHHRavKkpT": {
+      "addAt": "12/03/2022, 00:20:52",
+      "annualSales": [
+        23,
+        19,
+        15,
+        11,
+        14,
+        10,
+        14,
+        10,
+        14,
+        18,
+        21,
+        17
+      ],
+      "annualTotal": 186,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpT?alt=media&token=c10c855f-309e-45ff-9b59-1f9583b3190c",
+      "description": "Offering legal advice and assistance in creating clear and comprehensive return and refund policies for customer satisfaction and legal compliance.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpT",
+      "monthly": {
+        "new": 1,
+        "complete": 17,
+        "pending": 15
+      },
+      "price": "$100",
+      "quantity": "one-time",
+      "section": "Analytics",
+      "title": "Return and Refund Policy Consultation"
+    },
+    "-NcCirURxGMHHRavKkpU": {
+      "addAt": "07/05/2022, 15:02:14",
+      "annualSales": [
+        8,
+        14,
+        20,
+        24,
+        18,
+        12,
+        18,
+        24,
+        30,
+        36,
+        39,
+        33
+      ],
+      "annualTotal": 276,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpU?alt=media&token=668ddd3a-a4f7-454d-b1d9-98d10021f9f7",
+      "description": "Configuring Google Analytics to track website performance, monitor user behavior, and gain insights for improving marketing strategies.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpU",
+      "monthly": {
+        "new": 5,
+        "complete": 33,
+        "pending": 13
+      },
+      "price": "$150",
+      "quantity": "one-time",
+      "section": "Analytics",
+      "title": "Google Analytics Setup and Analysis"
+    },
+    "-NcCirURxGMHHRavKkpV": {
+      "addAt": "04/10/2022, 23:20:20",
+      "annualSales": [
+        18,
+        24,
+        17,
+        10,
+        17,
+        24,
+        17,
+        10,
+        17,
+        24,
+        27,
+        20
+      ],
+      "annualTotal": 225,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpV?alt=media&token=c5ab7f23-f7f9-4974-814d-d6a75285133e",
+      "description": "Creating engaging and persuasive website content, product descriptions, blog articles, and promotional materials.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpV",
+      "monthly": {
+        "new": 3,
+        "complete": 20,
+        "pending": 7
+      },
+      "price": "$10",
+      "quantity": "per language",
+      "section": "Development",
+      "title": "Content Writing and Copywriting"
+    },
+    "-NcCirURxGMHHRavKkpW": {
+      "addAt": "05/12/2022, 05:58:50",
+      "annualSales": [
+        33,
+        26,
+        19,
+        12,
+        19,
+        22,
+        15,
+        19,
+        12,
+        19,
+        26,
+        30
+      ],
+      "annualTotal": 252,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpW?alt=media&token=04d2db65-4c59-49d1-9b42-6f142555cd0d",
+      "description": "Layout and optimizing an e-commerce website for a seamless user experience across various devices and screen sizes.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpW",
+      "monthly": {
+        "new": 2,
+        "complete": 30,
+        "pending": 6
+      },
+      "price": "$400",
+      "quantity": "one-time",
+      "section": "Development",
+      "title": "Landing Page Layout"
+    },
+    "-NcCirURxGMHHRavKkpX": {
+      "addAt": "11/02/2023, 10:46:45",
+      "annualSales": [
+        21,
+        12,
+        21,
+        29,
+        20,
+        11,
+        20,
+        29,
+        34,
+        25,
+        16,
+        25
+      ],
+      "annualTotal": 263,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpX?alt=media&token=a2273ec0-ba19-4299-abc3-a052d76d097c",
+      "description": "Developing and managing targeted advertising campaigns on social media platforms to reach potential customers and drive sales.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpX",
+      "monthly": {
+        "new": 3,
+        "complete": 25,
+        "pending": 13
+      },
+      "price": "$300 ",
+      "quantity": "per month",
+      "section": "Service",
+      "title": "Social Media Advertising Campaign"
+    },
+    "-NcCirURxGMHHRavKkpY": {
+      "addAt": "14/02/2023, 00:09:17",
+      "annualSales": [
+        8,
+        17,
+        21,
+        12,
+        21,
+        26,
+        17,
+        8,
+        17,
+        26,
+        30,
+        21
+      ],
+      "annualTotal": 224,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpY?alt=media&token=e4321478-38d6-42cb-aee0-1846ddd3ea03",
+      "description": "Designing and implementing a customer loyalty program to incentivize repeat purchases and foster customer retention.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpY",
+      "monthly": {
+        "new": 3,
+        "complete": 21,
+        "pending": 16
+      },
+      "price": "$200",
+      "quantity": "one-time",
+      "section": "Service",
+      "title": "Loyalty Program Implementation"
+    },
+    "-NcCirURxGMHHRavKkpZ": {
+      "addAt": "08/03/2023, 02:42:26",
+      "annualSales": [
+        31,
+        26,
+        21,
+        16,
+        11,
+        16,
+        21,
+        23,
+        18,
+        13,
+        18,
+        23
+      ],
+      "annualTotal": 237,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpZ?alt=media&token=225f75f3-9f50-48b4-8f3d-399a2c6ed665",
+      "description": "Collecting and analyzing data on website performance, customer behavior, and sales metrics, providing actionable insights for business growth.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpZ",
+      "monthly": {
+        "new": 2,
+        "complete": 23,
+        "pending": 13
+      },
+      "price": "$250",
+      "quantity": "per month",
+      "section": "Analytics",
+      "title": "Data Analytics and Reporting"
+    },
+    "-NcCirURxGMHHRavKkp_": {
+      "addAt": "17/04/2023, 00:28:11",
+      "annualSales": [
+        38,
+        33,
+        28,
+        23,
+        18,
+        13,
+        8,
+        13,
+        17,
+        12,
+        15,
+        10
+      ],
+      "annualTotal": 228,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkp_?alt=media&token=0126e8d0-fa6b-4a08-918c-8f5eb6e8c085",
+      "description": "Developing a comprehensive influencer marketing strategy to collaborate with relevant influencers, increase brand exposure, and drive sales.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkp_",
+      "monthly": {
+        "new": 4,
+        "complete": 10,
+        "pending": 6
+      },
+      "price": "$400",
+      "quantity": "one-time",
+      "section": "Analytics",
+      "title": "Influencer Marketing Strategy"
+    },
+    "-NcCirURxGMHHRavKkpa": {
+      "addAt": "08/06/2023, 10:03:40",
+      "annualSales": [
+        20,
+        10,
+        15,
+        25,
+        15,
+        19,
+        9,
+        19,
+        26,
+        30,
+        20,
+        10
+      ],
+      "annualTotal": 218,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpa?alt=media&token=ccd395a2-e998-4093-96d1-00cb6d1ec406",
+      "description": "Implementing automated systems and strategies to recover abandoned shopping carts and convert potential customers into completed purchases.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpa",
+      "monthly": {
+        "new": 3,
+        "complete": 10,
+        "pending": 7
+      },
+      "price": "$200",
+      "quantity": "one-time",
+      "section": "Development",
+      "title": "Cart Abandonment Recovery System"
+    },
+    "-NcCirURxGMHHRavKkpb": {
+      "addAt": "14/06/2023, 10:59:59",
+      "annualSales": [
+        27,
+        18,
+        27,
+        30,
+        21,
+        12,
+        21,
+        30,
+        32,
+        23,
+        14,
+        23
+      ],
+      "annualTotal": 278,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpb?alt=media&token=3c2e2009-aaf2-4813-8014-ab5dfaf10027",
+      "description": "Integrating a user-friendly system for customers to leave reviews and ratings, enhancing credibility and social proof for products.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpb",
+      "monthly": {
+        "new": 3,
+        "complete": 23,
+        "pending": 6
+      },
+      "price": "$100",
+      "quantity": "one-time",
+      "section": "Development",
+      "title": "Product Review and Rating System"
+    },
+    "-NcCirURxGMHHRavKkpc": {
+      "addAt": "18/10/2023, 13:05:38",
+      "annualSales": [
+        10,
+        17,
+        26,
+        33,
+        24,
+        15,
+        17,
+        19,
+        10,
+        13,
+        22,
+        27
+      ],
+      "annualTotal": 233,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpc?alt=media&token=1affec93-71df-43db-b1c8-75ae2f7fb34e",
+      "description": "Integrating a CRM system to manage customer data, track interactions, and provide personalized experiences.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpc",
+      "monthly": {
+        "new": 2,
+        "complete": 27,
+        "pending": 8
+      },
+      "price": "$300",
+      "quantity": "one-time",
+      "section": "Service",
+      "title": "CRM (Customer Relationship Management) Integration"
+    },
+    "-NcCirURxGMHHRavKkpd": {
+      "addAt": "22/11/2023, 08:46:56",
+      "annualSales": [
+        14,
+        15,
+        11,
+        15,
+        19,
+        23,
+        27,
+        31,
+        35,
+        36,
+        32,
+        28
+      ],
+      "annualTotal": 286,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpd?alt=media&token=682978a7-f27b-41d7-98b5-65faf766488b",
+      "description": "Implementing techniques and recommendations to encourage customers to purchase related or upgraded products, increasing the average order value.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpd",
+      "monthly": {
+        "new": 4,
+        "complete": 28,
+        "pending": 20
+      },
+      "price": "$200",
+      "quantity": "one-time",
+      "section": "Analytics",
+      "title": "Cross-Selling and Upselling Strategy"
+    },
+    "-NcCirURxGMHHRavKkpe": {
+      "addAt": "08/12/2023, 18:09:53",
+      "annualSales": [
+        30,
+        21,
+        12,
+        21,
+        12,
+        21,
+        30,
+        31,
+        22,
+        13,
+        22,
+        31
+      ],
+      "annualTotal": 266,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpe?alt=media&token=da0567d7-e0db-42b2-b81d-b47e425128d2",
+      "description": "Conducting A/B tests to compare different website layouts, design elements, and marketing strategies to optimize conversions and user experience.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpe",
+      "monthly": {
+        "new": 3,
+        "complete": 31,
+        "pending": 8
+      },
+      "price": "$150",
+      "quantity": "one-time",
+      "section": "Service",
+      "title": "A/B Testing"
+    },
+    "-NcCirURxGMHHRavKkpf": {
+      "addAt": "20/12/2023, 05:56:14",
+      "annualSales": [
+        8,
+        16,
+        24,
+        32,
+        34,
+        28,
+        18,
+        10,
+        18,
+        26,
+        28,
+        20
+      ],
+      "annualTotal": 262,
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpf?alt=media&token=acf9e9e1-5026-47d2-9072-2b75257dd9fc",
+      "description": "Providing expert advice and guidance on various aspects of e-commerce, including strategy development, market analysis, and business growth plans.",
+      "editAt": "Not",
+      "id": "-NcCirURxGMHHRavKkpf",
+      "monthly": {
+        "new": 5,
+        "complete": 20,
+        "pending": 9
+      },
+      "price": "$300",
+      "quantity": "per year",
+      "section": "Analytics",
+      "title": "Consulting"
+    }
+  },
+  "team": {
+    "-Nbt9zQDpR161ZSjzUul": {
+      "addAt": "15/08/2023, 15:29:15",
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/team%2F-Nbt9zQDpR161ZSjzUul?alt=media&token=9b8d7c5e-4ac9-4c8d-be7b-2838c5d03350",
+      "birthYear": "1996",
+      "department": "IT",
+      "editAt": "16/08/2023, 13:07:50",
+      "email": "jackson@google.com",
+      "fullName": {
+        "firstName": "Danny",
+        "lastName": "Williamson"
+      },
+      "id": "-Nbt9zQDpR161ZSjzUul",
+      "level": "Lead",
+      "location": "Oslo",
+      "performance": [
+        21,
+        42,
+        97,
+        90,
+        50,
+        54,
+        57,
+        80,
+        70,
+        92
+      ],
+      "phone": "+38(076)-543-23-45",
+      "position": "PHP, Python Developer",
+      "rating": 5,
+      "salary": "$672,000",
+      "startDate": "02/08/2021",
+      "status": "Active"
+    },
+    "-NbtPbJeAlykpaohb6Y5": {
+      "addAt": "15/08/2023, 16:37:28",
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/team%2F-NbtPbJeAlykpaohb6Y5?alt=media&token=72b8461e-adae-45f4-bd43-f3190b47d963",
+      "birthYear": "2003",
+      "department": "UI/UX",
+      "editAt": "Not",
+      "email": "kristin.watson@mail.com",
+      "fullName": {
+        "firstName": "Kristin",
+        "lastName": "Watson"
+      },
+      "id": "-NbtPbJeAlykpaohb6Y5",
+      "level": "Trainee",
+      "location": "Columbus",
+      "performance": [
+        80,
+        45,
+        69,
+        76,
+        98
+      ],
+      "phone": "+38(087)-623-45-67",
+      "position": "Product Designer",
+      "rating": 3,
+      "salary": "$450",
+      "startDate": "24/08/2023",
+      "status": "Onboarding"
+    },
+    "-NbtR9IKQxsz0HgrSpng": {
+      "addAt": "15/08/2023, 16:44:14",
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/team%2F-NbtR9IKQxsz0HgrSpng?alt=media&token=d1f62eeb-4cd0-4cea-9ad5-6b8dc226d628",
+      "birthYear": "1998",
+      "department": "IT",
+      "editAt": "16/08/2023, 13:06:03",
+      "email": "arroragaur@gmail.com",
+      "fullName": {
+        "firstName": "Arrora",
+        "lastName": "Gaur"
+      },
+      "id": "-NbtR9IKQxsz0HgrSpng",
+      "level": "Middle",
+      "location": "Mexico",
+      "performance": [
+        23,
+        27,
+        31,
+        64,
+        25,
+        16,
+        78,
+        24,
+        25,
+        73
+      ],
+      "phone": "+38(087)-623-45-67",
+      "position": "Java Script Software Engineer",
+      "rating": 5,
+      "salary": "$433,060",
+      "startDate": "02/08/2020",
+      "status": "Repose"
+    },
+    "-NbtSE-UC4MKwUXP4llW": {
+      "addAt": "15/08/2023, 16:48:55",
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/team%2F-NbtSE-UC4MKwUXP4llW?alt=media&token=51a0bf9f-215c-4036-95f3-a862f595e1af",
+      "birthYear": "2001",
+      "department": "IT",
+      "editAt": "15/08/2023, 22:18:08",
+      "email": "james.mullican@mail.com",
+      "fullName": {
+        "firstName": "James",
+        "lastName": "Mullican"
+      },
+      "id": "-NbtSE-UC4MKwUXP4llW",
+      "level": "Junior",
+      "location": "Lyon",
+      "performance": [
+        32,
+        43,
+        64,
+        52,
+        22,
+        68,
+        92,
+        89,
+        57,
+        75
+      ],
+      "phone": "+38(054)-323-45-67",
+      "position": "Qa Engineer",
+      "rating": 4,
+      "salary": "$107,500",
+      "startDate": "24/01/2023",
+      "status": "Active"
+    },
+    "-NbtTfYFA1XE8d1nSsnP": {
+      "addAt": "15/08/2023, 16:55:14",
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/team%2F-NbtTfYFA1XE8d1nSsnP?alt=media&token=0b8e5214-21e5-401c-b364-4d5fd28b656e",
+      "birthYear": "1994",
+      "department": "Finance",
+      "editAt": "16/08/2023, 12:44:40",
+      "email": "herrod.chandler@gmail.com",
+      "fullName": {
+        "firstName": "Herrod",
+        "lastName": "Chandler"
+      },
+      "id": "-NbtTfYFA1XE8d1nSsnP",
+      "level": "Middle",
+      "location": "Detroit",
+      "performance": [
+        68,
+        25,
+        36,
+        100,
+        15,
+        35,
+        77,
+        40,
+        75,
+        83
+      ],
+      "phone": "+38(087)-654-33-45",
+      "position": "Sales Assistant",
+      "rating": 5,
+      "salary": "$137,500",
+      "startDate": "31/08/2020",
+      "status": "Awaiting"
+    },
+    "-NbtW1agGP4TuLZuFDNE": {
+      "addAt": "15/08/2023, 17:05:33",
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/team%2F-NbtW1agGP4TuLZuFDNE?alt=media&token=6fda6665-2216-4801-bbf8-7d9d6660219c",
+      "birthYear": "2001",
+      "department": "Marketing",
+      "editAt": "Not",
+      "email": "rhonadavidson@mail.com",
+      "fullName": {
+        "firstName": "Rhona",
+        "lastName": "Davidson"
+      },
+      "id": "-NbtW1agGP4TuLZuFDNE",
+      "level": "Junior",
+      "location": "Nurnberg",
+      "performance": [
+        18,
+        22,
+        76,
+        75,
+        28,
+        40
+      ],
+      "phone": "+38(087)-654-23-45",
+      "position": "Accountant",
+      "rating": 4,
+      "salary": "$162,700",
+      "startDate": "27/08/2022",
+      "status": "Active"
+    },
+    "-NbujixxOqjRenh8wif6": {
+      "addAt": "15/08/2023, 22:49:24",
+      "avatar": "https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/team%2F-NbujixxOqjRenh8wif6?alt=media&token=26d870e5-2c28-49cb-b76e-b41e74b6f2dc",
+      "birthYear": "1995",
+      "department": "IT",
+      "editAt": "16/08/2023, 13:00:36",
+      "email": "airi.satou@gmail.com",
+      "fullName": {
+        "firstName": "Airi",
+        "lastName": "Satou"
+      },
+      "id": "-NbujixxOqjRenh8wif6",
+      "level": "Senior",
+      "location": "Tokyo",
+      "performance": [
+        18,
+        22,
+        76,
+        75,
+        68,
+        84,
+        50,
+        56,
+        77,
+        89
+      ],
+      "phone": "+38(065)-434-56-78",
+      "position": "Java Developer",
+      "rating": 4,
+      "salary": "$478,900",
+      "startDate": "02/08/2020",
+      "status": "Active"
+    }
+  }
+}

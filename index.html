@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="icons/avocado-icon.svg" rel="icon" type="image/svg+xml">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="Basic-Components/css/mdb.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./Basic Components/css/all.min.css"> -->
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Sidenav-->
+<nav class="sidenav shadow-0 h-100 fixed-top"
+     data-mdb-close-on-esc="false"
+     data-mdb-content="#slim-content"
+     data-mdb-expand-on-hover="true"
+     data-mdb-focus-trap="false"
+     data-mdb-hidden="false"
+     data-mdb-mode="side"
+     data-mdb-slim="true"
+     data-mdb-slim-collapsed="true"
+     id="main-sidenav">
+</nav>
+<!-- Sidenav-->
+
+<main>
+    <div id="slim-content" style="padding: 15px;">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-nav navbar-light sticky-top shadow-0 mb-2 mt-0 pt-0">
+            <!-- Container wrapper -->
+            <div class="container-fluid ps-0">
+                <label class="container-switch">
+                    <input aria-controls="#main-sidenav"
+                           aria-haspopup="true"
+                           checked="checked"
+                           class="btn"
+                           data-mdb-target="#main-sidenav"
+                           data-mdb-toggle="sidenav"
+                           type="checkbox">
+                    <div class="checkmark">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                <!-- Navbar brand -->
+                <a class="navbar-brand me-auto ps-2">
+                    <h5>Dashboard</h5>
+                </a>
+                <!-- Collapsible wrapper -->
+                <div id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    </ul>
+
+                    <div class="form-outline" id="date-time-options">
+                        <input class="form-control" id="date-time-picker" type="text"/>
+                        <label class="form-label" for="date-time-picker">Select Date and Time</label>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Section: Charts -->
+        <section class="mb-4">
+            <div class="row g-4">
+                <div class="col-lg-8 col-md-12 hidden-arrow">
+                    <!-- Card Liner Chart-->
+                    <div class="bg-card rounded-6 h-100">
+                        <div class="d-flex justify-content-center flex-column p-2">
+                            <!-- Status title -->
+                            <div class="mb-1 text-center">
+                                <p class="mb-0">
+                                    <span class="h6 me-2">Annual Report</span>
+                                </p>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-center" id="line-chart-btns-container">
+                                <button class="btn btn-primary btn-line-report m-1" data-key="total">
+                                    Total
+                                </button>
+                                <button class="btn btn-outline-primary btn-line-report m-1" data-key="development">
+                                    Development
+                                </button>
+                                <button class="btn btn-outline-primary btn-line-report m-1" data-key="service">
+                                    Service
+                                </button>
+                                <button class="btn btn-outline-primary btn-line-report m-1" data-key="analytics">
+                                    Analytics
+                                </button>
+                            </div>
+                            <div class="">
+                                <canvas id="chart-line"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+                </div>
+
+                <div class="col-lg-4 col-md-10">
+
+                    <!-- Card Pie Chart-->
+                    <div class="bg-card rounded-6 h-100">
+                        <div class="p-2">
+                            <div class="p-1">
+                                <div class="row align-items-center">
+                                    <!-- Status title -->
+                                    <div class="mb-1 text-center">
+                                        <p class="mb-0">
+                                            <span class="h6 me-2">Sections Report</span>
+                                        </p>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-center" id="pie-chart-btns-container">
+                                        <button class="btn btn-primary btn-pie-report m-1" data-key="annual">
+                                            Annual
+                                        </button>
+                                        <button class="btn btn-outline-primary btn-pie-report m-1"
+                                                data-key="semi-annual">
+                                            Semi-Annual
+                                        </button>
+                                        <button class="btn btn-outline-primary btn-pie-report m-1"
+                                                data-key="quarterly">
+                                            Quarterly
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-2"></div>
+                                <div class="parent col-8">
+                                    <canvas class="canvas" id="chart-pie"></canvas>
+                                    <!-- Custom tooltip canvas -->
+                                    <div class="canvas-tooltip text-center grey-text  lh-1">
+                                        <span class="text-uppercase fw-bolder small">t o t a l</span><br>
+                                        <span class="h3" id="item-total"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="legend text-center">
+                            <ul class="chart-legend doughnut-chart-legend m-0">
+                                <li class="ms-2"><span class="color-swatch color-swatch-1 me-1"></span>Development</li>
+                                <li class="ms-2"><span class="color-swatch color-swatch-2 me-1"></span>Service</li>
+                                <li class="ms-2 collapse show"><span
+                                        class="color-swatch color-swatch-3 me-1"></span>Analytics
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                        </div>
+                        <!-- Card body -->
+
+                    </div>
+
+                </div>
+            </div>
+    </section>
+    <!-- Section: Charts -->
+
+    <!-- Section: Map -->
+    <section class="mb-0">
+        <div class="col-md-12 col-lg-12 mb-lg-0 position-relative bg-card rounded-6 p-2">
+            <div class="m-2 " id="map-container">
+                <h6 class="text-center">Advanced Annual Visualization</h6>
+                <div class="d-flex flex-wrap justify-content-center" id="map-actions-btns-container">
+                    <button class="btn btn-primary btn-map-advanced m-1" data-mdb-color="indigo" data-mdb-key="sales">
+                        Sales
+                    </button>
+                    <button class="btn btn-outline-primary btn-map-advanced m-1" data-mdb-color="pink"
+                            data-mdb-key="employees">
+                        Employees
+                    </button>
+                    <button class="btn btn-outline-primary btn-map-advanced m-1" data-mdb-color="yellow"
+                            data-mdb-key="annualProfit">
+                        Annual Profit increase (2023-2024)
+                    </button>
+                    <button class="btn btn-outline-primary btn-map-advanced m-1" data-mdb-color="green"
+                            data-mdb-key="salesIncrease">
+                        Sales increase (2023-2024)
+                    </button>
+                </div>
+                <div class="mt-2 overflow-hidden" style="background-color: var(--main-bg-color);">
+                    <div class="d-flex justify-content-center align-items-center" id="map-advanced"
+                         style="height: 45vh;"></div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-center align-items-center my-2" id="map-bullets-btns-container">
+
+                    <button class="message-btn btn ms-2 btn-outline-primary btn-floating btn-sm map-advanced-display me-3"
+                            data-mdb-bullets="true"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-trigger="hover"
+                            title="Company units (bullets)">
+                        <i class="fas fa-circle-dot"></i>
+                    </button>
+
+                    <div class="d-flex flex-wrap justify-content-center" id="map-advanced-legend"></div>
+
+                    <button class="message-btn btn ms-3 btn-primary btn-floating btn-sm map-advanced-display"
+                            data-mdb-bullets="false"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-trigger="hover"
+                            title="Countries (fills)">
+                        <i class="fas fa-brush"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Section: Map -->
+    </div>
+</main>
+<script src="js/html-modules/sidenav.js"></script>
+<script src="js/theme.js"></script>
+<script src="Basic-Components/js/min js/mdb.min.js"></script>
+<script src="Basic-Components/js/components/inputmask.min.js"></script>
+<script src="Basic-Components/js/components/vector-maps.min.js"></script>
+<script src="Basic-Components/js/components/organization-chart.min.js"></script>
+
+<script src="js/index-js/index.js" type="module"></script>
+</body>
+
+</html>

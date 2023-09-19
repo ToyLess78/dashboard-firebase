@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Analytics</title>
+    <link href="icons/avocado-icon.svg" rel="icon" type="image/svg+xml">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="Basic-Components/css/mdb.min.css" rel="stylesheet">
+    <!--   <link rel="stylesheet" href="Basic-Components/css/all.min.css">-->
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/team.css" rel="stylesheet">
+    <style>
+        textarea:focus::placeholder {
+            color: transparent;
+        }
+
+        input:focus::placeholder {
+            color: transparent;
+        }
+    </style>
+
+</head>
+<body>
+<!-- Sidenav-->
+<nav class="sidenav shadow-0 h-100 fixed-top" data-mdb-close-on-esc="false" data-mdb-content="#slim-content"
+     data-mdb-expand-on-hover="true"
+     data-mdb-focus-trap="false" data-mdb-hidden="false" data-mdb-mode="side" data-mdb-slim="true"
+     data-mdb-slim-collapsed="true" id="main-sidenav">
+
+</nav>
+
+<!-- Add and edit price form container-->
+
+<div
+        id="form-container"
+        class="sidenav"
+        data-mdb-mode="side"
+        data-mdb-content="#slim-content"
+        data-mdb-right="true"
+        data-mdb-width="400">
+    <div id="collapse-form" class="collapse show">
+        <div class="d-flex flex-row align-items-center mt-3">
+            <div class="flex-fill col-10 ms-3">
+                <div class="py-2 ms-3">
+                    <p class="mb-0">
+                        <span id="form-title" data-mdb-popconfirm-mode="modal"
+                              data-mdb-message="No profile picture. Are you sure?" class="h5 me-2 popconfirm-toggle"
+                              style="pointer-events: none;">Add New: </span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn-close" id="form-close-btn" aria-label="Close"></button>
+            </div>
+        </div>
+        <form id="input-form" class="mx-1 mx-md-4 mb-3 needs-validation" novalidate>
+            <div class="d-flex flex-row align-items-center mt-3">
+                <div class="col-1">
+                </div>
+                <div class="form-outline flex-fill col-10 ms-3 mb-3">
+                    <div class="text-center mb-2">
+                        <label class="form-label text-white m-1" for="custom-file">
+                            <div class="bg-image">
+                                <img id="image-preview" src="./img/camera-300.svg" class="img-fluid rounded-6 shadow-4"
+                                     alt="placeholder">
+                                <div class="mask rounded-4">
+                                    <div class="d-flex justify-content-center align-items-end h-100">
+                                        <a id="link-preview" class="text-center mb-0"
+                                           style="line-height: 110%; cursor: pointer;">
+                                            <span>Upload</span><br><small>or</small>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="file" class="form-control d-none" id="custom-file" accept="image/*">
+                        <div id="url-input-collapse" class="accordion-item collapse show">
+          <span class="accordion-header mx-auto" id="headingOne">
+            <div class="collapsed " type="button" data-mdb-toggle="collapse" data-mdb-target="#collapseOne"
+                 aria-expanded="false" aria-controls="collapseOne">
+              <a href="">Enter URL</a>
+            </div>
+          </span>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+                                <div class="accordion-body">
+                                    <div class="form-outline d-flex">
+                                        <a href="#" type="button" id="upload">
+                                            <i class="fas fa-cloud-arrow-up trailing grey-text"></i>
+                                        </a>
+                                        <input type="url" id="url"
+                                               class="form-control form-control-lg form-icon-trailing">
+                                        <label class="form-label" for="url" style="margin-left: 0;">Enter
+                                            here</label>
+                                    </div>
+                                    <span class="text-danger" id="danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="inputs-body">
+                <div id="work-inputs-array">
+                    <div class="py-1 ms-5">
+                        <p class="mb-0">
+                            <span class="me-2">Title: </span>
+                        </p>
+                    </div>
+                    <div class="d-flex flex-row align-items-center is-valid-container">
+                        <div class="col-1 grey-text mb-3" data-relation="title">
+                            <svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.1665 0.416016C2.99087 0.416016 0.416504 2.99038 0.416504 6.16602V17.666C0.416504 20.8416 2.99087 23.416 6.1665 23.416H17.6665C20.8421 23.416 23.4165 20.8416 23.4165 17.666V11.916C23.4165 11.2809 22.9016 10.766 22.2665 10.766C21.6314 10.766 21.1165 11.2809 21.1165 11.916V17.666C21.1165 19.5715 19.5719 21.116 17.6665 21.116H6.1665C4.26113 21.116 2.7165 19.5715 2.7165 17.666V6.16602C2.7165 4.26064 4.26113 2.71602 6.1665 2.71602H11.9165C12.5516 2.71602 13.0665 2.20114 13.0665 1.56602C13.0665 0.930894 12.5516 0.416016 11.9165 0.416016H6.1665Z"/>
+                                <path d="M16.2783 2.47908C17.6802 1.07729 19.9529 1.07729 21.3547 2.47908C22.7565 3.88087 22.7565 6.15363 21.3547 7.55542L13.1801 15.7299C12.7381 16.1721 12.184 16.4858 11.5774 16.6374L7.59545 17.633C7.20355 17.7309 6.789 17.616 6.50335 17.3304C6.21772 17.0448 6.10289 16.6303 6.20087 16.2383L7.19635 12.2564C7.34802 11.6497 7.66168 11.0958 8.10383 10.6536L16.2783 2.47908Z"/>
+                            </svg>
+
+                        </div>
+                        <div class="form-outline flex-fill col-10 ms-3 mb-3">
+                            <input type="text" id="title" data-valid="name" class="form-control form-control-lg"
+                                   placeholder="Price title here..."
+                                   required/>
+                            <div class="invalid-feedback pt-3">Please provide a valid Title.</div>
+                        </div>
+
+
+                    </div>
+                    <div class="py-1 ms-5">
+                        <p class="mb-0">
+                            <span class="me-2">Cost: </span>
+                        </p>
+                    </div>
+                    <div class="d-flex flex-row align-items-center is-valid-container">
+                        <div class="col-1 grey-text mb-3" data-relation="price">
+                            <svg width="24" height="24" viewBox="0 0 23 23" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M19.0602 15.7337L17.0283 17.7267C14.0419 20.6558 12.5487 22.1204 10.711 22.1026C8.87333 22.0848 7.40876 20.5916 4.47963 17.6053C1.55049 14.6189 0.0859195 13.1257 0.103704 11.288C0.121488 9.45032 1.61468 7.98576 4.60106 5.05663L6.63301 3.0636C8.34943 1.38004 9.20769 0.538264 10.3136 0.232657C11.4194 -0.0729605 12.5882 0.208677 14.9255 0.77195L16.2735 1.09678C18.2399 1.57066 19.2231 1.80761 19.8914 2.48893C20.5596 3.17025 20.7775 4.15788 21.2133 6.13313L21.5119 7.48708C22.0299 9.83493 22.2888 11.0089 21.9619 12.1086C21.6349 13.2084 20.7767 14.0502 19.0602 15.7337ZM8.55394 10.1426C9.30126 9.40946 10.3633 9.42601 11.2007 9.87688C11.5243 9.65868 11.9672 9.69531 12.2502 9.98384C12.5322 10.2714 12.5611 10.7128 12.3393 11.0317C12.5344 11.4074 12.6355 11.8193 12.6277 12.2285C12.619 12.6841 12.2426 13.0463 11.787 13.0376C11.3315 13.0289 10.9692 12.6525 10.9779 12.1969C10.9817 12.0024 10.8968 11.7458 10.6796 11.5243C10.2575 11.094 9.8302 11.2019 9.70926 11.3205C9.58842 11.4391 9.47222 11.8642 9.89432 12.2946C10.7483 13.1654 11.0202 14.6571 10.0568 15.602C9.30937 16.3351 8.24732 16.3186 7.40993 15.8677C7.08638 16.0859 6.64341 16.0493 6.36041 15.7607C6.07839 15.4732 6.04966 15.0316 6.27144 14.7126C6.00924 14.2075 5.91467 13.6349 6.03203 13.0908C6.12798 12.6455 6.56689 12.3623 7.01236 12.4583C7.45772 12.5543 7.74092 12.9932 7.64497 13.4386C7.60294 13.6331 7.66392 13.9478 7.93101 14.2203C8.35323 14.6506 8.78054 14.5426 8.90138 14.4241C9.02232 14.3055 9.13853 13.8804 8.71631 13.45C7.8623 12.5792 7.5905 11.0875 8.55394 10.1426ZM13.0045 8.9473C13.8553 9.81468 15.2482 9.82816 16.1157 8.97741C16.9831 8.12657 16.9966 6.73367 16.1458 5.86624C15.295 4.99881 13.9021 4.98533 13.0347 5.83613C12.1672 6.68693 12.1537 8.07983 13.0045 8.9473Z"></path>
+                            </svg>
+                        </div>
+                        <div class="form-outline flex-fill col-10 ms-3 mb-3">
+                            <input class="ps-3 form-control form-control-lg form-icon-trailing" data-valid="salary"
+                                   id="price" required type="text" placeholder="$1,200..." required/>
+                            <div class="invalid-feedback pt-3">Please provide a valid Cost.</div>
+                        </div>
+                    </div>
+                    <div class="py-1 ms-5">
+                        <p class="mb-0">
+                            <span class="me-2">Quantity: </span>
+                        </p>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <div class="col-1 grey-text" data-relation="select-1">
+                            <svg width="21" height="23" viewBox="0 0 21 23" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.0766 2.05257C17.7021 0.523443 15.3481 0.398208 13.8189 1.77284L2.39293 12.0445C1.91061 12.4781 1.55521 13.0346 1.36471 13.6545L0.114227 17.7239C-0.00885014 18.1245 0.0872362 18.5602 0.367346 18.8717C0.647449 19.1833 1.0705 19.3251 1.4818 19.2452L5.6609 18.4335C6.29755 18.3099 6.88864 18.0155 7.37089 17.5819L18.7969 7.3103C20.3261 5.93567 20.4513 3.5817 19.0766 2.05257Z"/>
+                                <path d="M0 21.5C0 20.6716 0.55965 20 1.25 20H18.75C19.4404 20 20 20.6716 20 21.5C20 22.3284 19.4404 23 18.75 23H1.25C0.55965 23 0 22.3284 0 21.5Z"/>
+                            </svg>
+
+
+                        </div>
+                        <div class="flex-fill mb-0 col-10 ms-3">
+                            <select class="select"
+                                    data-mdb-invalid-feedback="Please choice Quantity"
+                                    data-mdb-size="lg"
+                                    data-mdb-validation="true"
+                                    id="quantity-select"
+                                    data-mdb-placeholder="per...">
+                                <option hidden selected value=""></option>
+                                <option value="one-time">one-time</option>
+                                <option value="per year">per year</option>
+                                <option value="per month">per month</option>
+                                <option value="per hour">per hour</option>
+                                <option value="per order">per order</option>
+                                <option value="per language">per language</option>
+                                <option value="per page">per page</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="py-1 ms-5">
+                        <p class="mb-0">
+                            <span class="me-2">Description: </span>
+                        </p>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-start is-valid-container">
+                        <div class="col-1 mt-3 grey-text" data-relation="description">
+                            <svg width="21" height="23" viewBox="0 0 21 23" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.9134 7.1875H16.0952C14.5889 7.1875 13.3679 5.98076 13.3679 4.49219V2.69531C13.3679 1.20674 12.1469 0 10.6406 0H3.3679C1.86167 0 0.640625 1.20674 0.640625 2.69531V20.3047C0.640625 21.7933 1.86167 23 3.3679 23H17.9134C19.4196 23 20.6406 21.7933 20.6406 20.3047V9.88281C20.6406 8.39424 19.4196 7.1875 17.9134 7.1875ZM15.6406 19.4062H5.64063C4.88749 19.4062 4.27699 18.8029 4.27699 18.0586C4.27699 17.3143 4.88749 16.7109 5.64063 16.7109H15.6406C16.3938 16.7109 17.0043 17.3143 17.0043 18.0586C17.0043 18.8029 16.3938 19.4062 15.6406 19.4062ZM15.6406 14.0156H5.64063C4.88749 14.0156 4.27699 13.4123 4.27699 12.668C4.27699 11.9237 4.88749 11.3203 5.64063 11.3203H15.6406C16.3938 11.3203 17.0043 11.9237 17.0043 12.668C17.0043 13.4123 16.3938 14.0156 15.6406 14.0156Z"/>
+                            </svg>
+
+                        </div>
+                        <div class="form-outline flex-fill col-10 ms-3 mb-3">
+                <textarea class="form-control"
+                          data-valid="description"
+                          id="description"
+                          rows="8"
+                          class="form-control form-control-lg"
+                          placeholder="Description text here..."
+                          required></textarea>
+                            <div class="invalid-feedback pt-3">Please provide a valid Description.</div>
+                        </div>
+                    </div>
+                    <div class="py-1 ms-5">
+                        <p class="mb-0">
+                            <span class="me-2">Section: </span>
+                        </p>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <div class="col-1 grey-text" data-relation="select-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.6986 9.77114C23.2401 7.47759 22.1129 5.37112 20.459 3.71725C18.8052 2.06338 16.6987 0.936144 14.4051 0.477648C13.9762 0.391628 13.5336 0.401855 13.1092 0.50759C12.6847 0.613325 12.289 0.811935 11.9506 1.0891C11.6122 1.36626 11.3395 1.71506 11.1522 2.11035C10.9649 2.50565 10.8676 2.93758 10.8674 3.37501V9.77114C10.8674 10.7094 11.2402 11.6092 11.9036 12.2727C12.5671 12.9361 13.4669 13.3088 14.4051 13.3088H20.8013C21.2387 13.3086 21.6706 13.2114 22.0659 13.0241C22.4612 12.8368 22.81 12.5641 23.0872 12.2257C23.3643 11.8873 23.5629 11.4916 23.6687 11.0671C23.7744 10.6427 23.7846 10.2 23.6986 9.77114ZM21.2635 10.7299C21.208 10.799 21.1376 10.8547 21.0576 10.8929C20.9775 10.9311 20.8899 10.9507 20.8013 10.9504H14.4051C14.0924 10.9504 13.7924 10.8261 13.5713 10.605C13.3501 10.3838 13.2259 10.0839 13.2259 9.77114V3.37501C13.2265 3.21805 13.2885 3.06757 13.3988 2.95581C13.509 2.84405 13.6586 2.77992 13.8155 2.77714C13.8552 2.77729 13.8947 2.78164 13.9334 2.79011C15.7711 3.1572 17.4588 4.06021 18.7839 5.38528C20.109 6.71035 21.012 8.39813 21.3791 10.2358C21.3978 10.3215 21.3972 10.4104 21.3772 10.4959C21.3572 10.5814 21.3183 10.6613 21.2635 10.7299ZM21.089 15.6755C21.1993 15.839 21.2677 16.0272 21.2883 16.2233C21.3089 16.4195 21.2809 16.6177 21.2069 16.8005C20.4222 18.7607 19.0661 20.4396 17.3147 21.619C15.5633 22.7983 13.4977 23.4236 11.3863 23.4136C11.0082 23.4133 10.6303 23.3936 10.2542 23.3547C7.84886 23.0751 5.6084 21.9913 3.89609 20.279C2.18378 18.5667 1.09999 16.3262 0.820424 13.9208C0.566803 11.6303 1.07041 9.31964 2.25423 7.34235C3.43805 5.36506 5.23692 3.82992 7.37575 2.97171C7.55868 2.89823 7.75681 2.87056 7.95287 2.89111C8.14894 2.91166 8.33702 2.97982 8.50073 3.08964C8.65951 3.19751 8.78954 3.34252 8.87955 3.51206C8.96956 3.6816 9.01683 3.87055 9.01724 4.0625V12.211C9.01724 12.9928 9.32784 13.7427 9.88071 14.2956C10.4336 14.8484 11.1834 15.159 11.9653 15.159H20.1161C20.3081 15.1594 20.497 15.2067 20.6666 15.2967C20.8361 15.3867 20.9811 15.5168 21.089 15.6755Z"/>
+                            </svg>
+
+
+                        </div>
+                        <div class="flex-fill mb-0 col-10 ms-3">
+                            <select class="select"
+                                    data-mdb-invalid-feedback="Please choice Section"
+                                    data-mdb-size="lg"
+                                    data-mdb-validation="true"
+                                    id="section-select"
+                                    data-mdb-placeholder="Define in...">
+                                <option hidden selected value=""></option>
+                                <option value="Development">Development</option>
+                                <option value="Service">Service</option>
+                                <option value="Analytics">Analytics</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="rating" class="collapse show">
+                </div>
+                <div class="d-flex  flex-row align-items-center my-3 mb-lg-4">
+                    <div class="col-1 me-2" style="margin-left: -10px">
+                        <button type="reset"
+                                id="form-clear-btn"
+                                class="btn btn-outline-primary btn-floating btn-lg"
+                                data-mdb-toggle="tooltip"
+                                data-mdb-placement="left"
+                                data-mdb-trigger="hover"
+                                title="Clear Form">
+                            <i class="fas fa-eraser fa-lg text-outline"></i></button>
+
+                    </div>
+                    <div id="add-submit-btn" class="flex-fill mb-0 col-10 ms-3 collapse">
+                        <button type="submit" id="add-item" class="btn btn-primary btn-lg btn-block">Add New
+                        </button>
+                    </div>
+                    <div id="edit-buttons" class="flex-fill mb-0 col-10 ms-3 collapse show row">
+                        <div class="flex-fill mb-0 col-5 ms-2">
+                            <button type="reset" id="cancel" class="btn shadow-0  btn-secondary btn-lg btn-block">Cancel
+                            </button>
+                        </div>
+                        <div class="flex-fill mb-0 col-5">
+                            <button type="submit" id="save-item" class="btn shadow-0 btn-primary btn-lg btn-block">
+                                Save
+                            </button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <!-- Preview price form container replace in modal!-->
+
+    <div id="collapse-preview" class="collapse">
+
+        <button type="button" class="btn-close" id="item-close-btn" aria-label="Close"></button>
+
+    </div>
+</div>
+<main>
+    <div class="" id="slim-content" style="padding: 15px; ">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-nav navbar-light sticky-top shadow-0 mb-2 mt-0 pt-0">
+            <!-- Container wrapper -->
+            <div class="container-fluid ps-0">
+                <label class="container-switch">
+                    <input aria-controls="#main-sidenav" aria-haspopup="true" checked="checked" class="btn"
+                           data-mdb-target="#main-sidenav"
+                           data-mdb-toggle="sidenav" type="checkbox">
+                    <div class="checkmark">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                <!-- Navbar brand -->
+                <a class="navbar-brand me-auto ps-2">
+                    <h5 id="main-title">Analytics</h5>
+                </a>
+                <!-- Collapsible wrapper -->
+                <div id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    </ul>
+
+                    <!-- Date picker -->
+
+                    <div class="w-auto form-outline datepicker">
+                        <input class="form-control" id="datepicker" type="text">
+                        <label class="form-label" for="datepicker">Date</label>
+                    </div>
+
+                    <!-- Date picker -->
+                </div>
+
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <section class="mb-4">
+            <div id="analytics-container" class="collapse show">
+                <div class="d-flex justify-content-end mb-4">
+                    <button class="btn-outline-primary btn-sm me-3" id="show-table-btn"
+                            data-mdb-target="#datatable-show"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-placement="bottom"
+                            data-mdb-trigger="hover"
+                            title="Show Table">
+                        <svg width="24" class="text-outline" height="20" viewBox="0 0 28 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.7166 11.8884C27.7211 13.6435 26.3256 15.0699 24.5997 15.0743L13.1415 15.1037C11.4156 15.1082 10.0128 13.689 10.0083 11.9339C10.0038 10.1787 11.3993 8.75247 13.1251 8.74804L24.5834 8.71859C26.3093 8.71415 27.7121 10.1332 27.7166 11.8884Z"/>
+                            <path d="M18.3722 23.8475C20.0982 23.843 21.4935 22.4167 21.489 20.6616C21.4845 18.9065 20.0819 17.4873 18.3559 17.4918L13.1476 17.5052C11.4218 17.5096 10.0263 18.936 10.0308 20.691C10.0354 22.4461 11.4381 23.8653 13.164 23.8609L18.3722 23.8475Z"/>
+                            <path d="M18.3495 6.37974C20.0755 6.3753 21.4709 4.94893 21.4664 3.19386C21.4618 1.43878 20.0592 0.0196011 18.3332 0.0240369L13.125 0.0374223C11.3991 0.0418578 10.0037 1.46823 10.0082 3.2233C10.0127 4.97838 11.4154 6.39756 13.1413 6.39312L18.3495 6.37974Z"/>
+                            <ellipse cx="3.15" cy="3.20328" rx="3.15" ry="3.20328"/>
+                            <ellipse cx="3.15" cy="20.797" rx="3.15" ry="3.20328"/>
+                            <ellipse cx="3.15" cy="12.3556" rx="3.15" ry="3.20328"/>
+                        </svg>
+
+                    </button>
+                    <div class="form-outline">
+                        <input
+                                data-mdb-search
+                                type="text"
+                                id="search-list"
+                                class="form-control"
+                        />
+                        <label class="form-label" for="search-list">Search</label>
+                    </div>
+
+                    <hr class="mt-3"/>
+
+                </div>
+                <div class="row g-3">
+
+                    <div class="col-md-12 col-lg-8 mb-4 mb-lg-0">
+                        <div class="bg-card rounded-6 p-3" id="main-card">
+                            <div class="card-header">
+                                <p class="card-title text-center"><span id="card-title" class="h5"></span></p>
+                            </div>
+                            <p class="text-center mb-0 grey-text">
+                                <span class="small" id="card-price">$</span>
+                                <small><span class="ms-2 small" id="card-quantity">per</span></small>
+
+                            </p>
+                            <div class="row g-3 d-flex align-items-center">
+                                <div class="col-8 mt-0">
+                                    <div class="px-2">
+
+                                        <div class="bg-image">
+                                            <img
+                                                    src="img/-NcCirURxGMHHRavKkpD.png"
+                                                    alt="Badge"
+                                                    class="rounded-6 mt-2 w-50"
+                                                    id="card-img"/>
+                                            <div class="mask">
+                                                <div class="mask d-flex justify-content-end align-items-center">
+                                                    <div class="d-flex  flex-row">
+                                                        <div class="col-3"></div>
+                                                        <div class="card-body">
+                                                            <div class=" p-2 rounded-4 container glass-background shadow-1">
+                                                                <p id="card-description" class="grey-text"></p>
+                                                            </div>
+                                                            <p class="card-text mt-3 text-end pe-4">
+                                                                <small id="add-at">Add at</small><br>
+                                                                <small id="edit-at" class="collapse show">Last
+                                                                    updated </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-4 mt-0">
+                                    <div class="px-2">
+
+
+                                        <!-- Card header -->
+                                        <div class="p-1">
+                                            <div class="row align-items-center">
+                                                <!-- Status title -->
+                                                <div class="mb-1 mb-md-0 text-center">
+                                                    <p class="mb-0">
+                                                        <span class="h6 me-2">Monthly Analytics</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="parent">
+                                            <canvas class="canvas" id="chart-pie"></canvas>
+                                            <!-- Custom tooltip canvas -->
+                                            <div class="canvas-tooltip text-center grey-text  lh-1">
+                                                <span class="text-uppercase fw-bolder small">t o t a l</span><br>
+                                                <span id="item-total" class="h3"></span>
+                                            </div>
+                                        </div>
+                                        <div class="legend text-center">
+                                            <ul class="chart-legend doughnut-chart-legend">
+                                                <li class="ms-2"><span class="color-swatch color-swatch-1 me-1"></span>Complete</li>
+                                                <li class="ms-2"><span class="color-swatch color-swatch-2 me-1"></span>Pending</li>
+                                                <li id="li-new" class="ms-2 collapse show"><span class="color-swatch color-swatch-3 me-1"></span>New</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <!-- Card body -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center flex-column">
+                                <!-- Status title -->
+                                <div class="mb-1 mb-md-0 text-center">
+                                    <p class="mb-2">
+                                        <span class="h6 me-2">Annual Sales Analytics</span>
+                                    </p>
+                                </div>
+                                <div class="">
+                                <canvas id="chart-line"></canvas>
+                                </div>
+                            </div>
+
+                    </div>
+                    </div>
+
+
+                    <div id="nav-tabs" class="col-lg-4 mb-4 mb-lg-0 d-none d-sm-none d-md-none d-lg-block">
+
+                        <div class="bg-card rounded-6 p-3" data-mdb-perfect-scrollbar="true" data-mdb-suppress-scroll-x="true" style="position: relative;" id="target-card">
+                            <!-- Tabs navs -->
+                            <ul class="nav nav-tabs nav-fill mb-3 " id="ex1" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a
+                                            class="nav-link active"
+                                            id="ex2-tab-1"
+                                            data-mdb-toggle="tab"
+                                            href="#tabs-development"
+                                            role="tab"
+                                            aria-controls="tabs-development"
+                                            aria-selected="true"
+                                    >
+                                        <svg class="me-1" width="16" height="18" viewBox="0 0 36 40" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.8025 38.1382C21.0668 38.4596 20.6004 38.6608 20.0768 38.7949C19.5675 38.9252 18.9664 39 18 39C17.0335 39 16.4324 38.9252 15.9232 38.7949C15.3996 38.6608 14.9332 38.4596 14.1974 38.1382C8.98578 35.8616 1 30.6415 1 19.9828V19.9761V19.9695V19.9628V19.9562V19.9495V19.9429V19.9363V19.9296V19.923V19.9163V19.9097V19.9031V19.8964V19.8898V19.8832V19.8766V19.8699V19.8633V19.8567V19.8501V19.8435V19.8369V19.8302V19.8236V19.817V19.8104V19.8038V19.7972V19.7906V19.784V19.7774V19.7708V19.7642V19.7577V19.7511V19.7445V19.7379V19.7313V19.7247V19.7182V19.7116V19.705V19.6984V19.6919V19.6853V19.6787V19.6722V19.6656V19.6591V19.6525V19.646V19.6394V19.6329V19.6263V19.6198V19.6132V19.6067V19.6001V19.5936V19.5871V19.5805V19.574V19.5675V19.5609V19.5544V19.5479V19.5414V19.5348V19.5283V19.5218V19.5153V19.5088V19.5023V19.4958V19.4893V19.4827V19.4762V19.4697V19.4632V19.4567V19.4503V19.4438V19.4373V19.4308V19.4243V19.4178V19.4113V19.4049V19.3984V19.3919V19.3854V19.3789V19.3725V19.366V19.3595V19.3531V19.3466V19.3402V19.3337V19.3272V19.3208V19.3143V19.3079V19.3014V19.295V19.2885V19.2821V19.2757V19.2692V19.2628V19.2564V19.2499V19.2435V19.2371V19.2306V19.2242V19.2178V19.2114V19.2049V19.1985V19.1921V19.1857V19.1793V19.1729V19.1665V19.1601V19.1537V19.1473V19.1409V19.1345V19.1281V19.1217V19.1153V19.1089V19.1025V19.0961V19.0898V19.0834V19.077V19.0706V19.0642V19.0579V19.0515V19.0451V19.0388V19.0324V19.026V19.0197V19.0133V19.007V19.0006V18.9943V18.9879V18.9816V18.9752V18.9689V18.9625V18.9562V18.9498V18.9435V18.9372V18.9308V18.9245V18.9182V18.9118V18.9055V18.8992V18.8929V18.8866V18.8802V18.8739V18.8676V18.8613V18.855V18.8487V18.8424V18.8361V18.8298V18.8235V18.8172V18.8109V18.8046V18.7983V18.792V18.7857V18.7794V18.7731V18.7669V18.7606V18.7543V18.748V18.7417V18.7355V18.7292V18.7229V18.7167V18.7104V18.7041V18.6979V18.6916V18.6854V18.6791V18.6729V18.6666V18.6604V18.6541V18.6479V18.6416V18.6354V18.6291V18.6229V18.6167V18.6104V18.6042V18.598V18.5918V18.5855V18.5793V18.5731V18.5669V18.5606V18.5544V18.5482V18.542V18.5358V18.5296V18.5234V18.5172V18.511V18.5048V18.4986V18.4924V18.4862V18.48V18.4738V18.4676V18.4614V18.4553V18.4491V18.4429V18.4367V18.4305V18.4244V18.4182V18.412V18.4059V18.3997V18.3935V18.3874V18.3812V18.375V18.3689V18.3627V18.3566V18.3504V18.3443V18.3381V18.332V18.3258V18.3197V18.3136V18.3074V18.3013V18.2952V18.289V18.2829V18.2768V18.2706V18.2645V18.2584V18.2523V18.2462V18.24V18.2339V18.2278V18.2217V18.2156V18.2095V18.2034V18.1973V18.1912V18.1851V18.179V18.1729V18.1668V18.1607V18.1546V18.1485V18.1425V18.1364V18.1303V18.1242V18.1181V18.1121V18.106V18.0999V18.0938V18.0878V18.0817V18.0756V18.0696V18.0635V18.0575V18.0514V18.0454V18.0393V18.0333V18.0272V18.0212V18.0151V18.0091V18.003V17.997V17.991V17.9849V17.9789V17.9729V17.9668V17.9608V17.9548V17.9488V17.9427V17.9367V17.9307V17.9247V17.9187V17.9127V17.9067V17.9006V17.8946V17.8886V17.8826V17.8766V17.8706V17.8646V17.8586V17.8527V17.8467V17.8407V17.8347V17.8287V17.8227V17.8167V17.8108V17.8048V17.7988V17.7928V17.7869V17.7809V17.7749V17.769V17.763V17.757V17.7511V17.7451V17.7392V17.7332V17.7273V17.7213V17.7154V17.7094V17.7035V17.6975V17.6916V17.6857V17.6797V17.6738V17.6679V17.6619V17.656V17.6501V17.6441V17.6382V17.6323V17.6264V17.6205V17.6145V17.6086V17.6027V17.5968V17.5909V17.585V17.5791V17.5732V17.5673V17.5614V17.5555V17.5496V17.5437V17.5378V17.5319V17.526V17.5202V17.5143V17.5084V17.5025V17.4966V17.4908V17.4849V17.479V17.4731V17.4673V17.4614V17.4556V17.4497V17.4438V17.438V17.4321V17.4263V17.4204V17.4146V17.4087V17.4029V17.397V17.3912V17.3853V17.3795V17.3737V17.3678V17.362V17.3562V17.3503V17.3445V17.3387V17.3328V17.327V17.3212V17.3154V17.3096V17.3038V17.2979V17.2921V17.2863V17.2805V17.2747V17.2689V17.2631V17.2573V17.2515V17.2457V17.2399V17.2341V17.2283V17.2226V17.2168V17.211V17.2052V17.1994V17.1936V17.1879V17.1821V17.1763V17.1705V17.1648V17.159V17.1532V17.1475V17.1417V17.136V17.1302V17.1245V17.1187V17.1129V17.1072V17.1014V17.0957V17.09V17.0842V17.0785V17.0727V17.067V17.0613V17.0555V17.0498V17.0441V17.0383V17.0326V17.0269V17.0212V17.0154V17.0097V17.004V16.9983V16.9926V16.9869V16.9812V16.9755V16.9698V16.9641V16.9584V16.9527V16.947V16.9413V16.9356V16.9299V16.9242V16.9185V16.9128V16.9071V16.9014V16.8958V16.8901V16.8844V16.8787V16.8731V16.8674V16.8617V16.8561V16.8504V16.8447V16.8391V16.8334C1 13.6231 1.00037 11.258 1.0929 9.55866C1.13912 8.70991 1.20684 8.06135 1.30047 7.57551C1.39727 7.07318 1.50566 6.83605 1.57355 6.73931L1.57356 6.7393C1.63856 6.64668 1.82033 6.46856 2.25747 6.21469C2.68029 5.96914 3.26526 5.69572 4.04699 5.37814C5.61222 4.74227 7.83468 3.9811 10.8537 2.94769L10.5477 2.05371L10.8537 2.94769L11.9993 2.55555L11.7038 1.69236L11.9993 2.55555C15.1969 1.46101 16.5821 1 18 1C19.4179 1 20.8031 1.46101 24.0007 2.55555L25.1463 2.94769C28.1653 3.9811 30.3878 4.74227 31.953 5.37814C32.7348 5.69572 33.3198 5.96914 33.7426 6.21469C34.1797 6.46856 34.3615 6.64668 34.4265 6.73929C34.4944 6.83603 34.6027 7.07317 34.6995 7.5755C34.7932 8.06134 34.8609 8.7099 34.9071 9.55866C34.9996 11.258 35 13.6231 35 16.8334V16.8391V16.8447V16.8504V16.8561V16.8617V16.8674V16.8731V16.8787V16.8844V16.8901V16.8958V16.9014V16.9071V16.9128V16.9185V16.9242V16.9299V16.9356V16.9413V16.947V16.9527V16.9584V16.9641V16.9698V16.9755V16.9812V16.9869V16.9926V16.9983V17.004V17.0097V17.0154V17.0212V17.0269V17.0326V17.0383V17.0441V17.0498V17.0555V17.0613V17.067V17.0727V17.0785V17.0842V17.09V17.0957V17.1014V17.1072V17.1129V17.1187V17.1245V17.1302V17.136V17.1417V17.1475V17.1532V17.159V17.1648V17.1705V17.1763V17.1821V17.1879V17.1936V17.1994V17.2052V17.211V17.2168V17.2226V17.2283V17.2341V17.2399V17.2457V17.2515V17.2573V17.2631V17.2689V17.2747V17.2805V17.2863V17.2921V17.2979V17.3038V17.3096V17.3154V17.3212V17.327V17.3328V17.3387V17.3445V17.3503V17.3562V17.362V17.3678V17.3737V17.3795V17.3853V17.3912V17.397V17.4029V17.4087V17.4146V17.4204V17.4263V17.4321V17.438V17.4438V17.4497V17.4556V17.4614V17.4673V17.4731V17.479V17.4849V17.4908V17.4966V17.5025V17.5084V17.5143V17.5202V17.526V17.5319V17.5378V17.5437V17.5496V17.5555V17.5614V17.5673V17.5732V17.5791V17.585V17.5909V17.5968V17.6027V17.6086V17.6145V17.6205V17.6264V17.6323V17.6382V17.6441V17.6501V17.656V17.6619V17.6679V17.6738V17.6797V17.6857V17.6916V17.6975V17.7035V17.7094V17.7154V17.7213V17.7273V17.7332V17.7392V17.7451V17.7511V17.757V17.763V17.769V17.7749V17.7809V17.7869V17.7928V17.7988V17.8048V17.8108V17.8167V17.8227V17.8287V17.8347V17.8407V17.8467V17.8527V17.8586V17.8646V17.8706V17.8766V17.8826V17.8886V17.8946V17.9006V17.9067V17.9127V17.9187V17.9247V17.9307V17.9367V17.9427V17.9488V17.9548V17.9608V17.9668V17.9729V17.9789V17.9849V17.991V17.997V18.003V18.0091V18.0151V18.0212V18.0272V18.0333V18.0393V18.0454V18.0514V18.0575V18.0635V18.0696V18.0756V18.0817V18.0878V18.0938V18.0999V18.106V18.1121V18.1181V18.1242V18.1303V18.1364V18.1425V18.1485V18.1546V18.1607V18.1668V18.1729V18.179V18.1851V18.1912V18.1973V18.2034V18.2095V18.2156V18.2217V18.2278V18.2339V18.24V18.2462V18.2523V18.2584V18.2645V18.2706V18.2768V18.2829V18.289V18.2952V18.3013V18.3074V18.3136V18.3197V18.3258V18.332V18.3381V18.3443V18.3504V18.3566V18.3627V18.3689V18.375V18.3812V18.3874V18.3935V18.3997V18.4059V18.412V18.4182V18.4244V18.4305V18.4367V18.4429V18.4491V18.4553V18.4614V18.4676V18.4738V18.48V18.4862V18.4924V18.4986V18.5048V18.511V18.5172V18.5234V18.5296V18.5358V18.542V18.5482V18.5544V18.5606V18.5669V18.5731V18.5793V18.5855V18.5918V18.598V18.6042V18.6104V18.6167V18.6229V18.6291V18.6354V18.6416V18.6479V18.6541V18.6604V18.6666V18.6729V18.6791V18.6854V18.6916V18.6979V18.7041V18.7104V18.7167V18.7229V18.7292V18.7355V18.7417V18.748V18.7543V18.7606V18.7669V18.7731V18.7794V18.7857V18.792V18.7983V18.8046V18.8109V18.8172V18.8235V18.8298V18.8361V18.8424V18.8487V18.855V18.8613V18.8676V18.8739V18.8802V18.8866V18.8929V18.8992V18.9055V18.9118V18.9182V18.9245V18.9308V18.9372V18.9435V18.9498V18.9562V18.9625V18.9689V18.9752V18.9816V18.9879V18.9943V19.0006V19.007V19.0133V19.0197V19.026V19.0324V19.0388V19.0451V19.0515V19.0579V19.0642V19.0706V19.077V19.0834V19.0898V19.0961V19.1025V19.1089V19.1153V19.1217V19.1281V19.1345V19.1409V19.1473V19.1537V19.1601V19.1665V19.1729V19.1793V19.1857V19.1921V19.1985V19.2049V19.2114V19.2178V19.2242V19.2306V19.2371V19.2435V19.2499V19.2564V19.2628V19.2692V19.2757V19.2821V19.2885V19.295V19.3014V19.3079V19.3143V19.3208V19.3272V19.3337V19.3402V19.3466V19.3531V19.3595V19.366V19.3725V19.3789V19.3854V19.3919V19.3984V19.4049V19.4113V19.4178V19.4243V19.4308V19.4373V19.4438V19.4503V19.4567V19.4632V19.4697V19.4762V19.4827V19.4893V19.4958V19.5023V19.5088V19.5153V19.5218V19.5283V19.5348V19.5414V19.5479V19.5544V19.5609V19.5675V19.574V19.5805V19.5871V19.5936V19.6001V19.6067V19.6132V19.6198V19.6263V19.6329V19.6394V19.646V19.6525V19.6591V19.6656V19.6722V19.6787V19.6853V19.6919V19.6984V19.705V19.7116V19.7182V19.7247V19.7313V19.7379V19.7445V19.7511V19.7577V19.7642V19.7708V19.7774V19.784V19.7906V19.7972V19.8038V19.8104V19.817V19.8236V19.8302V19.8369V19.8435V19.8501V19.8567V19.8633V19.8699V19.8766V19.8832V19.8898V19.8964V19.9031V19.9097V19.9163V19.923V19.9296V19.9363V19.9429V19.9495V19.9562V19.9628V19.9695V19.9761V19.9828C35 30.6415 27.0141 35.8616 21.8025 38.1382ZM21.8025 38.1382L22.2028 39.0546L21.8025 38.1382C21.8025 38.1382 21.8025 38.1382 21.8025 38.1382ZM0.755467 6.16512L0.75504 6.16482L0.755467 6.16512Z"
+                                                  stroke="currentColor" stroke-width="2"/>
+                                            <path d="M19.8794 11.0233C20.7056 11.169 21.2571 11.9568 21.1115 12.783L18.6497 26.7446C18.5041 27.5707 17.7162 28.1224 16.89 27.9767C16.0639 27.831 15.5123 27.0432 15.658 26.217L18.1198 12.2555C18.2654 11.4293 19.0532 10.8777 19.8794 11.0233ZM13.8893 14.1296C14.4825 14.7228 14.4825 15.6846 13.8893 16.2778L10.6671 19.4999L13.8893 22.7222C14.4825 23.3154 14.4825 24.2771 13.8893 24.8703C13.2961 25.4635 12.3344 25.4635 11.7412 24.8703L7.44489 20.5741C7.16003 20.2892 7 19.9028 7 19.4999C7 19.0971 7.16003 18.7108 7.44489 18.4259L11.7412 14.1296C12.3344 13.5364 13.2961 13.5364 13.8893 14.1296ZM25.0283 14.1296L29.3246 18.4259C29.6095 18.7108 29.7695 19.0971 29.7695 19.4999C29.7695 19.9028 29.6095 20.2892 29.3246 20.5741L25.0283 24.8703C24.4351 25.4635 23.4734 25.4635 22.8802 24.8703C22.287 24.2771 22.287 23.3154 22.8802 22.7222L26.1024 19.4999L22.8802 16.2778C22.287 15.6846 22.287 14.7228 22.8802 14.1296C23.4734 13.5364 24.4351 13.5364 25.0283 14.1296Z"
+                                                  fill="currentColor"/>
+                                        </svg>
+                                        Development</a
+                                    >
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a
+                                            class="nav-link p-17"
+                                            id="ex2-tab-2"
+                                            data-mdb-toggle="tab"
+                                            href="#tabs-service"
+                                            role="tab"
+                                            aria-controls="tabs-service"
+                                            aria-selected="false"
+                                    >
+                                        <svg class="me-1" width="16" height="18" viewBox="0 0 36 40" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.8025 38.1382C21.0668 38.4596 20.6004 38.6608 20.0768 38.7949C19.5675 38.9252 18.9664 39 18 39C17.0335 39 16.4324 38.9252 15.9232 38.7949C15.3996 38.6608 14.9332 38.4596 14.1974 38.1382C8.98578 35.8616 1 30.6415 1 19.9828V19.9761V19.9695V19.9628V19.9562V19.9495V19.9429V19.9363V19.9296V19.923V19.9163V19.9097V19.9031V19.8964V19.8898V19.8832V19.8766V19.8699V19.8633V19.8567V19.8501V19.8435V19.8369V19.8302V19.8236V19.817V19.8104V19.8038V19.7972V19.7906V19.784V19.7774V19.7708V19.7642V19.7577V19.7511V19.7445V19.7379V19.7313V19.7247V19.7182V19.7116V19.705V19.6984V19.6919V19.6853V19.6787V19.6722V19.6656V19.6591V19.6525V19.646V19.6394V19.6329V19.6263V19.6198V19.6132V19.6067V19.6001V19.5936V19.5871V19.5805V19.574V19.5675V19.5609V19.5544V19.5479V19.5414V19.5348V19.5283V19.5218V19.5153V19.5088V19.5023V19.4958V19.4893V19.4827V19.4762V19.4697V19.4632V19.4567V19.4503V19.4438V19.4373V19.4308V19.4243V19.4178V19.4113V19.4049V19.3984V19.3919V19.3854V19.3789V19.3725V19.366V19.3595V19.3531V19.3466V19.3402V19.3337V19.3272V19.3208V19.3143V19.3079V19.3014V19.295V19.2885V19.2821V19.2757V19.2692V19.2628V19.2564V19.2499V19.2435V19.2371V19.2306V19.2242V19.2178V19.2114V19.2049V19.1985V19.1921V19.1857V19.1793V19.1729V19.1665V19.1601V19.1537V19.1473V19.1409V19.1345V19.1281V19.1217V19.1153V19.1089V19.1025V19.0961V19.0898V19.0834V19.077V19.0706V19.0642V19.0579V19.0515V19.0451V19.0388V19.0324V19.026V19.0197V19.0133V19.007V19.0006V18.9943V18.9879V18.9816V18.9752V18.9689V18.9625V18.9562V18.9498V18.9435V18.9372V18.9308V18.9245V18.9182V18.9118V18.9055V18.8992V18.8929V18.8866V18.8802V18.8739V18.8676V18.8613V18.855V18.8487V18.8424V18.8361V18.8298V18.8235V18.8172V18.8109V18.8046V18.7983V18.792V18.7857V18.7794V18.7731V18.7669V18.7606V18.7543V18.748V18.7417V18.7355V18.7292V18.7229V18.7167V18.7104V18.7041V18.6979V18.6916V18.6854V18.6791V18.6729V18.6666V18.6604V18.6541V18.6479V18.6416V18.6354V18.6291V18.6229V18.6167V18.6104V18.6042V18.598V18.5918V18.5855V18.5793V18.5731V18.5669V18.5606V18.5544V18.5482V18.542V18.5358V18.5296V18.5234V18.5172V18.511V18.5048V18.4986V18.4924V18.4862V18.48V18.4738V18.4676V18.4614V18.4553V18.4491V18.4429V18.4367V18.4305V18.4244V18.4182V18.412V18.4059V18.3997V18.3935V18.3874V18.3812V18.375V18.3689V18.3627V18.3566V18.3504V18.3443V18.3381V18.332V18.3258V18.3197V18.3136V18.3074V18.3013V18.2952V18.289V18.2829V18.2768V18.2706V18.2645V18.2584V18.2523V18.2462V18.24V18.2339V18.2278V18.2217V18.2156V18.2095V18.2034V18.1973V18.1912V18.1851V18.179V18.1729V18.1668V18.1607V18.1546V18.1485V18.1425V18.1364V18.1303V18.1242V18.1181V18.1121V18.106V18.0999V18.0938V18.0878V18.0817V18.0756V18.0696V18.0635V18.0575V18.0514V18.0454V18.0393V18.0333V18.0272V18.0212V18.0151V18.0091V18.003V17.997V17.991V17.9849V17.9789V17.9729V17.9668V17.9608V17.9548V17.9488V17.9427V17.9367V17.9307V17.9247V17.9187V17.9127V17.9067V17.9006V17.8946V17.8886V17.8826V17.8766V17.8706V17.8646V17.8586V17.8527V17.8467V17.8407V17.8347V17.8287V17.8227V17.8167V17.8108V17.8048V17.7988V17.7928V17.7869V17.7809V17.7749V17.769V17.763V17.757V17.7511V17.7451V17.7392V17.7332V17.7273V17.7213V17.7154V17.7094V17.7035V17.6975V17.6916V17.6857V17.6797V17.6738V17.6679V17.6619V17.656V17.6501V17.6441V17.6382V17.6323V17.6264V17.6205V17.6145V17.6086V17.6027V17.5968V17.5909V17.585V17.5791V17.5732V17.5673V17.5614V17.5555V17.5496V17.5437V17.5378V17.5319V17.526V17.5202V17.5143V17.5084V17.5025V17.4966V17.4908V17.4849V17.479V17.4731V17.4673V17.4614V17.4556V17.4497V17.4438V17.438V17.4321V17.4263V17.4204V17.4146V17.4087V17.4029V17.397V17.3912V17.3853V17.3795V17.3737V17.3678V17.362V17.3562V17.3503V17.3445V17.3387V17.3328V17.327V17.3212V17.3154V17.3096V17.3038V17.2979V17.2921V17.2863V17.2805V17.2747V17.2689V17.2631V17.2573V17.2515V17.2457V17.2399V17.2341V17.2283V17.2226V17.2168V17.211V17.2052V17.1994V17.1936V17.1879V17.1821V17.1763V17.1705V17.1648V17.159V17.1532V17.1475V17.1417V17.136V17.1302V17.1245V17.1187V17.1129V17.1072V17.1014V17.0957V17.09V17.0842V17.0785V17.0727V17.067V17.0613V17.0555V17.0498V17.0441V17.0383V17.0326V17.0269V17.0212V17.0154V17.0097V17.004V16.9983V16.9926V16.9869V16.9812V16.9755V16.9698V16.9641V16.9584V16.9527V16.947V16.9413V16.9356V16.9299V16.9242V16.9185V16.9128V16.9071V16.9014V16.8958V16.8901V16.8844V16.8787V16.8731V16.8674V16.8617V16.8561V16.8504V16.8447V16.8391V16.8334C1 13.6231 1.00037 11.258 1.0929 9.55866C1.13912 8.70991 1.20684 8.06135 1.30047 7.57551C1.39727 7.07318 1.50566 6.83605 1.57355 6.73931L1.57356 6.7393C1.63856 6.64668 1.82033 6.46856 2.25747 6.21469C2.68029 5.96914 3.26526 5.69572 4.04699 5.37814C5.61222 4.74227 7.83468 3.9811 10.8537 2.94769L10.5477 2.05371L10.8537 2.94769L11.9993 2.55555L11.7038 1.69236L11.9993 2.55555C15.1969 1.46101 16.5821 1 18 1C19.4179 1 20.8031 1.46101 24.0007 2.55555L25.1463 2.94769C28.1653 3.9811 30.3878 4.74227 31.953 5.37814C32.7348 5.69572 33.3198 5.96914 33.7426 6.21469C34.1797 6.46856 34.3615 6.64668 34.4265 6.73929C34.4944 6.83603 34.6027 7.07317 34.6995 7.5755C34.7932 8.06134 34.8609 8.7099 34.9071 9.55866C34.9996 11.258 35 13.6231 35 16.8334V16.8391V16.8447V16.8504V16.8561V16.8617V16.8674V16.8731V16.8787V16.8844V16.8901V16.8958V16.9014V16.9071V16.9128V16.9185V16.9242V16.9299V16.9356V16.9413V16.947V16.9527V16.9584V16.9641V16.9698V16.9755V16.9812V16.9869V16.9926V16.9983V17.004V17.0097V17.0154V17.0212V17.0269V17.0326V17.0383V17.0441V17.0498V17.0555V17.0613V17.067V17.0727V17.0785V17.0842V17.09V17.0957V17.1014V17.1072V17.1129V17.1187V17.1245V17.1302V17.136V17.1417V17.1475V17.1532V17.159V17.1648V17.1705V17.1763V17.1821V17.1879V17.1936V17.1994V17.2052V17.211V17.2168V17.2226V17.2283V17.2341V17.2399V17.2457V17.2515V17.2573V17.2631V17.2689V17.2747V17.2805V17.2863V17.2921V17.2979V17.3038V17.3096V17.3154V17.3212V17.327V17.3328V17.3387V17.3445V17.3503V17.3562V17.362V17.3678V17.3737V17.3795V17.3853V17.3912V17.397V17.4029V17.4087V17.4146V17.4204V17.4263V17.4321V17.438V17.4438V17.4497V17.4556V17.4614V17.4673V17.4731V17.479V17.4849V17.4908V17.4966V17.5025V17.5084V17.5143V17.5202V17.526V17.5319V17.5378V17.5437V17.5496V17.5555V17.5614V17.5673V17.5732V17.5791V17.585V17.5909V17.5968V17.6027V17.6086V17.6145V17.6205V17.6264V17.6323V17.6382V17.6441V17.6501V17.656V17.6619V17.6679V17.6738V17.6797V17.6857V17.6916V17.6975V17.7035V17.7094V17.7154V17.7213V17.7273V17.7332V17.7392V17.7451V17.7511V17.757V17.763V17.769V17.7749V17.7809V17.7869V17.7928V17.7988V17.8048V17.8108V17.8167V17.8227V17.8287V17.8347V17.8407V17.8467V17.8527V17.8586V17.8646V17.8706V17.8766V17.8826V17.8886V17.8946V17.9006V17.9067V17.9127V17.9187V17.9247V17.9307V17.9367V17.9427V17.9488V17.9548V17.9608V17.9668V17.9729V17.9789V17.9849V17.991V17.997V18.003V18.0091V18.0151V18.0212V18.0272V18.0333V18.0393V18.0454V18.0514V18.0575V18.0635V18.0696V18.0756V18.0817V18.0878V18.0938V18.0999V18.106V18.1121V18.1181V18.1242V18.1303V18.1364V18.1425V18.1485V18.1546V18.1607V18.1668V18.1729V18.179V18.1851V18.1912V18.1973V18.2034V18.2095V18.2156V18.2217V18.2278V18.2339V18.24V18.2462V18.2523V18.2584V18.2645V18.2706V18.2768V18.2829V18.289V18.2952V18.3013V18.3074V18.3136V18.3197V18.3258V18.332V18.3381V18.3443V18.3504V18.3566V18.3627V18.3689V18.375V18.3812V18.3874V18.3935V18.3997V18.4059V18.412V18.4182V18.4244V18.4305V18.4367V18.4429V18.4491V18.4553V18.4614V18.4676V18.4738V18.48V18.4862V18.4924V18.4986V18.5048V18.511V18.5172V18.5234V18.5296V18.5358V18.542V18.5482V18.5544V18.5606V18.5669V18.5731V18.5793V18.5855V18.5918V18.598V18.6042V18.6104V18.6167V18.6229V18.6291V18.6354V18.6416V18.6479V18.6541V18.6604V18.6666V18.6729V18.6791V18.6854V18.6916V18.6979V18.7041V18.7104V18.7167V18.7229V18.7292V18.7355V18.7417V18.748V18.7543V18.7606V18.7669V18.7731V18.7794V18.7857V18.792V18.7983V18.8046V18.8109V18.8172V18.8235V18.8298V18.8361V18.8424V18.8487V18.855V18.8613V18.8676V18.8739V18.8802V18.8866V18.8929V18.8992V18.9055V18.9118V18.9182V18.9245V18.9308V18.9372V18.9435V18.9498V18.9562V18.9625V18.9689V18.9752V18.9816V18.9879V18.9943V19.0006V19.007V19.0133V19.0197V19.026V19.0324V19.0388V19.0451V19.0515V19.0579V19.0642V19.0706V19.077V19.0834V19.0898V19.0961V19.1025V19.1089V19.1153V19.1217V19.1281V19.1345V19.1409V19.1473V19.1537V19.1601V19.1665V19.1729V19.1793V19.1857V19.1921V19.1985V19.2049V19.2114V19.2178V19.2242V19.2306V19.2371V19.2435V19.2499V19.2564V19.2628V19.2692V19.2757V19.2821V19.2885V19.295V19.3014V19.3079V19.3143V19.3208V19.3272V19.3337V19.3402V19.3466V19.3531V19.3595V19.366V19.3725V19.3789V19.3854V19.3919V19.3984V19.4049V19.4113V19.4178V19.4243V19.4308V19.4373V19.4438V19.4503V19.4567V19.4632V19.4697V19.4762V19.4827V19.4893V19.4958V19.5023V19.5088V19.5153V19.5218V19.5283V19.5348V19.5414V19.5479V19.5544V19.5609V19.5675V19.574V19.5805V19.5871V19.5936V19.6001V19.6067V19.6132V19.6198V19.6263V19.6329V19.6394V19.646V19.6525V19.6591V19.6656V19.6722V19.6787V19.6853V19.6919V19.6984V19.705V19.7116V19.7182V19.7247V19.7313V19.7379V19.7445V19.7511V19.7577V19.7642V19.7708V19.7774V19.784V19.7906V19.7972V19.8038V19.8104V19.817V19.8236V19.8302V19.8369V19.8435V19.8501V19.8567V19.8633V19.8699V19.8766V19.8832V19.8898V19.8964V19.9031V19.9097V19.9163V19.923V19.9296V19.9363V19.9429V19.9495V19.9562V19.9628V19.9695V19.9761V19.9828C35 30.6415 27.0141 35.8616 21.8025 38.1382ZM21.8025 38.1382L22.2028 39.0546L21.8025 38.1382C21.8025 38.1382 21.8025 38.1382 21.8025 38.1382ZM0.755467 6.16512L0.75504 6.16482L0.755467 6.16512Z"
+                                                  stroke="currentColor" stroke-width="2"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M26.4023 21.58C26.76 21.77 27.036 22.07 27.2301 22.37C27.6083 22.99 27.5776 23.75 27.2097 24.42L26.4943 25.62C26.1162 26.26 25.411 26.66 24.6855 26.66C24.3278 26.66 23.9292 26.56 23.6022 26.36C23.3365 26.19 23.0299 26.13 22.7029 26.13C21.6911 26.13 20.8429 26.96 20.8122 27.95C20.8122 29.1 19.872 30 18.6968 30H17.3069C16.1215 30 15.1813 29.1 15.1813 27.95C15.1608 26.96 14.3126 26.13 13.3009 26.13C12.9636 26.13 12.657 26.19 12.4015 26.36C12.0745 26.56 11.6657 26.66 11.3183 26.66C10.5824 26.66 9.87729 26.26 9.49917 25.62L8.79402 24.42C8.4159 23.77 8.39546 22.99 8.77358 22.37C8.93709 22.07 9.24368 21.77 9.59115 21.58C9.87729 21.44 10.0612 21.21 10.235 20.94C10.746 20.08 10.4394 18.95 9.57071 18.44C8.55897 17.87 8.23194 16.6 8.81446 15.61L9.49917 14.43C10.0919 13.44 11.3591 13.09 12.3811 13.67C13.2702 14.15 14.425 13.83 14.9462 12.98C15.1097 12.7 15.2017 12.4 15.1813 12.1C15.1608 11.71 15.2732 11.34 15.4674 11.04C15.8455 10.42 16.5302 10.02 17.2763 10H18.7172C19.4735 10 20.1582 10.42 20.5363 11.04C20.7203 11.34 20.8429 11.71 20.8122 12.1C20.7918 12.4 20.8838 12.7 21.0473 12.98C21.5685 13.83 22.7233 14.15 23.6226 13.67C24.6344 13.09 25.9118 13.44 26.4943 14.43L27.179 15.61C27.7718 16.6 27.4447 17.87 26.4228 18.44C25.5541 18.95 25.2475 20.08 25.7687 20.94C25.9322 21.21 26.1162 21.44 26.4023 21.58ZM15.1096 20.0097C15.1096 21.5797 16.4075 22.8297 18.012 22.8297C19.6165 22.8297 20.8837 21.5797 20.8837 20.0097C20.8837 18.4397 19.6165 17.1797 18.012 17.1797C16.4075 17.1797 15.1096 18.4397 15.1096 20.0097Z"
+                                                  fill="currentColor"/>
+                                        </svg>
+                                        Service</a
+                                    >
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a
+                                            class="nav-link"
+                                            id="ex2-tab-3"
+                                            data-mdb-toggle="tab"
+                                            href="#tabs-analytics"
+                                            role="tab"
+                                            aria-controls="tabs-analytics"
+                                            aria-selected="false"
+                                    >
+                                        <svg class="me-1" width="16" height="18" viewBox="0 0 36 40" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.8025 38.1382C21.0668 38.4596 20.6004 38.6608 20.0768 38.7949C19.5675 38.9252 18.9664 39 18 39C17.0335 39 16.4324 38.9252 15.9232 38.7949C15.3996 38.6608 14.9332 38.4596 14.1974 38.1382C8.98578 35.8616 1 30.6415 1 19.9828V19.9761V19.9695V19.9628V19.9562V19.9495V19.9429V19.9363V19.9296V19.923V19.9163V19.9097V19.9031V19.8964V19.8898V19.8832V19.8766V19.8699V19.8633V19.8567V19.8501V19.8435V19.8369V19.8302V19.8236V19.817V19.8104V19.8038V19.7972V19.7906V19.784V19.7774V19.7708V19.7642V19.7577V19.7511V19.7445V19.7379V19.7313V19.7247V19.7182V19.7116V19.705V19.6984V19.6919V19.6853V19.6787V19.6722V19.6656V19.6591V19.6525V19.646V19.6394V19.6329V19.6263V19.6198V19.6132V19.6067V19.6001V19.5936V19.5871V19.5805V19.574V19.5675V19.5609V19.5544V19.5479V19.5414V19.5348V19.5283V19.5218V19.5153V19.5088V19.5023V19.4958V19.4893V19.4827V19.4762V19.4697V19.4632V19.4567V19.4503V19.4438V19.4373V19.4308V19.4243V19.4178V19.4113V19.4049V19.3984V19.3919V19.3854V19.3789V19.3725V19.366V19.3595V19.3531V19.3466V19.3402V19.3337V19.3272V19.3208V19.3143V19.3079V19.3014V19.295V19.2885V19.2821V19.2757V19.2692V19.2628V19.2564V19.2499V19.2435V19.2371V19.2306V19.2242V19.2178V19.2114V19.2049V19.1985V19.1921V19.1857V19.1793V19.1729V19.1665V19.1601V19.1537V19.1473V19.1409V19.1345V19.1281V19.1217V19.1153V19.1089V19.1025V19.0961V19.0898V19.0834V19.077V19.0706V19.0642V19.0579V19.0515V19.0451V19.0388V19.0324V19.026V19.0197V19.0133V19.007V19.0006V18.9943V18.9879V18.9816V18.9752V18.9689V18.9625V18.9562V18.9498V18.9435V18.9372V18.9308V18.9245V18.9182V18.9118V18.9055V18.8992V18.8929V18.8866V18.8802V18.8739V18.8676V18.8613V18.855V18.8487V18.8424V18.8361V18.8298V18.8235V18.8172V18.8109V18.8046V18.7983V18.792V18.7857V18.7794V18.7731V18.7669V18.7606V18.7543V18.748V18.7417V18.7355V18.7292V18.7229V18.7167V18.7104V18.7041V18.6979V18.6916V18.6854V18.6791V18.6729V18.6666V18.6604V18.6541V18.6479V18.6416V18.6354V18.6291V18.6229V18.6167V18.6104V18.6042V18.598V18.5918V18.5855V18.5793V18.5731V18.5669V18.5606V18.5544V18.5482V18.542V18.5358V18.5296V18.5234V18.5172V18.511V18.5048V18.4986V18.4924V18.4862V18.48V18.4738V18.4676V18.4614V18.4553V18.4491V18.4429V18.4367V18.4305V18.4244V18.4182V18.412V18.4059V18.3997V18.3935V18.3874V18.3812V18.375V18.3689V18.3627V18.3566V18.3504V18.3443V18.3381V18.332V18.3258V18.3197V18.3136V18.3074V18.3013V18.2952V18.289V18.2829V18.2768V18.2706V18.2645V18.2584V18.2523V18.2462V18.24V18.2339V18.2278V18.2217V18.2156V18.2095V18.2034V18.1973V18.1912V18.1851V18.179V18.1729V18.1668V18.1607V18.1546V18.1485V18.1425V18.1364V18.1303V18.1242V18.1181V18.1121V18.106V18.0999V18.0938V18.0878V18.0817V18.0756V18.0696V18.0635V18.0575V18.0514V18.0454V18.0393V18.0333V18.0272V18.0212V18.0151V18.0091V18.003V17.997V17.991V17.9849V17.9789V17.9729V17.9668V17.9608V17.9548V17.9488V17.9427V17.9367V17.9307V17.9247V17.9187V17.9127V17.9067V17.9006V17.8946V17.8886V17.8826V17.8766V17.8706V17.8646V17.8586V17.8527V17.8467V17.8407V17.8347V17.8287V17.8227V17.8167V17.8108V17.8048V17.7988V17.7928V17.7869V17.7809V17.7749V17.769V17.763V17.757V17.7511V17.7451V17.7392V17.7332V17.7273V17.7213V17.7154V17.7094V17.7035V17.6975V17.6916V17.6857V17.6797V17.6738V17.6679V17.6619V17.656V17.6501V17.6441V17.6382V17.6323V17.6264V17.6205V17.6145V17.6086V17.6027V17.5968V17.5909V17.585V17.5791V17.5732V17.5673V17.5614V17.5555V17.5496V17.5437V17.5378V17.5319V17.526V17.5202V17.5143V17.5084V17.5025V17.4966V17.4908V17.4849V17.479V17.4731V17.4673V17.4614V17.4556V17.4497V17.4438V17.438V17.4321V17.4263V17.4204V17.4146V17.4087V17.4029V17.397V17.3912V17.3853V17.3795V17.3737V17.3678V17.362V17.3562V17.3503V17.3445V17.3387V17.3328V17.327V17.3212V17.3154V17.3096V17.3038V17.2979V17.2921V17.2863V17.2805V17.2747V17.2689V17.2631V17.2573V17.2515V17.2457V17.2399V17.2341V17.2283V17.2226V17.2168V17.211V17.2052V17.1994V17.1936V17.1879V17.1821V17.1763V17.1705V17.1648V17.159V17.1532V17.1475V17.1417V17.136V17.1302V17.1245V17.1187V17.1129V17.1072V17.1014V17.0957V17.09V17.0842V17.0785V17.0727V17.067V17.0613V17.0555V17.0498V17.0441V17.0383V17.0326V17.0269V17.0212V17.0154V17.0097V17.004V16.9983V16.9926V16.9869V16.9812V16.9755V16.9698V16.9641V16.9584V16.9527V16.947V16.9413V16.9356V16.9299V16.9242V16.9185V16.9128V16.9071V16.9014V16.8958V16.8901V16.8844V16.8787V16.8731V16.8674V16.8617V16.8561V16.8504V16.8447V16.8391V16.8334C1 13.6231 1.00037 11.258 1.0929 9.55866C1.13912 8.70991 1.20684 8.06135 1.30047 7.57551C1.39727 7.07318 1.50566 6.83605 1.57355 6.73931L1.57356 6.7393C1.63856 6.64668 1.82033 6.46856 2.25747 6.21469C2.68029 5.96914 3.26526 5.69572 4.04699 5.37814C5.61222 4.74227 7.83468 3.9811 10.8537 2.94769L10.5477 2.05371L10.8537 2.94769L11.9993 2.55555L11.7038 1.69236L11.9993 2.55555C15.1969 1.46101 16.5821 1 18 1C19.4179 1 20.8031 1.46101 24.0007 2.55555L25.1463 2.94769C28.1653 3.9811 30.3878 4.74227 31.953 5.37814C32.7348 5.69572 33.3198 5.96914 33.7426 6.21469C34.1797 6.46856 34.3615 6.64668 34.4265 6.73929C34.4944 6.83603 34.6027 7.07317 34.6995 7.5755C34.7932 8.06134 34.8609 8.7099 34.9071 9.55866C34.9996 11.258 35 13.6231 35 16.8334V16.8391V16.8447V16.8504V16.8561V16.8617V16.8674V16.8731V16.8787V16.8844V16.8901V16.8958V16.9014V16.9071V16.9128V16.9185V16.9242V16.9299V16.9356V16.9413V16.947V16.9527V16.9584V16.9641V16.9698V16.9755V16.9812V16.9869V16.9926V16.9983V17.004V17.0097V17.0154V17.0212V17.0269V17.0326V17.0383V17.0441V17.0498V17.0555V17.0613V17.067V17.0727V17.0785V17.0842V17.09V17.0957V17.1014V17.1072V17.1129V17.1187V17.1245V17.1302V17.136V17.1417V17.1475V17.1532V17.159V17.1648V17.1705V17.1763V17.1821V17.1879V17.1936V17.1994V17.2052V17.211V17.2168V17.2226V17.2283V17.2341V17.2399V17.2457V17.2515V17.2573V17.2631V17.2689V17.2747V17.2805V17.2863V17.2921V17.2979V17.3038V17.3096V17.3154V17.3212V17.327V17.3328V17.3387V17.3445V17.3503V17.3562V17.362V17.3678V17.3737V17.3795V17.3853V17.3912V17.397V17.4029V17.4087V17.4146V17.4204V17.4263V17.4321V17.438V17.4438V17.4497V17.4556V17.4614V17.4673V17.4731V17.479V17.4849V17.4908V17.4966V17.5025V17.5084V17.5143V17.5202V17.526V17.5319V17.5378V17.5437V17.5496V17.5555V17.5614V17.5673V17.5732V17.5791V17.585V17.5909V17.5968V17.6027V17.6086V17.6145V17.6205V17.6264V17.6323V17.6382V17.6441V17.6501V17.656V17.6619V17.6679V17.6738V17.6797V17.6857V17.6916V17.6975V17.7035V17.7094V17.7154V17.7213V17.7273V17.7332V17.7392V17.7451V17.7511V17.757V17.763V17.769V17.7749V17.7809V17.7869V17.7928V17.7988V17.8048V17.8108V17.8167V17.8227V17.8287V17.8347V17.8407V17.8467V17.8527V17.8586V17.8646V17.8706V17.8766V17.8826V17.8886V17.8946V17.9006V17.9067V17.9127V17.9187V17.9247V17.9307V17.9367V17.9427V17.9488V17.9548V17.9608V17.9668V17.9729V17.9789V17.9849V17.991V17.997V18.003V18.0091V18.0151V18.0212V18.0272V18.0333V18.0393V18.0454V18.0514V18.0575V18.0635V18.0696V18.0756V18.0817V18.0878V18.0938V18.0999V18.106V18.1121V18.1181V18.1242V18.1303V18.1364V18.1425V18.1485V18.1546V18.1607V18.1668V18.1729V18.179V18.1851V18.1912V18.1973V18.2034V18.2095V18.2156V18.2217V18.2278V18.2339V18.24V18.2462V18.2523V18.2584V18.2645V18.2706V18.2768V18.2829V18.289V18.2952V18.3013V18.3074V18.3136V18.3197V18.3258V18.332V18.3381V18.3443V18.3504V18.3566V18.3627V18.3689V18.375V18.3812V18.3874V18.3935V18.3997V18.4059V18.412V18.4182V18.4244V18.4305V18.4367V18.4429V18.4491V18.4553V18.4614V18.4676V18.4738V18.48V18.4862V18.4924V18.4986V18.5048V18.511V18.5172V18.5234V18.5296V18.5358V18.542V18.5482V18.5544V18.5606V18.5669V18.5731V18.5793V18.5855V18.5918V18.598V18.6042V18.6104V18.6167V18.6229V18.6291V18.6354V18.6416V18.6479V18.6541V18.6604V18.6666V18.6729V18.6791V18.6854V18.6916V18.6979V18.7041V18.7104V18.7167V18.7229V18.7292V18.7355V18.7417V18.748V18.7543V18.7606V18.7669V18.7731V18.7794V18.7857V18.792V18.7983V18.8046V18.8109V18.8172V18.8235V18.8298V18.8361V18.8424V18.8487V18.855V18.8613V18.8676V18.8739V18.8802V18.8866V18.8929V18.8992V18.9055V18.9118V18.9182V18.9245V18.9308V18.9372V18.9435V18.9498V18.9562V18.9625V18.9689V18.9752V18.9816V18.9879V18.9943V19.0006V19.007V19.0133V19.0197V19.026V19.0324V19.0388V19.0451V19.0515V19.0579V19.0642V19.0706V19.077V19.0834V19.0898V19.0961V19.1025V19.1089V19.1153V19.1217V19.1281V19.1345V19.1409V19.1473V19.1537V19.1601V19.1665V19.1729V19.1793V19.1857V19.1921V19.1985V19.2049V19.2114V19.2178V19.2242V19.2306V19.2371V19.2435V19.2499V19.2564V19.2628V19.2692V19.2757V19.2821V19.2885V19.295V19.3014V19.3079V19.3143V19.3208V19.3272V19.3337V19.3402V19.3466V19.3531V19.3595V19.366V19.3725V19.3789V19.3854V19.3919V19.3984V19.4049V19.4113V19.4178V19.4243V19.4308V19.4373V19.4438V19.4503V19.4567V19.4632V19.4697V19.4762V19.4827V19.4893V19.4958V19.5023V19.5088V19.5153V19.5218V19.5283V19.5348V19.5414V19.5479V19.5544V19.5609V19.5675V19.574V19.5805V19.5871V19.5936V19.6001V19.6067V19.6132V19.6198V19.6263V19.6329V19.6394V19.646V19.6525V19.6591V19.6656V19.6722V19.6787V19.6853V19.6919V19.6984V19.705V19.7116V19.7182V19.7247V19.7313V19.7379V19.7445V19.7511V19.7577V19.7642V19.7708V19.7774V19.784V19.7906V19.7972V19.8038V19.8104V19.817V19.8236V19.8302V19.8369V19.8435V19.8501V19.8567V19.8633V19.8699V19.8766V19.8832V19.8898V19.8964V19.9031V19.9097V19.9163V19.923V19.9296V19.9363V19.9429V19.9495V19.9562V19.9628V19.9695V19.9761V19.9828C35 30.6415 27.0141 35.8616 21.8025 38.1382ZM21.8025 38.1382L22.2028 39.0546L21.8025 38.1382C21.8025 38.1382 21.8025 38.1382 21.8025 38.1382ZM0.755467 6.16512L0.75504 6.16482L0.755467 6.16512Z"
+                                                  stroke="currentColor" stroke-width="2"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M25.4862 20.0701C23.9905 20.0701 22.7779 21.2826 22.7779 22.7785V27.2923C22.7779 28.7881 23.9905 30.0006 25.4862 30.0006C26.982 30.0006 28.1946 28.7881 28.1946 27.2923V22.7785C28.1946 21.2826 26.982 20.0701 25.4862 20.0701ZM18.2641 8.33398C16.7682 8.33398 15.5557 9.54655 15.5557 11.0423V27.2923C15.5557 28.7881 16.7682 30.0006 18.2641 30.0006C19.7598 30.0006 20.9724 28.7881 20.9724 27.2923V11.0423C20.9724 9.54655 19.7598 8.33398 18.2641 8.33398ZM11.0418 14.6534C9.54599 14.6534 8.33344 15.866 8.33344 17.3618V27.2923C8.33344 28.7881 9.54599 30.0006 11.0418 30.0006C12.5376 30.0006 13.7501 28.7881 13.7501 27.2923V17.3618C13.7501 15.866 12.5376 14.6534 11.0418 14.6534Z"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M25.4862 20.0701C23.9905 20.0701 22.7779 21.2826 22.7779 22.7785V27.2923C22.7779 28.7881 23.9905 30.0006 25.4862 30.0006C26.982 30.0006 28.1946 28.7881 28.1946 27.2923V22.7785C28.1946 21.2826 26.982 20.0701 25.4862 20.0701ZM18.2641 8.33398C16.7682 8.33398 15.5557 9.54655 15.5557 11.0423V27.2923C15.5557 28.7881 16.7682 30.0006 18.2641 30.0006C19.7598 30.0006 20.9724 28.7881 20.9724 27.2923V11.0423C20.9724 9.54655 19.7598 8.33398 18.2641 8.33398ZM11.0418 14.6534C9.54599 14.6534 8.33344 15.866 8.33344 17.3618V27.2923C8.33344 28.7881 9.54599 30.0006 11.0418 30.0006C12.5376 30.0006 13.7501 28.7881 13.7501 27.2923V17.3618C13.7501 15.866 12.5376 14.6534 11.0418 14.6534Z"
+                                                  fill="currentColor"/>
+                                        </svg>
+                                        Analytics</a
+                                    >
+                                </li>
+                            </ul>
+                            <!-- Tabs navs -->
+
+                            <!-- Tabs content -->
+                            <div class="tab-content" id="price-content">
+                                <div
+                                        class="tab-pane fade show active  bg-transparent"
+                                        id="tabs-development"
+                                        role="tabpanel"
+                                        aria-labelledby="ex2-tab-1">
+                                    <ul class="list-group" id="list-development"></ul>
+                                </div>
+                                <div
+                                        class="tab-pane fade  bg-transparent"
+                                        id="tabs-service"
+                                        role="tabpanel"
+                                        aria-labelledby="ex2-tab-2">
+                                    <ul class="list-group" id="list-service">
+                                    </ul>
+                                </div>
+                                <div
+                                        class="tab-pane fade  bg-transparent"
+                                        id="tabs-analytics"
+                                        role="tabpanel"
+                                        aria-labelledby="ex2-tab-3">
+                                    <ul class="list-group" id="list-analytics"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="datatable-show" class="collapse">
+                <div class="d-flex justify-content-end mb-4">
+                    <button class="btn-outline-primary btn-sm me-3" id="hide-table-btn"
+                            data-mdb-toggle="tooltip"
+                            data-mdb-placement="bottom"
+                            data-mdb-trigger="hover"
+                            title="Show Analytics"
+                            aria-expanded="true"
+                            aria-controls="analytics-container"
+                            data-mdb-target="#analytics-container"
+                           >
+                        <svg width="20" height="22" viewBox="0 0 23 25" class="text-outline" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.125 13.5417C4.85089 13.5417 6.25 14.9407 6.25 16.6667V21.875C6.25 23.6009 4.85089 25 3.125 25C1.39911 25 0 23.6009 0 21.875V16.6667C0 14.9407 1.39911 13.5417 3.125 13.5417ZM11.4583 0C13.1843 0 14.5833 1.39911 14.5833 3.125V21.875C14.5833 23.6009 13.1843 25 11.4583 25C9.7324 25 8.33333 23.6009 8.33333 21.875V3.125C8.33333 1.39911 9.7324 0 11.4583 0ZM19.7917 7.29167C21.5176 7.29167 22.9167 8.69078 22.9167 10.4167V21.875C22.9167 23.6009 21.5176 25 19.7917 25C18.0657 25 16.6667 23.6009 16.6667 21.875V10.4167C16.6667 8.69078 18.0657 7.29167 19.7917 7.29167Z"/>
+                        </svg>
+
+                    </button>
+
+
+                    <div class="form-outline">
+                        <input
+                                data-mdb-search
+                                data-mdb-target="#datatable"
+                                type="text"
+                                id="search_datatable"
+                                class="form-control"
+                        />
+                        <label class="form-label" for="search_datatable">Search</label>
+                    </div>
+                    <button class="btn-outline-primary btn-sm ms-3 collapse" id="hide-row-btn"
+                            data-mdb-target="#datatable"
+                            data-mdb-toggle="tooltip" title="Hide Select">
+                        <i class="fas fa-eye-slash text-outline"></i>
+                    </button>
+                    <button class="btn-outline-primary btn-sm ms-3 collapse" id="show-row-btn"
+                            data-mdb-target="#datatable"
+                            data-mdb-toggle="tooltip" title="Show All">
+                        <i class="fas fa-eye text-outline"></i>
+                    </button>
+                    <button class="btn btn-primary btn-sm ms-3 collapse show"
+                            id="form-open-btn" data-mdb-add-entry data-mdb-target="#datatable">
+                        <i class="fa fa-plus"></i>
+                    </button>
+
+                    <hr class="mt-3"/>
+
+                </div>
+
+                <div id="datatable-container">
+                    <div id="datatable"
+                         class="table-responsive overflow-auto row-radius id-hide"
+                         data-mdb-selectable="true"
+                         data-mdb-multi="true"
+                         data-mdb-loading="true"></div>
+                    <button
+                            id="confirm-delete"
+                            data-mdb-popconfirm-mode="modal"
+                            class="btn btn-primary popconfirm-toggle  collapse"
+                            data-mdb-message="Are you sure you want to delete this entry?"
+                            data-mdb-ok-text="Delete">Confirm
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    </div>
+</main>
+
+</section>
+<script src="js/html-modules/sidenav.js"></script>
+<script src="js/theme.js"></script>
+<script src="Basic-Components/js/min js/mdb.min.js"></script>
+<script src="Basic-Components/js/components/table-editor.min.js"></script>
+<script src="Basic-Components/js/components/inputmask.min.js"></script>
+<script src="Basic-Components/js/components/organization-chart.min.js"></script>
+<script src="js/analytics-js/analytics-list.js" type="module"></script>
+
+
+</body>
+</html>

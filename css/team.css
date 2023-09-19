@@ -1,0 +1,63 @@
+.progress-bar-vertical {
+    height: 10rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.pink-bg {
+    background-color: var(--permanent-pink);
+}
+.pink-bg:hover {
+    background-color: hsla(330, 100%, 71%, 0.6);
+
+}
+
+.progress-bar-vertical .progress-bar {
+    width: 1rem;
+    height: 0;
+    -webkit-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.progress {
+    --mdb-progress-bg: transparent;
+}
+
+.pink .tooltip-arrow {
+    display: block;
+}
+.pink .tooltip-inner {
+    background-color: var(--secondary-bg-color-opacity);
+    box-shadow: none;
+    border: 2px solid hsla(330, 100%, 71%, 0.6);
+    opacity: 1 !important;
+    color: var(--permanent-pink);
+}
+.tooltip.pink {
+    --mdb-tooltip-bg: hsla(330, 100%, 71%, 0.6); !important;
+}
+
+.form-control:disabled {
+    background-color: transparent;
+
+}
+span#percent1,
+span#percent2,
+.canvas-tooltip {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+span#percent1::after,
+span#percent2::after {
+    content: '%';
+}
+
+.canvas-wrap {
+    position: relative;
+}

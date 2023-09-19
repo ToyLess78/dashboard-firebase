@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Basic-Components/css/mdb.min.css">
+<link rel="stylesheet" href="Basic-Components/css/all.min.css">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/invoice.css">
+
+</head>
+
+<body>
+
+  <!-- Sidenav-->
+  <nav id="sidenav-4" data-mdb-close-on-esc="false" class="sidenav shadow-0 h-100 fixed-top d-print-none"
+    data-mdb-hidden="false" data-mdb-mode="side" data-mdb-slim="true" data-mdb-slim-collapsed="true"
+    data-mdb-content="#slim-content" data-mdb-focus-trap="false" data-mdb-expand-on-hover="true">
+    <div class="pe-2">
+      <!-- Big sidebar elements  -->
+      <div class="mt-3 mb-3 d-flex flex-column justify-content-center align-items-center">
+        <a class="button mb-1" href="#">
+
+          <svg height="50px" width="50px" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 503.467 503.467"
+            xml:space="preserve"
+            fill="&lt;svg height=&quot;200px&quot; width=&quot;200px&quot; version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; viewBox=&quot;0 0 503.467 503.467&quot; xml:space=&quot;preserve&quot; fill=&quot;#000000&quot;&gt;&lt;g id=&quot;SVGRepo_bgCarrier&quot; stroke-width=&quot;0&quot;&gt;&lt;/g&gt;&lt;g id=&quot;SVGRepo_tracerCarrier&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/g&gt;&lt;g id=&quot;SVGRepo_iconCarrier&quot;&gt; &lt;g transform=&quot;translate(1 1)&quot;&gt; &lt;path style=&quot;fill:#F1F4FA;&quot; d=&quot;M270.349,272.067c25.6,45.227,20.48,96.427-11.947,115.2c-32.427,18.773-80.213-2.56-105.813-46.933 c-25.6-45.227-20.48-96.427,11.947-115.2C196.962,205.507,244.749,226.84,270.349,272.067&quot;&gt;&lt;/path&gt; &lt;g&gt; &lt;path style=&quot;fill: #3A36DB;&quot; d=&quot;M455.522,139.8c9.387,52.053,42.667,119.467,42.667,187.733c0,93.867-76.8,170.667-170.667,170.667 c-17.92,0-34.987-2.56-51.2-7.68c11.093-3.413,22.187-8.533,32.427-14.507c81.92-46.933,109.227-151.893,62.293-232.96 c-34.133-58.88-96.427-100.693-130.56-141.653c-7.68-8.533-15.36-17.067-23.04-23.893c23.04-50.347,60.587-74.24,109.227-74.24 C393.229,3.267,438.456,45.934,455.522,139.8&quot;&gt;&lt;/path&gt; &lt;path style=&quot;fill: #3A36DB;&quot; d=&quot;M258.402,387.267c32.427-18.773,38.4-70.827,11.947-115.2 c-25.6-45.227-73.387-65.707-105.813-46.933s-38.4,70.827-11.947,115.2C178.189,384.707,225.122,406.04,258.402,387.267 M276.322,490.52c-75.093,24.747-159.573-5.973-200.533-76.8C41.656,354.84,36.536,278.894,18.616,229.4 C-13.811,139.8,4.109,80.067,61.282,46.787c50.347-29.013,102.4-21.333,156.16,29.867c7.68,6.827,15.36,15.36,23.04,23.893 c34.133,40.107,96.427,81.92,130.56,141.653c46.933,81.92,19.627,186.027-62.293,232.96 C298.509,481.987,287.416,487.107,276.322,490.52&quot;&gt;&lt;/path&gt; &lt;/g&gt; &lt;/g&gt; &lt;path style=&quot;fill:#06152B;&quot; d=&quot;M225.269,503.467c-60.587,0-119.467-31.573-151.893-87.04c-22.187-38.4-32.427-83.627-40.96-123.733 c-5.12-22.187-9.387-43.52-16.213-60.587C-15.371,143.36-0.864,80.214,60.576,44.373c61.44-34.987,123.733-17.067,184.32,55.467 c11.947,14.507,28.16,29.013,45.227,44.373c29.867,27.307,64,58.88,86.187,97.28c23.04,40.107,29.867,87.893,17.067,133.12 c-11.947,45.227-40.96,82.773-81.92,105.813C285.002,495.787,255.136,503.467,225.269,503.467z M121.162,34.987 c-18.773,0-37.547,5.12-56.32,16.213C7.669,84.48-5.984,144.214,23.882,228.693c5.973,17.92,11.093,39.253,16.213,61.44 c8.533,39.253,18.773,84.48,40.107,122.027c46.08,79.36,147.627,106.667,226.987,60.587l0,0 c38.4-22.187,65.707-58.027,77.653-100.693c11.093-42.667,5.973-87.893-16.213-126.293c-21.333-37.547-54.613-68.267-84.48-95.573 c-17.067-15.36-33.28-30.72-46.08-45.227C199.669,58.88,160.416,34.987,121.162,34.987z M337.056,503.467 c-2.56,0-4.267-1.707-4.267-4.267s1.707-4.267,4.267-4.267c88.747-4.267,157.867-77.653,157.867-166.4 c0-42.667-13.653-86.187-25.6-124.587c-6.827-22.187-13.653-43.52-17.067-62.293C436.042,53.76,394.229,8.534,328.522,8.534 c-38.4,0-69.12,15.36-90.453,45.227c-1.707,1.707-4.267,2.56-5.973,0.853c-1.707-1.707-2.56-4.267-0.853-5.973 C254.282,16.214,287.562,0,328.522,0c70.827,0,115.2,46.933,132.267,139.947c3.413,18.773,10.24,39.253,17.067,61.44 c11.947,39.253,25.6,82.773,25.6,127.147C503.456,421.547,430.069,498.347,337.056,503.467L337.056,503.467z M232.949,398.507 c-10.24,0-20.48-2.56-30.72-6.827c-20.48-9.387-39.253-26.453-52.053-49.493c-27.307-46.933-20.48-101.547,13.653-121.173 c34.987-19.627,84.48,1.707,111.787,48.64l0,0c27.307,46.933,20.48,101.547-13.653,121.173 C252.576,395.947,243.189,398.507,232.949,398.507z M191.989,222.72c-8.533,0-17.067,1.707-24.747,5.973 c-30.72,17.92-34.987,66.56-10.24,109.227c11.947,21.333,29.013,37.547,48.64,46.08c18.773,8.533,36.693,8.533,52.053,0 c30.72-17.92,34.987-66.56,10.24-109.227l0,0C249.162,242.347,218.442,222.72,191.989,222.72z M243.189,298.667 c-1.707,0-3.413-0.853-3.413-2.56C223.562,264.534,191.989,256,191.136,256c-2.56-0.853-3.413-2.56-3.413-5.12 c0.853-2.56,2.56-3.413,5.12-3.413c1.707,0,35.84,9.387,53.76,45.227c0.853,1.707,0,4.267-1.707,5.973 C244.896,298.667,244.042,298.667,243.189,298.667z&quot;&gt;&lt;/path&gt; &lt;/g&gt;&lt;/svg&gt;">
+
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+            <g id="SVGRepo_iconCarrier">
+              <g transform="translate(1 1)">
+                <path style="fill:#F1F4FA;"
+                  d="M270.349,272.067c25.6,45.227,20.48,96.427-11.947,115.2c-32.427,18.773-80.213-2.56-105.813-46.933 c-25.6-45.227-20.48-96.427,11.947-115.2C196.962,205.507,244.749,226.84,270.349,272.067" />
+                <g>
+                  <path style="fill:var(--main-indigo-color);"
+                    d="M455.522,139.8c9.387,52.053,42.667,119.467,42.667,187.733c0,93.867-76.8,170.667-170.667,170.667 c-17.92,0-34.987-2.56-51.2-7.68c11.093-3.413,22.187-8.533,32.427-14.507c81.92-46.933,109.227-151.893,62.293-232.96 c-34.133-58.88-96.427-100.693-130.56-141.653c-7.68-8.533-15.36-17.067-23.04-23.893c23.04-50.347,60.587-74.24,109.227-74.24 C393.229,3.267,438.456,45.934,455.522,139.8" />
+                  <path style="fill:var(--main-indigo-color);"
+                    d="M258.402,387.267c32.427-18.773,38.4-70.827,11.947-115.2 c-25.6-45.227-73.387-65.707-105.813-46.933s-38.4,70.827-11.947,115.2C178.189,384.707,225.122,406.04,258.402,387.267 M276.322,490.52c-75.093,24.747-159.573-5.973-200.533-76.8C41.656,354.84,36.536,278.894,18.616,229.4 C-13.811,139.8,4.109,80.067,61.282,46.787c50.347-29.013,102.4-21.333,156.16,29.867c7.68,6.827,15.36,15.36,23.04,23.893 c34.133,40.107,96.427,81.92,130.56,141.653c46.933,81.92,19.627,186.027-62.293,232.96 C298.509,481.987,287.416,487.107,276.322,490.52" />
+                </g>
+              </g>
+              <path style="fill:var(--secondary-bg-color);"
+                d="M225.269,503.467c-60.587,0-119.467-31.573-151.893-87.04c-22.187-38.4-32.427-83.627-40.96-123.733 c-5.12-22.187-9.387-43.52-16.213-60.587C-15.371,143.36-0.864,80.214,60.576,44.373c61.44-34.987,123.733-17.067,184.32,55.467 c11.947,14.507,28.16,29.013,45.227,44.373c29.867,27.307,64,58.88,86.187,97.28c23.04,40.107,29.867,87.893,17.067,133.12 c-11.947,45.227-40.96,82.773-81.92,105.813C285.002,495.787,255.136,503.467,225.269,503.467z M121.162,34.987 c-18.773,0-37.547,5.12-56.32,16.213C7.669,84.48-5.984,144.214,23.882,228.693c5.973,17.92,11.093,39.253,16.213,61.44 c8.533,39.253,18.773,84.48,40.107,122.027c46.08,79.36,147.627,106.667,226.987,60.587l0,0 c38.4-22.187,65.707-58.027,77.653-100.693c11.093-42.667,5.973-87.893-16.213-126.293c-21.333-37.547-54.613-68.267-84.48-95.573 c-17.067-15.36-33.28-30.72-46.08-45.227C199.669,58.88,160.416,34.987,121.162,34.987z M337.056,503.467 c-2.56,0-4.267-1.707-4.267-4.267s1.707-4.267,4.267-4.267c88.747-4.267,157.867-77.653,157.867-166.4 c0-42.667-13.653-86.187-25.6-124.587c-6.827-22.187-13.653-43.52-17.067-62.293C436.042,53.76,394.229,8.534,328.522,8.534 c-38.4,0-69.12,15.36-90.453,45.227c-1.707,1.707-4.267,2.56-5.973,0.853c-1.707-1.707-2.56-4.267-0.853-5.973 C254.282,16.214,287.562,0,328.522,0c70.827,0,115.2,46.933,132.267,139.947c3.413,18.773,10.24,39.253,17.067,61.44 c11.947,39.253,25.6,82.773,25.6,127.147C503.456,421.547,430.069,498.347,337.056,503.467L337.056,503.467z M232.949,398.507 c-10.24,0-20.48-2.56-30.72-6.827c-20.48-9.387-39.253-26.453-52.053-49.493c-27.307-46.933-20.48-101.547,13.653-121.173 c34.987-19.627,84.48,1.707,111.787,48.64l0,0c27.307,46.933,20.48,101.547-13.653,121.173 C252.576,395.947,243.189,398.507,232.949,398.507z M191.989,222.72c-8.533,0-17.067,1.707-24.747,5.973 c-30.72,17.92-34.987,66.56-10.24,109.227c11.947,21.333,29.013,37.547,48.64,46.08c18.773,8.533,36.693,8.533,52.053,0 c30.72-17.92,34.987-66.56,10.24-109.227l0,0C249.162,242.347,218.442,222.72,191.989,222.72z M243.189,298.667 c-1.707,0-3.413-0.853-3.413-2.56C223.562,264.534,191.989,256,191.136,256c-2.56-0.853-3.413-2.56-3.413-5.12 c0.853-2.56,2.56-3.413,5.12-3.413c1.707,0,35.84,9.387,53.76,45.227c0.853,1.707,0,4.267-1.707,5.973 C244.896,298.667,244.042,298.667,243.189,298.667z" />
+            </g>
+
+          </svg>
+        </a>
+        <h5 data-mdb-slim="false">Avo Cado</h5>
+      </div>
+      <div class="main-ul">
+        <ul class="sidenav-menu">
+          <li class="sidenav-item">
+            <a class="sidenav-link" href="/index.html">
+              <div class="me-3 pb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M4.54 2H7.92C9.33 2 10.46 3.15 10.46 4.561V7.97C10.46 9.39 9.33 10.53 7.92 10.53H4.54C3.14 10.53 2 9.39 2 7.97V4.561C2 3.15 3.14 2 4.54 2ZM4.54 13.4697H7.92C9.33 13.4697 10.46 14.6107 10.46 16.0307V19.4397C10.46 20.8497 9.33 21.9997 7.92 21.9997H4.54C3.14 21.9997 2 20.8497 2 19.4397V16.0307C2 14.6107 3.14 13.4697 4.54 13.4697ZM19.4601 2H16.0801C14.6701 2 13.5401 3.15 13.5401 4.561V7.97C13.5401 9.39 14.6701 10.53 16.0801 10.53H19.4601C20.8601 10.53 22.0001 9.39 22.0001 7.97V4.561C22.0001 3.15 20.8601 2 19.4601 2ZM16.0801 13.4697H19.4601C20.8601 13.4697 22.0001 14.6107 22.0001 16.0307V19.4397C22.0001 20.8497 20.8601 21.9997 19.4601 21.9997H16.0801C14.6701 21.9997 13.5401 20.8497 13.5401 19.4397V16.0307C13.5401 14.6107 14.6701 13.4697 16.0801 13.4697Z" />
+                </svg>
+              </div>
+              <span data-mdb-slim="false">Dashboard</span>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link">
+              <div class="me-3 pb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M7.33 2H16.669C20.07 2 21.99 3.929 22 7.33V16.67C22 20.07 20.07 22 16.669 22H7.33C3.929 22 2 20.07 2 16.67V7.33C2 3.929 3.929 2 7.33 2ZM12.049 17.86C12.48 17.86 12.839 17.54 12.879 17.11V6.92C12.919 6.61 12.77 6.299 12.5 6.13C12.219 5.96 11.879 5.96 11.61 6.13C11.339 6.299 11.19 6.61 11.219 6.92V17.11C11.27 17.54 11.629 17.86 12.049 17.86ZM16.65 17.86C17.07 17.86 17.429 17.54 17.48 17.11V13.83C17.509 13.509 17.36 13.21 17.089 13.04C16.82 12.87 16.48 12.87 16.2 13.04C15.929 13.21 15.78 13.509 15.82 13.83V17.11C15.86 17.54 16.219 17.86 16.65 17.86ZM8.219 17.11C8.179 17.54 7.82 17.86 7.389 17.86C6.959 17.86 6.599 17.54 6.56 17.11V10.2C6.53 9.889 6.679 9.58 6.95 9.41C7.219 9.24 7.56 9.24 7.83 9.41C8.099 9.58 8.25 9.889 8.219 10.2V17.11Z" />
+                </svg>
+              </div>
+              <span data-mdb-slim="false">Analytics</span>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link" href="invoice-list.html">
+              <div class="me-3 pb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M21.7872 10.539C21.6518 10.6706 21.4681 10.7457 21.2747 10.7457C20.559 10.7457 19.9787 11.3095 19.9787 11.9953C19.9787 12.6858 20.5522 13.2467 21.2611 13.2543C21.6605 13.258 22 13.5286 22 13.9166V16.3265C22 18.3549 20.3075 20 18.2186 20H15.0658C14.7398 20 14.4758 19.7435 14.4758 19.4269V17.3975C14.4758 17.0029 14.1567 16.6929 13.7505 16.6929C13.354 16.6929 13.0251 17.0029 13.0251 17.3975V19.4269C13.0251 19.7435 12.7611 20 12.4362 20H5.78143C3.70213 20 2 18.3558 2 16.3265V13.9166C2 13.5286 2.33946 13.258 2.73888 13.2543C3.44874 13.2467 4.02128 12.6858 4.02128 11.9953C4.02128 11.3282 3.46035 10.8209 2.72534 10.8209C2.53191 10.8209 2.34816 10.7457 2.21277 10.6142C2.07737 10.4827 2 10.3042 2 10.1163V7.68291C2 5.65731 3.706 4 5.7911 4H12.4362C12.7611 4 13.0251 4.25649 13.0251 4.57311V6.97827C13.0251 7.36348 13.354 7.68291 13.7505 7.68291C14.1567 7.68291 14.4758 7.36348 14.4758 6.97827V4.57311C14.4758 4.25649 14.7398 4 15.0658 4H18.2186C20.3075 4 22 5.64416 22 7.67352V10.0411C22 10.229 21.9226 10.4075 21.7872 10.539ZM13.7505 14.8702C14.1567 14.8702 14.4758 14.5508 14.4758 14.1656V10.4075C14.4758 10.0223 14.1567 9.70288 13.7505 9.70288C13.354 9.70288 13.0251 10.0223 13.0251 10.4075V14.1656C13.0251 14.5508 13.354 14.8702 13.7505 14.8702Z" />
+                </svg>
+              </div>
+              <span data-mdb-slim="false">Invoice</span>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link">
+              <div class="me-3 pb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.81 2H16.191C19.28 2 21 3.78 21 6.83V17.16C21 20.26 19.28 22 16.191 22H7.81C4.77 22 3 20.26 3 17.16V6.83C3 3.78 4.77 2 7.81 2ZM8.08 6.66V6.65H11.069C11.5 6.65 11.85 7 11.85 7.429C11.85 7.87 11.5 8.22 11.069 8.22H8.08C7.649 8.22 7.3 7.87 7.3 7.44C7.3 7.01 7.649 6.66 8.08 6.66ZM8.08 12.74H15.92C16.35 12.74 16.7 12.39 16.7 11.96C16.7 11.53 16.35 11.179 15.92 11.179H8.08C7.649 11.179 7.3 11.53 7.3 11.96C7.3 12.39 7.649 12.74 8.08 12.74ZM8.08 17.31H15.92C16.319 17.27 16.62 16.929 16.62 16.53C16.62 16.12 16.319 15.78 15.92 15.74H8.08C7.78 15.71 7.49 15.85 7.33 16.11C7.17 16.36 7.17 16.69 7.33 16.95C7.49 17.2 7.78 17.35 8.08 17.31Z" />
+                </svg>
+              </div>
+              <span data-mdb-slim="false">Schedule</span>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link" href="/calendar.html">
+              <div class="me-3 pb-1 ps-1">
+                <svg width="18" height="20" viewBox="0 0 18 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.4109 0.76862L13.4119 1.51824C16.1665 1.73414 17.9862 3.6112 17.9891 6.48975L18 14.9155C18.0039 18.054 16.0322 19.985 12.8718 19.99L5.15189 20C2.0112 20.004 0.0148232 18.027 0.0108739 14.8796L1.32771e-05 6.55272C-0.00393603 3.65517 1.75153 1.78311 4.50618 1.53024L4.50519 0.780614C4.5042 0.340834 4.83002 0.00999952 5.26445 0.00999952C5.69887 0.00900002 6.02469 0.338835 6.02568 0.778615L6.02666 1.47826L11.8914 1.47027L11.8904 0.770619C11.8894 0.330839 12.2152 0.00100402 12.6497 4.52073e-06C13.0742 -0.000994979 13.4099 0.32884 13.4109 0.76862ZM1.52149 6.86157L16.4696 6.84158V6.49175C16.4272 4.34283 15.349 3.21539 13.4139 3.04748L13.4148 3.81709C13.4148 4.24688 13.0801 4.58771 12.6556 4.58771C12.2212 4.58871 11.8944 4.24888 11.8944 3.81909L11.8934 3.0095L6.02864 3.01749L6.02962 3.82609C6.02962 4.25687 5.70479 4.5967 5.27037 4.5967C4.83595 4.5977 4.50914 4.25887 4.50914 3.82809L4.50815 3.05847C2.58286 3.25138 1.51754 4.38281 1.5205 6.55072L1.52149 6.86157ZM12.2399 11.4043V11.4153C12.2498 11.8751 12.625 12.2239 13.0801 12.2139C13.5244 12.2029 13.8789 11.8221 13.869 11.3623C13.8483 10.9225 13.4918 10.5637 13.0485 10.5647C12.5944 10.5747 12.2389 10.9445 12.2399 11.4043ZM13.0554 15.892C12.6013 15.882 12.235 15.5032 12.234 15.0435C12.2241 14.5837 12.5884 14.2029 13.0426 14.1919H13.0525C13.5165 14.1919 13.8927 14.5707 13.8927 15.0405C13.8937 15.5102 13.5185 15.891 13.0554 15.892ZM8.17213 11.4203C8.19187 11.8801 8.56804 12.2389 9.02222 12.2189C9.46651 12.1979 9.82096 11.8181 9.80122 11.3583C9.79036 10.9085 9.42505 10.5587 8.98075 10.5597C8.52658 10.5797 8.17114 10.9605 8.17213 11.4203ZM9.02617 15.8471C8.57199 15.8671 8.19681 15.5082 8.17608 15.0485C8.17608 14.5887 8.53053 14.2089 8.9847 14.1879C9.429 14.1869 9.79529 14.5367 9.80517 14.9855C9.8259 15.4463 9.47046 15.8261 9.02617 15.8471ZM4.10434 11.4553C4.12408 11.915 4.50025 12.2749 4.95442 12.2539C5.39872 12.2339 5.75317 11.8531 5.73244 11.3933C5.72257 10.9435 5.35725 10.5937 4.91197 10.5947C4.4578 10.6147 4.10335 10.9955 4.10434 11.4553ZM4.95837 15.8521C4.5042 15.8731 4.12902 15.5132 4.10828 15.0535C4.1073 14.5937 4.46274 14.2129 4.91691 14.1929C5.3612 14.1919 5.7275 14.5417 5.73738 14.9915C5.75811 15.4513 5.40366 15.8321 4.95837 15.8521Z" />
+                </svg>
+              </div>
+              <span data-mdb-slim="false">Calendar</span>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link">
+              <div class="me-3 pb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.1801 4.41C17.1801 3.08 18.2601 2 19.5901 2C20.9201 2 22.0001 3.08 22.0001 4.41C22.0001 5.74 20.9201 6.82 19.5901 6.82C18.2601 6.82 17.1801 5.74 17.1801 4.41ZM13.33 14.7593L16.22 11.0303L16.18 11.0503C16.34 10.8303 16.37 10.5503 16.26 10.3003C16.151 10.0503 15.91 9.8803 15.651 9.8603C15.38 9.8303 15.111 9.9503 14.95 10.1703L12.531 13.3003L9.76 11.1203C9.59 10.9903 9.39 10.9393 9.19 10.9603C8.991 10.9903 8.811 11.0993 8.69 11.2593L5.731 15.1103L5.67 15.2003C5.5 15.5193 5.58 15.9293 5.88 16.1503C6.02 16.2403 6.17 16.3003 6.34 16.3003C6.571 16.3103 6.79 16.1893 6.93 16.0003L9.44 12.7693L12.29 14.9103L12.38 14.9693C12.7 15.1393 13.1 15.0603 13.33 14.7593ZM15.45 3.7803C15.41 4.0303 15.39 4.2803 15.39 4.5303C15.39 6.7803 17.21 8.5993 19.45 8.5993C19.7 8.5993 19.94 8.5703 20.19 8.5303V16.5993C20.19 19.9903 18.19 22.0003 14.79 22.0003H7.401C4 22.0003 2 19.9903 2 16.5993V9.2003C2 5.8003 4 3.7803 7.401 3.7803H15.45Z" />
+                </svg>
+              </div>
+              <span class="me-4" data-mdb-slim="false">Messages</span>
+              <span class="badge rounded-pill badge-danger" data-mdb-slim="false">49</span>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link">
+              <div class="me-3 pb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M18.7071 8.79633C18.7071 10.0523 19.039 10.7925 19.7695 11.6456C20.3231 12.2741 20.5 13.0808 20.5 13.956C20.5 14.8302 20.2128 15.6601 19.6373 16.3339C18.884 17.1417 17.8215 17.6573 16.7372 17.747C15.1659 17.8809 13.5937 17.9937 12.0005 17.9937C10.4063 17.9937 8.83505 17.9263 7.26375 17.747C6.17846 17.6573 5.11602 17.1417 4.36367 16.3339C3.78822 15.6601 3.5 14.8302 3.5 13.956C3.5 13.0808 3.6779 12.2741 4.23049 11.6456C4.98384 10.7925 5.29392 10.0523 5.29392 8.79633V8.3703C5.29392 6.68834 5.71333 5.58852 6.577 4.51186C7.86106 2.9417 9.91935 2 11.9558 2H12.0452C14.1254 2 16.2502 2.98702 17.5125 4.62466C18.3314 5.67916 18.7071 6.73265 18.7071 8.3703V8.79633ZM9.07367 20.0608C9.07367 19.5573 9.53582 19.3266 9.96318 19.2279C10.4631 19.1222 13.5093 19.1222 14.0092 19.2279C14.4366 19.3266 14.8987 19.5573 14.8987 20.0608C14.8738 20.5402 14.5926 20.9653 14.204 21.2352C13.7001 21.628 13.1088 21.8767 12.4906 21.9664C12.1487 22.0107 11.8128 22.0117 11.4828 21.9664C10.8636 21.8767 10.2723 21.628 9.76938 21.2342C9.37978 20.9653 9.09852 20.5402 9.07367 20.0608Z" />
+                </svg>
+              </div>
+              <span data-mdb-slim="false">Notification</span>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link active">
+              <div class="me-3 pb-1">
+
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+
+                  <g id="bgCarrier" stroke-width="0" />
+
+                  <g id="tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g id="iconCarrier">
+                    <path
+                      d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2ZM10.95 17.51C10.66 17.8 10.11 18.08 9.71 18.14L7.25 18.49C7.16 18.5 7.07 18.51 6.98 18.51C6.57 18.51 6.19 18.37 5.92 18.1C5.59 17.77 5.45 17.29 5.53 16.76L5.88 14.3C5.94 13.89 6.21 13.35 6.51 13.06L10.97 8.6C11.05 8.81 11.13 9.02 11.24 9.26C11.34 9.47 11.45 9.69 11.57 9.89C11.67 10.06 11.78 10.22 11.87 10.34C11.98 10.51 12.11 10.67 12.19 10.76C12.24 10.83 12.28 10.88 12.3 10.9C12.55 11.2 12.84 11.48 13.09 11.69C13.16 11.76 13.2 11.8 13.22 11.81C13.37 11.93 13.52 12.05 13.65 12.14C13.81 12.26 13.97 12.37 14.14 12.46C14.34 12.58 14.56 12.69 14.78 12.8C15.01 12.9 15.22 12.99 15.43 13.06L10.95 17.51ZM17.37 11.09L16.45 12.02C16.39 12.08 16.31 12.11 16.23 12.11C16.2 12.11 16.16 12.11 16.14 12.1C14.11 11.52 12.49 9.9 11.91 7.87C11.88 7.76 11.91 7.64 11.99 7.57L12.92 6.64C14.44 5.12 15.89 5.15 17.38 6.64C18.14 7.4 18.51 8.13 18.51 8.89C18.5 9.61 18.13 10.33 17.37 11.09Z" />
+                  </g>
+
+                </svg>
+              </div>
+              <span data-mdb-slim="false">WYSIWYG Editor</span>
+            </a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link">
+              <div class="me-3 pb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M20.4023 13.58C20.76 13.77 21.036 14.07 21.2301 14.37C21.6083 14.99 21.5776 15.75 21.2097 16.42L20.4943 17.62C20.1162 18.26 19.411 18.66 18.6855 18.66C18.3278 18.66 17.9292 18.56 17.6022 18.36C17.3365 18.19 17.0299 18.13 16.7029 18.13C15.6911 18.13 14.8429 18.96 14.8122 19.95C14.8122 21.1 13.872 22 12.6968 22H11.3069C10.1215 22 9.18125 21.1 9.18125 19.95C9.16081 18.96 8.31259 18.13 7.30085 18.13C6.96361 18.13 6.65702 18.19 6.40153 18.36C6.0745 18.56 5.66572 18.66 5.31825 18.66C4.58245 18.66 3.87729 18.26 3.49917 17.62L2.79402 16.42C2.4159 15.77 2.39546 14.99 2.77358 14.37C2.93709 14.07 3.24368 13.77 3.59115 13.58C3.87729 13.44 4.06125 13.21 4.23498 12.94C4.74596 12.08 4.43937 10.95 3.57071 10.44C2.55897 9.87 2.23194 8.6 2.81446 7.61L3.49917 6.43C4.09191 5.44 5.35913 5.09 6.38109 5.67C7.27019 6.15 8.425 5.83 8.9462 4.98C9.10972 4.7 9.20169 4.4 9.18125 4.1C9.16081 3.71 9.27323 3.34 9.4674 3.04C9.84553 2.42 10.5302 2.02 11.2763 2H12.7172C13.4735 2 14.1582 2.42 14.5363 3.04C14.7203 3.34 14.8429 3.71 14.8122 4.1C14.7918 4.4 14.8838 4.7 15.0473 4.98C15.5685 5.83 16.7233 6.15 17.6226 5.67C18.6344 5.09 19.9118 5.44 20.4943 6.43L21.179 7.61C21.7718 8.6 21.4447 9.87 20.4228 10.44C19.5541 10.95 19.2475 12.08 19.7687 12.94C19.9322 13.21 20.1162 13.44 20.4023 13.58ZM9.10972 12.01C9.10972 13.58 10.4076 14.83 12.0121 14.83C13.6165 14.83 14.8838 13.58 14.8838 12.01C14.8838 10.44 13.6165 9.18 12.0121 9.18C10.4076 9.18 9.10972 10.44 9.10972 12.01Z" />
+                </svg>
+              </div>
+              <span data-mdb-slim="false">Settings</span>
+            </a>
+            <ul class="sidenav-collapse">
+              <li class="sidenav-item  disabled">
+                <span class="sidenav-link">Service pages:</span>
+              </li>
+              <li class="sidenav-item"><a class="sidenav-link" href="./login.html">Login</a></li>
+              <li class="sidenav-item"><a class="sidenav-link" href="./sign-up.html">Sign Up</a></li>
+              <li class="sidenav-item"><a class="sidenav-link" href="./recover.html">Recover</a></li>
+              <li class="sidenav-item"><a class="sidenav-link" href="./confirm.html">Confirm</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <!-- End bar section-->
+      <div class="end-bar d-flex flex-column  justify-content-center mt-5 pb-1 pt-5 align-items-end">
+        <!-- Lamp section  -->
+        <div class="text-center" data-mdb-slim="false">
+          <div class="lamp-background-rectangle"></div>
+          <div class="shape">
+            <div class="shadow-point"></div>
+          </div>
+          <img class="lamp" src="./img/object.svg" alt="lamp">
+          <div class="shell">
+            <button type="button" class="btn btn-customer rounded-5 shadow-0" onClick="window.location.reload()">Upgrade
+              Now
+            </button>
+          </div>
+        </div>
+        <!-- Bottom sidebar section -->
+        <div class="container mt-3">
+          <div class="profile row justify-content-center align-items-center gy-3">
+            <div class="col-3">
+              <img src="./img/avatar.jpg" alt="avatar" class="profile_pic">
+            </div>
+            <div class="profile_info col-7 pe-0 ps-4">
+              <span class="h6" data-mdb-slim="false">Python Developer</span><br>
+              <p class="my-0" data-mdb-slim="false">Free Account</p>
+            </div>
+            <div class="col-2">
+              <a href="login.html">
+                <!-- SVG - Logout icon door -->
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.24547 8.35964C6.88089 8.35964 6.59261 8.64297 6.59261 9.0013C6.59261 9.3513 6.88089 9.64297 7.24547 9.64297H12.3327V13.6263C12.3327 15.668 10.6454 17.3346 8.55967 17.3346H4.43055C2.35327 17.3346 0.666016 15.6763 0.666016 13.6346V4.3763C0.666016 2.3263 2.36175 0.667969 4.43903 0.667969H8.57663C10.6454 0.667969 12.3327 2.3263 12.3327 4.36797V8.35964H7.24547ZM15.3579 6.11814L17.7912 8.54314C17.9162 8.66814 17.9829 8.82647 17.9829 9.00147C17.9829 9.16814 17.9162 9.33481 17.7912 9.45147L15.3579 11.8765C15.2329 12.0015 15.0662 12.0681 14.9079 12.0681C14.7412 12.0681 14.5745 12.0015 14.4495 11.8765C14.1995 11.6265 14.1995 11.2181 14.4495 10.9681L15.7829 9.64314H12.3329V8.35981H15.7829L14.4495 7.03481C14.1995 6.78481 14.1995 6.37647 14.4495 6.12647C14.6995 5.86814 15.1079 5.86814 15.3579 6.11814Z" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </nav>
+  <!-- Sidenav-->
+
+  <main>
+    <div style="padding: 15px;" class="" id="slim-content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-nav navbar-light sticky-top shadow-0 mb-2 mt-0 pt-0 d-print-none">
+        <!-- Container wrapper -->
+        <div class="container-fluid ps-0">
+          <label class="container-switch">
+            <input type="checkbox" checked="checked" data-mdb-toggle="sidenav" data-mdb-target="#sidenav-4" class="btn"
+              aria-controls="#sidenav-4" aria-haspopup="true">
+            <div class="checkmark">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </label>
+          <!-- Navbar brand -->
+          <a class="navbar-brand me-auto ps-2" href="#">
+            <h5>JSON editor</h5>
+          </a>
+          <!-- Collapsible wrapper -->
+          <div id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+
+            <!-- Date picker -->
+
+            <div class="w-auto form-outline datepicker">
+              <input type="text" class="form-control" id="day-input">
+              <label for="day-input" class="form-label">Date</label>
+            </div>
+
+            <!-- Date picker -->
+          </div>
+
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+
+
+      <!-- Section: Form Editor-->
+      <section class="mb-4">
+        <div class="row g-4">
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 hidden-arrow d-print-none">
+            <div id="card-1" class=" p-2  bg-card rounded-6 h-100">
+
+              <!-- Card -->
+              <form class="mb-2">
+                <!--Avatar-->
+                <div>
+                  <div class="d-flex justify-content-center mb-4">
+                    <div class="text-center col-md-6 mb-2">
+                      <label class="form-label text-white m-1" for="customFile">
+
+                        <div class="bg-image" style="max-width: 134px">
+                          <img id="image-preview" src="./img/camera.svg" class="img-fluid rounded-circle"
+                            alt="placeholder">
+                          <div class="mask rounded-circle"
+                            style="background: linear-gradient( transparent, transparent, transparent, var(--secondary-bg-color)); ">
+                            <div class="d-flex justify-content-center align-items-end h-100">
+                              <a id="link-preview" class="text-center mb-0" style=" line-height: 110%; cursor: pointer;
+                              ">Upload<br><small>or</small></a>
+
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                      <input type="file" class="form-control d-none" id="customFile" accept="image/*" value="img" />
+
+                      <div id="url-input-collapse" class="accordion-item collapse show">
+                        <span class="accordion-header mx-auto" id="headingOne">
+                          <div class="collapsed " type="button" data-mdb-toggle="collapse"
+                            data-mdb-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <a href="">Enter URL</a>
+                          </div>
+                        </span>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                          data-mdb-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <div class="form-outline d-flex">
+                              <a href="#" type="button" id="upload">
+                                <i class="fas fa-cloud-arrow-up trailing grey-text"></i>
+                              </a>
+                              <input type="url" id="url" class="form-control form-control-lg form-icon-trailing" />
+                              <label class="form-label" for="url" style="margin-left: 0;">Enter
+                                here</label>
+
+                            </div>
+                            <span class="text-danger" id="danger"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-5">
+                      <div class="form-outline">
+                        <input type="text" id="invoiceId" class="form-control form-control-lg" value="#876370" size=""
+                          data-mdb-input-mask="#999999" minlength="7" maxlength="7" />
+                        <label class="form-label" for="invoiceId">Invoice Id</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                      <div class="form-outline datepicker " id="datepicker">
+                        <input type="text" class="form-control form-control-lg" id="date-input">
+                        <label for="date-input" class="form-label">Date</label>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6 mb-5">
+
+                      <div class="form-outline">
+                        <a href="#">
+                          <i class="trailing fas fa-user grey-text"></i>
+                        </a>
+                        <input type="text" id="name-input" class="form-control form-control-lg form-icon-trailing" size=""
+                          value="John Smith" />
+                        <label class="form-label" for="name-input">Name</label>
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-6 mb-5">
+                      <div class="form-outline">
+                        <a href="#" id="phone-link">
+                          <i class="trailing fas fa-phone grey-text"></i>
+                        </a>
+                        <input type="tel" id="phone-input" class="form-control form-control-lg form-icon-trailing"
+                          data-mdb-input-mask="+389999999999" value="+389999999999">
+                        <label class="form-label" for="phone-input">Phone</label>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-md-6 mb-5">
+                      <div class="form-outline">
+                        <a href="#" id="email-link">
+                          <i class="trailing fas fa-at grey-text"></i>
+                        </a>
+                        <input type="email" id="email-input" class="form-control form-control-lg form-icon-trailing"
+                          value="Example@gmail.com">
+                        <label class="form-label" for="email-input">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+
+                      <div class="form-outline">
+                        <a href="#" id="address-link">
+                          <svg class="trailing" width="14" height="20" viewBox="0 0 23 28" fill="var(--grey-tex-color)"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M0 11.6152C0 5.19177 5.20054 0 11.4911 0C17.7995 0 23 5.19177 23 11.6152C23 14.852 21.8595 17.857 19.9823 20.404C17.9113 23.2136 15.3588 25.6614 12.4857 27.5828C11.8281 28.0269 11.2347 28.0604 10.513 27.5828C7.62347 25.6614 5.07094 23.2136 3.01774 20.404C1.13915 17.857 0 14.852 0 11.6152ZM7.7041 11.9774C7.7041 14.1293 9.40533 15.8217 11.4913 15.8217C13.5786 15.8217 15.2962 14.1293 15.2962 11.9774C15.2962 9.84237 13.5786 8.06756 11.4913 8.06756C9.40533 8.06756 7.7041 9.84237 7.7041 11.9774Z" />
+                          </svg>
+                        </a>
+                        <input type="text" id="address-input" class="form-control form-control-lg form-icon-trailing"
+                          value="Street, City">
+                        <label class="form-label" for="address-input">Address</label>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </form>
+              <div>
+                <div class="bg-card rounded-6 h-100 pb-4">
+                  <div class="d-flex justify-content-end mb-4">
+
+                    <button class="btn btn-primary btn-sm ms-3" data-mdb-add-entry
+                      data-mdb-target="#table_disable_edit">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+
+                  <div class="ol-table table_disable_edit" id="table_disable_edit">
+
+
+                  </div>
+
+
+                </div>
+
+                <div class="grey-text">
+                  <div class="d-flex align-items-center justify-content-end mb-3 me-3">
+                    <p class="mb-0 pe-2">Tax:</p>
+                    <div class="d-flex flex-row">
+                      <div class="form-outline">
+                        <i class="trailing">%</i>
+                        <input type="number" id="tax" min="0" class="form-control form-icon-trailing" value="15"
+                          style="width: 90px;" data-change="change" />
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-end me-3">
+                    <p class="mb-0 pe-2">Discount:</p>
+                    <div class="d-flex flex-row">
+                      <div class="form-outline">
+                        <i class="trailing">%</i>
+                        <input type="number" id="discount" min="0" class="form-control form-icon-trailing" value="5"
+                          style="width: 90px;" data-change="change" />
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="d-flex justify-content-end align-items-center mt-5">
+                  <button class="btn shadow-0 btn-md btn-outline-primary modal-discard-button me-2"
+                    data-mdb-dismiss="modal">Cancel
+                  </button>
+                  <button class="me-2 btn shadow-0 btn-md btn-primary modal-save-button">Save</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- Card -->
+
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div id="card-2" class="p-2  bg-card rounded-6 h-100">
+
+              <div class="card-body">
+                <div class="container mb-5 mt-3">
+                  <div class="row d-flex align-items-baseline d-print-none">
+                    <div class="col-md-10">
+                      <p style="color: var(--grey-tex-color);font-size: 20px;">Invoice <strong>ID:
+                          <strong id="id-output1"> #876370</strong></strong>
+                      </p>
+                    </div>
+                    <div class="col-md-2 text-end">
+
+                      <a onclick="window.print()" role="button">
+                        <svg width="25" height="26" viewBox="0 0 20 21" fill="var(--main-indigo-color)"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M16.5167 3.87476V2.93542C16.5167 1.31683 15.1999 0 13.5813 0H6.37976C4.76117 0 3.44434 1.31683 3.44434 2.93542V3.87476H16.5167Z"
+                            fill="#3A36DB" />
+                          <path
+                            d="M4.61816 12.4844V17.2593V18.2769V18.864C4.61816 19.5125 5.14384 20.0382 5.79233 20.0382H14.1681C14.8166 20.0382 15.3422 19.5125 15.3422 18.864V18.2769V17.2593V12.4844H4.61816ZM11.5458 17.4942H8.41464C8.09041 17.4942 7.82756 17.2313 7.82756 16.9071C7.82756 16.5828 8.09041 16.32 8.41464 16.32H11.5458C11.87 16.32 12.1328 16.5828 12.1328 16.9071C12.1328 17.2313 11.87 17.4942 11.5458 17.4942ZM11.5458 14.9893H8.41464C8.09041 14.9893 7.82756 14.7264 7.82756 14.4022C7.82756 14.078 8.09041 13.8151 8.41464 13.8151H11.5458C11.87 13.8151 12.1328 14.078 12.1328 14.4022C12.1328 14.7264 11.87 14.9893 11.5458 14.9893Z"
+                            fill="#3A36DB" />
+                          <path
+                            d="M17.0646 5.04883H2.93542C1.31683 5.04883 0 6.36566 0 7.98425V12.6809C0 14.2995 1.31683 15.6163 2.93542 15.6163H3.44423V12.4852H3.09198C2.76775 12.4852 2.50489 12.2224 2.50489 11.8981C2.50489 11.5739 2.76775 11.3111 3.09198 11.3111H4.03131H15.9296H16.8689C17.1931 11.3111 17.456 11.5739 17.456 11.8981C17.456 12.2224 17.1931 12.4852 16.8689 12.4852H16.5166V15.6163H17.0646C18.6832 15.6163 20 14.2995 20 12.6809V7.98425C20 6.36566 18.6832 5.04883 17.0646 5.04883ZM4.97065 8.72789H3.09198C2.76775 8.72789 2.50489 8.46503 2.50489 8.1408C2.50489 7.81658 2.76775 7.55372 3.09198 7.55372H4.97065C5.29487 7.55372 5.55773 7.81658 5.55773 8.1408C5.55773 8.46503 5.29487 8.72789 4.97065 8.72789Z"
+                            fill="var(--main-indigo-color)" />
+                        </svg>
+
+                      </a>
+                    </div>
+                    <hr>
+                  </div>
+                  <div id="invoice" class="d-print-block">
+
+                    <div class="container bg-card">
+                      <div class="col-md-12">
+                        <div class="mt-3 mb-3 d-flex flex-column justify-content-center align-items-center">
+                          <a class="button my-3" href="#">
+
+
+                            <svg height="50px" width="50px" id=" Layer_2" xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 503.467 503.467" xml:space="preserve"
+                              fill="&lt;svg height=&quot;200px&quot; width=&quot;200px&quot; version=&quot;1.1&quot; id=&quot; Layer_2&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; viewBox=&quot;0 0 503.467 503.467&quot; xml:space=&quot;preserve&quot; fill=&quot;#000000&quot;&gt;&lt;g id=&quot;SVGRepo_bgCarrier&quot; stroke-width=&quot;0&quot;&gt;&lt;/g&gt;&lt;g id=&quot;SVGRepo_tracerCarrier&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/g&gt;&lt;g id=&quot;SVGRepo_iconCarrier&quot;&gt; &lt;g transform=&quot;translate(1 1)&quot;&gt; &lt;path style=&quot;fill:#F1F4FA;&quot; d=&quot;M270.349,272.067c25.6,45.227,20.48,96.427-11.947,115.2c-32.427,18.773-80.213-2.56-105.813-46.933 c-25.6-45.227-20.48-96.427,11.947-115.2C196.962,205.507,244.749,226.84,270.349,272.067&quot;&gt;&lt;/path&gt; &lt;g&gt; &lt;path style=&quot;fill: #3A36DB;&quot; d=&quot;M455.522,139.8c9.387,52.053,42.667,119.467,42.667,187.733c0,93.867-76.8,170.667-170.667,170.667 c-17.92,0-34.987-2.56-51.2-7.68c11.093-3.413,22.187-8.533,32.427-14.507c81.92-46.933,109.227-151.893,62.293-232.96 c-34.133-58.88-96.427-100.693-130.56-141.653c-7.68-8.533-15.36-17.067-23.04-23.893c23.04-50.347,60.587-74.24,109.227-74.24 C393.229,3.267,438.456,45.934,455.522,139.8&quot;&gt;&lt;/path&gt; &lt;path style=&quot;fill: #3A36DB;&quot; d=&quot;M258.402,387.267c32.427-18.773,38.4-70.827,11.947-115.2 c-25.6-45.227-73.387-65.707-105.813-46.933s-38.4,70.827-11.947,115.2C178.189,384.707,225.122,406.04,258.402,387.267 M276.322,490.52c-75.093,24.747-159.573-5.973-200.533-76.8C41.656,354.84,36.536,278.894,18.616,229.4 C-13.811,139.8,4.109,80.067,61.282,46.787c50.347-29.013,102.4-21.333,156.16,29.867c7.68,6.827,15.36,15.36,23.04,23.893 c34.133,40.107,96.427,81.92,130.56,141.653c46.933,81.92,19.627,186.027-62.293,232.96 C298.509,481.987,287.416,487.107,276.322,490.52&quot;&gt;&lt;/path&gt; &lt;/g&gt; &lt;/g&gt; &lt;path style=&quot;fill:#06152B;&quot; d=&quot;M225.269,503.467c-60.587,0-119.467-31.573-151.893-87.04c-22.187-38.4-32.427-83.627-40.96-123.733 c-5.12-22.187-9.387-43.52-16.213-60.587C-15.371,143.36-0.864,80.214,60.576,44.373c61.44-34.987,123.733-17.067,184.32,55.467 c11.947,14.507,28.16,29.013,45.227,44.373c29.867,27.307,64,58.88,86.187,97.28c23.04,40.107,29.867,87.893,17.067,133.12 c-11.947,45.227-40.96,82.773-81.92,105.813C285.002,495.787,255.136,503.467,225.269,503.467z M121.162,34.987 c-18.773,0-37.547,5.12-56.32,16.213C7.669,84.48-5.984,144.214,23.882,228.693c5.973,17.92,11.093,39.253,16.213,61.44 c8.533,39.253,18.773,84.48,40.107,122.027c46.08,79.36,147.627,106.667,226.987,60.587l0,0 c38.4-22.187,65.707-58.027,77.653-100.693c11.093-42.667,5.973-87.893-16.213-126.293c-21.333-37.547-54.613-68.267-84.48-95.573 c-17.067-15.36-33.28-30.72-46.08-45.227C199.669,58.88,160.416,34.987,121.162,34.987z M337.056,503.467 c-2.56,0-4.267-1.707-4.267-4.267s1.707-4.267,4.267-4.267c88.747-4.267,157.867-77.653,157.867-166.4 c0-42.667-13.653-86.187-25.6-124.587c-6.827-22.187-13.653-43.52-17.067-62.293C436.042,53.76,394.229,8.534,328.522,8.534 c-38.4,0-69.12,15.36-90.453,45.227c-1.707,1.707-4.267,2.56-5.973,0.853c-1.707-1.707-2.56-4.267-0.853-5.973 C254.282,16.214,287.562,0,328.522,0c70.827,0,115.2,46.933,132.267,139.947c3.413,18.773,10.24,39.253,17.067,61.44 c11.947,39.253,25.6,82.773,25.6,127.147C503.456,421.547,430.069,498.347,337.056,503.467L337.056,503.467z M232.949,398.507 c-10.24,0-20.48-2.56-30.72-6.827c-20.48-9.387-39.253-26.453-52.053-49.493c-27.307-46.933-20.48-101.547,13.653-121.173 c34.987-19.627,84.48,1.707,111.787,48.64l0,0c27.307,46.933,20.48,101.547-13.653,121.173 C252.576,395.947,243.189,398.507,232.949,398.507z M191.989,222.72c-8.533,0-17.067,1.707-24.747,5.973 c-30.72,17.92-34.987,66.56-10.24,109.227c11.947,21.333,29.013,37.547,48.64,46.08c18.773,8.533,36.693,8.533,52.053,0 c30.72-17.92,34.987-66.56,10.24-109.227l0,0C249.162,242.347,218.442,222.72,191.989,222.72z M243.189,298.667 c-1.707,0-3.413-0.853-3.413-2.56C223.562,264.534,191.989,256,191.136,256c-2.56-0.853-3.413-2.56-3.413-5.12 c0.853-2.56,2.56-3.413,5.12-3.413c1.707,0,35.84,9.387,53.76,45.227c0.853,1.707,0,4.267-1.707,5.973 C244.896,298.667,244.042,298.667,243.189,298.667z&quot;&gt;&lt;/path&gt; &lt;/g&gt;&lt;/svg&gt;">
+
+                              <g id="SVGRepo_bgCarrier2" stroke-width="0" />
+
+                              <g id="SVGRepo_tracerCarrier2" stroke-linecap="round" stroke-linejoin="round" />
+
+                              <g id="SVGRepo_iconCarrier2">
+                                <g transform="translate(1 1)">
+                                  <path style="fill:#F1F4FA;"
+                                    d="M270.349,272.067c25.6,45.227,20.48,96.427-11.947,115.2c-32.427,18.773-80.213-2.56-105.813-46.933 c-25.6-45.227-20.48-96.427,11.947-115.2C196.962,205.507,244.749,226.84,270.349,272.067" />
+                                  <g>
+                                    <path style="fill:var(--main-indigo-color);"
+                                      d="M455.522,139.8c9.387,52.053,42.667,119.467,42.667,187.733c0,93.867-76.8,170.667-170.667,170.667 c-17.92,0-34.987-2.56-51.2-7.68c11.093-3.413,22.187-8.533,32.427-14.507c81.92-46.933,109.227-151.893,62.293-232.96 c-34.133-58.88-96.427-100.693-130.56-141.653c-7.68-8.533-15.36-17.067-23.04-23.893c23.04-50.347,60.587-74.24,109.227-74.24 C393.229,3.267,438.456,45.934,455.522,139.8" />
+                                    <path style="fill:var(--main-indigo-color);"
+                                      d="M258.402,387.267c32.427-18.773,38.4-70.827,11.947-115.2 c-25.6-45.227-73.387-65.707-105.813-46.933s-38.4,70.827-11.947,115.2C178.189,384.707,225.122,406.04,258.402,387.267 M276.322,490.52c-75.093,24.747-159.573-5.973-200.533-76.8C41.656,354.84,36.536,278.894,18.616,229.4 C-13.811,139.8,4.109,80.067,61.282,46.787c50.347-29.013,102.4-21.333,156.16,29.867c7.68,6.827,15.36,15.36,23.04,23.893 c34.133,40.107,96.427,81.92,130.56,141.653c46.933,81.92,19.627,186.027-62.293,232.96 C298.509,481.987,287.416,487.107,276.322,490.52" />
+                                  </g>
+                                </g>
+                                <path style="fill:var(--secondary-bg-color);"
+                                  d="M225.269,503.467c-60.587,0-119.467-31.573-151.893-87.04c-22.187-38.4-32.427-83.627-40.96-123.733 c-5.12-22.187-9.387-43.52-16.213-60.587C-15.371,143.36-0.864,80.214,60.576,44.373c61.44-34.987,123.733-17.067,184.32,55.467 c11.947,14.507,28.16,29.013,45.227,44.373c29.867,27.307,64,58.88,86.187,97.28c23.04,40.107,29.867,87.893,17.067,133.12 c-11.947,45.227-40.96,82.773-81.92,105.813C285.002,495.787,255.136,503.467,225.269,503.467z M121.162,34.987 c-18.773,0-37.547,5.12-56.32,16.213C7.669,84.48-5.984,144.214,23.882,228.693c5.973,17.92,11.093,39.253,16.213,61.44 c8.533,39.253,18.773,84.48,40.107,122.027c46.08,79.36,147.627,106.667,226.987,60.587l0,0 c38.4-22.187,65.707-58.027,77.653-100.693c11.093-42.667,5.973-87.893-16.213-126.293c-21.333-37.547-54.613-68.267-84.48-95.573 c-17.067-15.36-33.28-30.72-46.08-45.227C199.669,58.88,160.416,34.987,121.162,34.987z M337.056,503.467 c-2.56,0-4.267-1.707-4.267-4.267s1.707-4.267,4.267-4.267c88.747-4.267,157.867-77.653,157.867-166.4 c0-42.667-13.653-86.187-25.6-124.587c-6.827-22.187-13.653-43.52-17.067-62.293C436.042,53.76,394.229,8.534,328.522,8.534 c-38.4,0-69.12,15.36-90.453,45.227c-1.707,1.707-4.267,2.56-5.973,0.853c-1.707-1.707-2.56-4.267-0.853-5.973 C254.282,16.214,287.562,0,328.522,0c70.827,0,115.2,46.933,132.267,139.947c3.413,18.773,10.24,39.253,17.067,61.44 c11.947,39.253,25.6,82.773,25.6,127.147C503.456,421.547,430.069,498.347,337.056,503.467L337.056,503.467z M232.949,398.507 c-10.24,0-20.48-2.56-30.72-6.827c-20.48-9.387-39.253-26.453-52.053-49.493c-27.307-46.933-20.48-101.547,13.653-121.173 c34.987-19.627,84.48,1.707,111.787,48.64l0,0c27.307,46.933,20.48,101.547-13.653,121.173 C252.576,395.947,243.189,398.507,232.949,398.507z M191.989,222.72c-8.533,0-17.067,1.707-24.747,5.973 c-30.72,17.92-34.987,66.56-10.24,109.227c11.947,21.333,29.013,37.547,48.64,46.08c18.773,8.533,36.693,8.533,52.053,0 c30.72-17.92,34.987-66.56,10.24-109.227l0,0C249.162,242.347,218.442,222.72,191.989,222.72z M243.189,298.667 c-1.707,0-3.413-0.853-3.413-2.56C223.562,264.534,191.989,256,191.136,256c-2.56-0.853-3.413-2.56-3.413-5.12 c0.853-2.56,2.56-3.413,5.12-3.413c1.707,0,35.84,9.387,53.76,45.227c0.853,1.707,0,4.267-1.707,5.973 C244.896,298.667,244.042,298.667,243.189,298.667z" />
+                              </g>
+
+                            </svg>
+                          </a>
+                          <h5 data-mdb-slim="false">Avo Cado</h5>
+                        </div>
+
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col-md-5">
+                          <ul class="list-unstyled">
+                            <li class="grey-text">To: <span id="name-output"
+                                style="color: var(--main-indigo-color);">John
+                                Smith</span>
+                            </li>
+                            <li class="grey-text">
+                              <svg class="trailing" width="14" height="20" viewBox="0 0 23 28"
+                                fill="var(--main-indigo-color)" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M0 11.6152C0 5.19177 5.20054 0 11.4911 0C17.7995 0 23 5.19177 23 11.6152C23 14.852 21.8595 17.857 19.9823 20.404C17.9113 23.2136 15.3588 25.6614 12.4857 27.5828C11.8281 28.0269 11.2347 28.0604 10.513 27.5828C7.62347 25.6614 5.07094 23.2136 3.01774 20.404C1.13915 17.857 0 14.852 0 11.6152ZM7.7041 11.9774C7.7041 14.1293 9.40533 15.8217 11.4913 15.8217C13.5786 15.8217 15.2962 14.1293 15.2962 11.9774C15.2962 9.84237 13.5786 8.06756 11.4913 8.06756C9.40533 8.06756 7.7041 9.84237 7.7041 11.9774Z" />
+                              </svg>
+                              <span id="address-output">Street, City</span>
+                            </li>
+                            <li class="grey-text"><i class="fas fa-phone" style="color: var(--main-indigo-color);"></i>
+                              <span id="phone-output">+389999999999</span>
+                            </li>
+                            <li class="grey-text"><i class="fas fa-at" style="color: var(--main-indigo-color);"></i>
+                              <span id="email-output">Example@gmail.com</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-md-3"></div>
+
+                        <div class="col-md-4">
+                          <ul class="list-unstyled">
+                            <br>
+                            <li class="grey-text"><i class="fas fa-circle" style="color: var(--main-indigo-color);"></i>
+                              <span class="fw-bold">ID:</span><span id="id-output2">
+                                #876370</span>
+                            </li>
+                            <li class="grey-text"><i class="fas fa-circle" style="color: var(--main-indigo-color);"></i>
+                              <span class="fw-bold">Date: <span id="date-output">
+                                </span></span>
+                            </li>
+
+                            <li class="grey-text"><i class="fas fa-circle" style="color: var(--main-indigo-color);"></i>
+                              <span class="me-1 fw-bold">Status:</span><span class="badge rounded-pill bgr-warning">
+                                Unpaid</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="row my-2 mx-1 justify-content-center">
+                        <div class="ol-table">
+                          <table class="table table-striped table-borderless" id="print-table">
+                            <thead style="background-color: var(--main-indigo-color);" class="text-white">
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Unit Price</th>
+                                <th scope="col">Amount</th>
+                              </tr>
+                            </thead>
+                            <tbody id="tbodyMod">
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Pro Package</td>
+                                <td>4</td>
+                                <td>$ 200</td>
+                                <td>$ 800</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Web hosting</td>
+                                <td>1</td>
+                                <td>$ 10</td>
+                                <td>$ 10</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Consulting</td>
+                                <td>1 year</td>
+                                <td>$ 300</td>
+                                <td>$ 300</td>
+                              </tr>
+                            </tbody>
+
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5">
+
+                        </div>
+                        <div class="col-md-7">
+                          <ul class="list-unstyled me-4" id="output">
+                            <li class="grey-text ms-3 text-end" id="sub-total"><span class="me-4">SubTotal</span>$ 1 110
+                            </li>
+                            <li class="grey-text ms-3 mt-2 text-end" id="tax-output"><span class="me-4">Tax(15%)</span>$
+                              167
+                            </li>
+                            <li class="grey-text ms-3 mt-2 text-end" id="discount-output">
+                              <span class="me-4">Discount(5%)</span>$ 56
+                            </li>
+
+                          </ul>
+                          <p class="text-end me-3" id="total-amount"><span class=" me-3">
+                              Total
+                              Amount</span><span style="font-size: 25px;">$ 1 221</span>
+                          </p>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-md-9">
+                          <p>Thank you for your purchase!</p>
+                        </div>
+                        <div class="col-md-3 d-print-none">
+                          <button type="button" class="btn btn-primary text-capitalize">Pay
+                            Now
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <script src="./js/theme.js"></script>
+  <script src="Basic-Components/js/min js/mdb.min.js"></script>
+  <script src="Basic-Components/js/components/table-editor.min.js"></script>
+  <script src="Basic-Components/js/components/inputmask.min.js"></script>
+  <script src="./invoice-js/date.js"></script>
+  <script src="./invoice-js/form-table.js"></script>
+  <script type="module" src="invoice-js/form-invoice.js"></script>
+
+
+
+</body>
+
+</html>
