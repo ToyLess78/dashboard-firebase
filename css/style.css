@@ -1312,12 +1312,15 @@ i.datepicker-toggle-icon svg {
 }
 
 
-.en .language::before {
-  content: 'JSON editor';
+.form-control.form-control-lg ~ .autocomplete-label {
+  padding-top: 0.5rem !important;
 }
-.ua .language::before {
-  content: 'ДЖЕЙСОН редакттор';
+.autocomplete-dropdown {
+  background-color: var(--secondary-bg-color);
+  color: var(--main-text-color);
 }
-
-
+.autocomplete-item,
+.autocomplete-input {
+  color: var(--main-text-color);
+}
 

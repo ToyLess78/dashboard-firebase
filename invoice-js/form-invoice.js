@@ -15,19 +15,19 @@ const preview = document.getElementById('image-preview'),
 
 /*- CREATE PREVIEW UPLOAD IMAGE IN HTML -*/
 
-inputFile.addEventListener('change', async () => {
-   await previewImageModule(inputFile, preview, linkPreview, collapseInput);
-});
+// inputFile.addEventListener('change', async () => {
+//    await previewImageModule(inputFile, preview, linkPreview, collapseInput);
+// });
 
 // const regexp = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
 
-upload.addEventListener('click', () => {
-    handleUploadClick(link, regexp, preview, linkPreview, inputFile, collapseInput, danger);
-});
+// upload.addEventListener('click', () => {
+//     handleUploadClick(link, regexp, preview, linkPreview, inputFile, collapseInput, danger);
+// });
 
-linkPreview.addEventListener('click', () => {
-    unUploadClick(preview, linkPreview, collapseInput, inputFile);
-});
+// linkPreview.addEventListener('click', () => {
+//     unUploadClick(preview, linkPreview, collapseInput, inputFile);
+// });
 
 /*- GET INPUT AND OUTPUT INVOICE ID VALUE -*/
 

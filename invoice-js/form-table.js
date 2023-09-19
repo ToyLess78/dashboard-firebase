@@ -97,7 +97,6 @@ const table = new TableEditor(
         // pagination: false,
     },
 );
-console.log('table', table);
 // Collapse table default pagination
 
 window.onload =  () =>
@@ -112,7 +111,7 @@ tableEditor.addEventListener('update.mdb.tableEditor', () => {
 
 })
 tableEditor.addEventListener('click', (e) => {
-    console.log(e.target, e.composedPath())
+    console.log(e.target)
 })
 
 
