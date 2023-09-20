@@ -503,22 +503,22 @@
                                 <th scope="row">1</th>
                                 <td>Pro Package</td>
                                 <td>4</td>
-                                <td>$ 200</td>
-                                <td>$ 800</td>
+                                <td>$200</td>
+                                <td>$800</td>
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
                                 <td>Web hosting</td>
                                 <td>1</td>
-                                <td>$ 10</td>
-                                <td>$ 10</td>
+                                <td>$10</td>
+                                <td>$10</td>
                               </tr>
                               <tr>
                                 <th scope="row">3</th>
                                 <td>Consulting</td>
                                 <td>1 year</td>
-                                <td>$ 300</td>
-                                <td>$ 300</td>
+                                <td>$300</td>
+                                <td>$300</td>
                               </tr>
                             </tbody>
 
@@ -531,19 +531,18 @@
                         </div>
                         <div class="col-md-7">
                           <ul class="list-unstyled me-4" id="output">
-                            <li class="grey-text ms-3 text-end" id="sub-total"><span class="me-4">SubTotal</span>$ 1 110
+                            <li class="grey-text ms-3 text-end" id="sub-total"><span class="me-4">SubTotal</span>$1,110
                             </li>
-                            <li class="grey-text ms-3 mt-2 text-end" id="tax-output"><span class="me-4">Tax(15%)</span>$
-                              167
+                            <li class="grey-text ms-3 mt-2 text-end" id="tax-output"><span class="me-4">Tax(15%)</span>$167
                             </li>
                             <li class="grey-text ms-3 mt-2 text-end" id="discount-output">
-                              <span class="me-4">Discount(5%)</span>$ 56
+                              <span class="me-4">Discount(5%)</span>$56
                             </li>
 
                           </ul>
                           <p class="text-end me-3" id="total-amount"><span class=" me-3">
                               Total
-                              Amount</span><span style="font-size: 25px;">$ 1 221</span>
+                              Amount</span><span style="font-size: 25px;">$1,221</span>
                           </p>
                         </div>
                       </div>
@@ -577,103 +576,7 @@
   <script src="Basic-Components/js/components/table-editor.min.js"></script>
   <script src="Basic-Components/js/components/inputmask.min.js"></script>
   <script src="./invoice-js/date.js"></script>
-  <script>
-    // Create edit table
-    const advancedColumns = [
-      {
-        label: '#',
-        width: 10,
-        field: 'ul',
-        editable: false,
-        sort: false,
-      },
-      {
-        label: 'Title',
-        field: 'title',
-      },
-      {
 
-        label: 'Qty',
-        field: 'qty',
-        inputType: 'number',
-        defaultValue: 1,
-
-      },
-      {
-        sort: false,
-        label: '',
-        field: 'options',
-      },
-      {
-        inputType: 'number',
-        defaultValue: 10,
-        label: 'Unit Price',
-        field: 'price',
-      },
-      {
-        sort: false,
-        editable: false,
-        label: 'Amount',
-        field: 'amount',
-      },
-    ];
-
-    const advancedRows = [
-      {
-        ul: '',
-        title: 'Pro Package',
-        qty: 4,
-        options: '',
-        price: 200,
-        amount: '',
-      },
-      {
-        ul: '',
-        title: 'Web hosting',
-        qty: 1,
-        options: '',
-        price: 10,
-        amount: '',
-      },
-      {
-        ul: '',
-        title: 'Consulting',
-        qty: 1,
-        options: 'year',
-        price: 300,
-        amount: '',
-      },
-    ];
-
-    const table = new TableEditor(
-            document.getElementById('table_disable_edit'),
-            {
-              columns: advancedColumns,
-              rows: advancedRows,
-            },
-            {
-              sm: true,
-              // pagination: false,
-            },
-    );
-    // Collapse table default pagination
-
-    window.onload =  () =>
-            document.querySelector('.table-editor__pagination').classList.add('collapse');
-
-    let arr = [];
-
-    const tableEditor = document.getElementById('table_disable_edit');
-    tableEditor.addEventListener('update.mdb.tableEditor', () => {
-      arr = table._rows;
-      console.log(table._rows);
-
-    })
-    tableEditor.addEventListener('click', (e) => {
-      console.log(e.target)
-    })
-
-  </script>
   <script type="module" src="js/modules-js/invoice-autocomplete-module.js"></script>
 
 

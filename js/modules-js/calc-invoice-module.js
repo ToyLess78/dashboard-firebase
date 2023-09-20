@@ -1,11 +1,20 @@
+// import {formatCurrency} from './validate-module.js'
 /*- FUNCTIONS TO CALCULATE, WRITE AND DYNAMIC CHANGE SUB TOTAL, TAX, DISCOUNT AND TOTAL AMOUNT-*/
+// const formatCurrency = (input) => {
+//     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0, minimumFractionDigits: 0}).format(input.replace(/[^0-9\.]+/g,""));
+//
+// }
+const formatCurrency = (input) => {
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0, minimumFractionDigits: 0}).format(input);
 
+}
 // Getting a table edit
-const upgradeTable = document.querySelector('#table_disable_edit .table');
 // Create regular to format sum
 const formatSum = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 
 export function calcTotal() {
+    const upgradeTable = document.querySelector('#table_disable_edit .table');
+
     const noFoundTd = upgradeTable.querySelector('td');
     const rows = upgradeTable.querySelectorAll('tbody tr');
     let subTotal = 0;
@@ -13,10 +22,10 @@ export function calcTotal() {
     let taxSum = 0;
     if (noFoundTd.textContent !== 'No matching results found') {
         rows.forEach((row) => {
-            let price = parseFloat(row.cells[4].textContent);
+            let price = parseFloat(row.cells[4].textContent.replace(/[^0-9\.]+/g,""));
             let qty = parseInt(row.cells[2].textContent);
             let preTotal = price * qty;
-            row.cells[5].textContent = preTotal;
+            row.cells[5].textContent = formatCurrency(preTotal);
             subTotal += preTotal;
         });
 
@@ -28,11 +37,11 @@ export function calcTotal() {
         discountSum = calculateTax(subTotal, discountPercent);
         updateOutput('discount-output', discountSum, `Discount(${discountPercent}%)`);
 
-        document.getElementById("sub-total").innerHTML = `<span class="me-4">SubTotal</span>$&nbsp${formatSum(subTotal)}`;
+        document.getElementById("sub-total").innerHTML = `<span class="me-4">SubTotal</span>${formatCurrency(subTotal)}`;
         mergeColumns();
 
         const total = subTotal + parseFloat(taxSum) - parseFloat(discountSum);
-        document.getElementById('total-amount').innerHTML = `<span class=" me-3"> Total Amount</span><span style="font-size: 25px;">$ ${formatSum(total)}</span>`;
+        document.getElementById('total-amount').innerHTML = `<span class=" me-3"> Total Amount</span><span style="font-size: 25px;">${formatCurrency(total)}</span>`;
     } else {
 
         document.querySelector('#print-table tbody tr').innerHTML = `<tr></tr>`;
@@ -43,7 +52,6 @@ export function calcTotal() {
         updateOutput('tax-output', 0, '');
         document.getElementById('discount').value = 0;
         updateOutput('discount-output', 0, '');
-
     }
 
 }
@@ -85,5 +93,8 @@ function calculateTax(subTotal, taxPercent) {
 
 function updateOutput(elementId, value, text) {
     const element = document.getElementById(elementId);
-    element.innerHTML = value > 0 ? `<li class="grey-text ms-3 mt-2 text-end" id="${elementId}">${text} $ ${value}</li>` : `<li class="grey-text ms-3 mt-2 text-end" id="${elementId}"></li>`;
+    element.innerHTML = value > 0 ? `<li class="grey-text ms-3 mt-2 text-end" id="${elementId}">${text} ${formatCurrency(value)}</li>` : `<li class="grey-text ms-3 mt-2 text-end" id="${elementId}"></li>`;
 }
+let str ='$1,589'
+let num = '1235';
+console.log(num.replace(/[^0-9\.]+/g,""))

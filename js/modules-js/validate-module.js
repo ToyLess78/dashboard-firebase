@@ -41,7 +41,7 @@ const toTitleCaseName = (input) => {
         .map(word=> word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
 }
-const formatCurrency = (input) => {
+export const formatCurrency = (input) => {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0, minimumFractionDigits: 0}).format(input.replace(/[^0-9\.]+/g,""));
 
 }
