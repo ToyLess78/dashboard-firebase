@@ -1,7 +1,7 @@
 /*- FUNCTIONS TO CALCULATE, WRITE AND DYNAMIC CHANGE SUB TOTAL, TAX, DISCOUNT AND TOTAL AMOUNT-*/
 
 // Getting a table edit
-const upgradeTable = document.querySelector('#table_disable_edit .table');
+const upgradeTable = document.querySelector('#table-edit .table');
 // Create regular to format sum
 const formatSum = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 
@@ -49,7 +49,7 @@ export function calcTotal() {
 }
 
 function mergeColumns() {
-    const tbodyParent = document.querySelector('#table_disable_edit .table tbody');
+    const tbodyParent = document.querySelector('#table-edit .table tbody');
     const tbodyMod = document.getElementById('tbodyMod');
     tbodyMod.innerHTML = tbodyParent.innerHTML;
 

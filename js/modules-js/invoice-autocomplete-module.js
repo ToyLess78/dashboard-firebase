@@ -1,119 +1,13 @@
 import {customerBase, firstData, priceBase} from "./firebase-module.js";
 import {calcTotal} from "./calc-invoice-module.js";
 import {formatCurrency} from "./validate-module.js";
+import {titleArr, priceAutocomplete, table} from "./invoce-tables-module.js";
 
-// Read database of prices
-const priceBaseRead = await priceBase.readData();
-const priceData = Object.values(priceBaseRead);
-const titleArr = priceData.map(item => item.title)
-const titleOptions = priceData.map(item => {
-    return {
-        id: item.id,
-        price: item.price,
-        quantity: item.quantity.replace('per ', ''),
-    }
-})
-const priceAutocomplete = {};
-titleOptions.forEach((item, index) => {
-    priceAutocomplete[`${titleArr[index]}`] = item
 
-})
-console.log(priceAutocomplete);
-// Create edit table
-const advancedColumns = [
-    {
-        label: '#',
-        width: 10,
-        field: 'ul',
-        editable: false,
-        sort: false,
-    },
-    {
-        label: 'Title',
-        field: 'title',
-        inputType: 'select',
-        options: titleArr,
-    },
-    {
-        label: 'Qty',
-        field: 'qty',
-        inputType: 'number',
-        defaultValue: 1,
-        sort: false,
-    },
-    {
-        sort: false,
-        label: '',
-        field: 'quantity',
 
-    },
-    {
-        defaultValue: '$10',
-        label: 'Unit Price',
-        field: 'price',
-    },
-    {
-        sort: false,
-        editable: false,
-        label: 'Amount',
-        field: 'amount',
-    },
-];
+// window.onload =  () =>
+//     document.querySelector('.table-editor__pagination').classList.add('collapse');
 
-const advancedRows = [
-    {
-        ul: '',
-        title: 'Pro Package',
-        qty: 4,
-        quantity: '',
-        price: '$200',
-        amount: '',
-    },
-    {
-        ul: '',
-        title: 'Web hosting',
-        qty: 1,
-        quantity: '',
-        price: '$10',
-        amount: '',
-    },
-    {
-        ul: '',
-        title: 'Consulting',
-        qty: 1,
-        quantity: 'year',
-        price: '$300',
-        amount: '',
-    },
-];
-
-const table = new TableEditor(
-    document.getElementById('table_disable_edit'),
-    {
-        columns: advancedColumns,
-        rows: advancedRows,
-    },
-    {
-        sm: true,
-        // pagination: false,
-    },
-);
-// Collapse table default pagination
-
-window.onload =  () =>
-    document.querySelector('.table-editor__pagination').classList.add('collapse');
-
-let arr = [];
-
-const tableEditor = document.getElementById('table_disable_edit');
-tableEditor.addEventListener('update.mdb.tableEditor', () => {
-    arr = table._rows;
-    console.log(table._rows);
-
-})
-tableEditor.addEventListener('click', (e) => {
-    console.log(e.target)
-})
 
 /*- GET INPUT AND OUTPUT INVOICE ID VALUE -*/
 
@@ -183,22 +77,9 @@ addressInput.addEventListener('input', () => {
 
 // Set minimum to table inputs numbers values
 
-const editTable = document.getElementById('table_disable_edit');
 
 
-/*- ATTACHES AN EVENT HANDLER TO AN ELEMENT-*/
 
-editTable.addEventListener('exit.mdb.tableEditor', calcTotal);
-
-editTable.addEventListener('update.mdb.tableEditor', calcTotal);
-
-editTable.querySelector('thead').addEventListener('click', calcTotal);
-
-const change = document.querySelectorAll('[data-change="change"]');
-
-for (let i = 0; i < change.length; i++) {
-    change[i].addEventListener('change', calcTotal);
-}
 
 // Read database of customers
 await customerBase.readItemData();
@@ -241,7 +122,7 @@ const imageItem = document.querySelector('#image-item'),
 
 displayValueAutocomplete.addEventListener('close.mdb.autocomplete', (e) => {
     let key = nameInput.value;
-    if (key) {
+    if (data.includes(key)) {
         document.querySelector('#name-output').textContent = key;
         imageItem.src = customerAutocomplete[key].avatar;
         phoneInput.value = customerAutocomplete[key].phone;
@@ -264,32 +145,6 @@ clearButton.addEventListener('click', () => {
 
 
 
-// Make prices autocomplete
 
-editTable.addEventListener('render.mdb.tableEditor', () => {
-    const currencyInput = document.querySelector('[data-mdb-field="price"] input');
-    const titleSelect = document.querySelector('.table-editor__input-select');
-    if(currencyInput) {
-        currencyInput.addEventListener('input', (e) => {
-            currencyInput.value = formatCurrency(currencyInput.value)
-        })
-    }
-    if(titleSelect) {
-        titleSelect.setAttribute('data-mdb-filter', 'true');
-        titleSelect.addEventListener('optionSelect.mdb.select', (e) => {
-            console.log(e.target.value);
-            document.querySelector('[data-mdb-field="quantity"] input').value = priceAutocomplete[e.target.value].quantity
-            document.querySelector('[data-mdb-field="quantity"] input').dispatchEvent(new Event('input'));
-            document.querySelector('[data-mdb-field="price"] input').value = priceAutocomplete[e.target.value].price
-            document.querySelector('[data-mdb-field="price"] input').dispatchEvent(new Event('input'));
-        })
-    }
-
-    const inputs = document.querySelectorAll('td input[type="number"]')
-
-    inputs.forEach(input => {
-        input.min = '1';
-    });
-});
 
 

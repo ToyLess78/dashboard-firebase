@@ -1323,4 +1323,6 @@ i.datepicker-toggle-icon svg {
 .autocomplete-input {
   color: var(--main-text-color);
 }
-
+.input-group > .form-control:focus {
+  border-color: var(--main-indigo-color);
+}

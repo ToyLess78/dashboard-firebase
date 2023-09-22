@@ -87,7 +87,7 @@ const advancedRows = [
 ];
 
 const table = new TableEditor(
-    document.getElementById('table_disable_edit'),
+    document.getElementById('table-edit'),
     {
         columns: advancedColumns,
         rows: advancedRows,
@@ -104,7 +104,7 @@ window.onload =  () =>
 
 let arr = [];
 
-const tableEditor = document.getElementById('table_disable_edit');
+const tableEditor = document.getElementById('table-edit');
 tableEditor.addEventListener('update.mdb.tableEditor', () => {
     arr = table._rows;
     console.log(table._rows);

@@ -21,76 +21,89 @@
     min-width: 1em;
     margin-right: 0.1em;
 }
+.ol-table .datatable-table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 1em;
+}
+.ol-table .datatable-table tr th:first-child {
+    padding-left: 3em;
+}
+
+.ol-table .datatable-table thead {
+    background-color: var(--main-indigo-color);
+    color: #FFFFFF;
+}
 
 table .form-outline .form-control {
     padding: 0.33em 0.5em;
 }
 
-#table_disable_edit tr td:nth-child(1) {
+#table-edit tr td:nth-child(1) {
     text-align: right;
 }
 
-#table_disable_edit tr th:nth-child(1) {
+#table-edit tr th:nth-child(1) {
     text-align: right;
 }
 
-#table_disable_edit tr td:nth-child(2) {
+#table-edit tr td:nth-child(2) {
     text-align: left;
     padding-left: 0.5em;
 
 }
 
-#table_disable_edit tr td:nth-child(3) {
+#table-edit tr td:nth-child(3) {
     text-align: right;
     padding-right: 0.5em;
 }
 
-#table_disable_edit tr td:nth-child(4) {
+#table-edit tr td:nth-child(4) {
     text-align: left;
     padding-left: 0;
 }
 
-#table_disable_edit tr th:nth-child(3) {
+#table-edit tr th:nth-child(3) {
     text-align: right;
     padding-right: 0;
 }
 
 
-    /*#table_disable_edit tr td:nth-child(5) {*/
+    /*#table-edit tr td:nth-child(5) {*/
 /*    text-align: right;*/
 /*    padding-right: 0;*/
 /*}*/
 
-/*#table_disable_edit tr td:nth-child(6) {*/
+/*#table-edit tr td:nth-child(6) {*/
 /*    text-align: left;*/
 /*    padding-left: 0.5em;*/
 /*}*/
 
-#table_disable_edit tr th:nth-child(6) {
+#table-edit tr th:nth-child(6) {
     text-align: left;
 }
 
-/*#table_disable_edit tr th:nth-child(5) {*/
+/*#table-edit tr th:nth-child(5) {*/
 /*    padding: 0;*/
 /*}*/
 
-/*#table_disable_edit tr td:nth-child(7) {*/
+/*#table-edit tr td:nth-child(7) {*/
 /*    text-align: right;*/
 /*    padding-right: 0;*/
 /*}*/
 
-#table_disable_edit tr td:nth-child(8) {
+#table-edit tr td:nth-child(8) {
     text-align: left;
     padding-left: 0.5em;
 }
 
-#table_disable_edit tr th:nth-child(8) {
+#table-edit tr th:nth-child(8) {
     text-align: left;
 }
 
-/*#table_disable_edit tr th:nth-child(7),*/
-/*#table_disable_edit tr th:nth-child(8),*/
-#table_disable_edit tr th:nth-child(6),
-#table_disable_edit tr td:nth-child(6) {
+/*#table-edit tr th:nth-child(7),*/
+/*#table-edit tr th:nth-child(8),*/
+#table-edit tr th:nth-child(6),
+#table-edit tr td:nth-child(6) {
     display: none;
 }

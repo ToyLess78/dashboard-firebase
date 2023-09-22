@@ -98,7 +98,7 @@ addressInput.addEventListener('input', () => {
 
 // Set minimum to table inputs numbers values
 
-const editTable = document.getElementById('table_disable_edit');
+const editTable = document.getElementById('table-edit');
 
 editTable.addEventListener('render.mdb.tableEditor', () => {
 

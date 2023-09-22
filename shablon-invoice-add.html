@@ -338,12 +338,12 @@
                   <div class="d-flex justify-content-end mb-4">
 
                     <button class="btn btn-primary btn-sm ms-3" data-mdb-add-entry
-                      data-mdb-target="#table_disable_edit">
+                      data-mdb-target="#table-edit">
                       <i class="fa fa-plus"></i>
                     </button>
                   </div>
 
-                  <div class="ol-table table_disable_edit" id="table_disable_edit">
+                  <div class="ol-table table-edit" id="table-edit">
 
 
                   </div>
@@ -408,10 +408,10 @@
                           xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M16.5167 3.87476V2.93542C16.5167 1.31683 15.1999 0 13.5813 0H6.37976C4.76117 0 3.44434 1.31683 3.44434 2.93542V3.87476H16.5167Z"
-                            fill="#3A36DB" />
+                            />
                           <path
                             d="M4.61816 12.4844V17.2593V18.2769V18.864C4.61816 19.5125 5.14384 20.0382 5.79233 20.0382H14.1681C14.8166 20.0382 15.3422 19.5125 15.3422 18.864V18.2769V17.2593V12.4844H4.61816ZM11.5458 17.4942H8.41464C8.09041 17.4942 7.82756 17.2313 7.82756 16.9071C7.82756 16.5828 8.09041 16.32 8.41464 16.32H11.5458C11.87 16.32 12.1328 16.5828 12.1328 16.9071C12.1328 17.2313 11.87 17.4942 11.5458 17.4942ZM11.5458 14.9893H8.41464C8.09041 14.9893 7.82756 14.7264 7.82756 14.4022C7.82756 14.078 8.09041 13.8151 8.41464 13.8151H11.5458C11.87 13.8151 12.1328 14.078 12.1328 14.4022C12.1328 14.7264 11.87 14.9893 11.5458 14.9893Z"
-                            fill="#3A36DB" />
+                            />
                           <path
                             d="M17.0646 5.04883H2.93542C1.31683 5.04883 0 6.36566 0 7.98425V12.6809C0 14.2995 1.31683 15.6163 2.93542 15.6163H3.44423V12.4852H3.09198C2.76775 12.4852 2.50489 12.2224 2.50489 11.8981C2.50489 11.5739 2.76775 11.3111 3.09198 11.3111H4.03131H15.9296H16.8689C17.1931 11.3111 17.456 11.5739 17.456 11.8981C17.456 12.2224 17.1931 12.4852 16.8689 12.4852H16.5166V15.6163H17.0646C18.6832 15.6163 20 14.2995 20 12.6809V7.98425C20 6.36566 18.6832 5.04883 17.0646 5.04883ZM4.97065 8.72789H3.09198C2.76775 8.72789 2.50489 8.46503 2.50489 8.1408C2.50489 7.81658 2.76775 7.55372 3.09198 7.55372H4.97065C5.29487 7.55372 5.55773 7.81658 5.55773 8.1408C5.55773 8.46503 5.29487 8.72789 4.97065 8.72789Z"
                             fill="var(--main-indigo-color)" />
@@ -423,7 +423,7 @@
                   </div>
                   <div id="invoice" class="d-print-block">
 
-                    <div class="container bg-card">
+                    <div class="container px-0">
                       <div class="col-md-12">
                         <div class="mt-3 mb-3 d-flex flex-column justify-content-center align-items-center">
                           <a class="button my-3">
@@ -486,43 +486,10 @@
                         </div>
                       </div>
 
-                      <div class="row my-2 mx-1 justify-content-center">
-                        <div class="ol-table">
-                          <table class="table table-striped table-borderless" id="print-table">
-                            <thead style="background-color: var(--main-indigo-color);" class="text-white">
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Qty</th>
-                                <th scope="col">Unit Price</th>
-                                <th scope="col">Amount</th>
-                              </tr>
-                            </thead>
-                            <tbody id="tbodyMod">
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Pro Package</td>
-                                <td>4</td>
-                                <td>$200</td>
-                                <td>$800</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Web hosting</td>
-                                <td>1</td>
-                                <td>$10</td>
-                                <td>$10</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Consulting</td>
-                                <td>1 year</td>
-                                <td>$300</td>
-                                <td>$300</td>
-                              </tr>
-                            </tbody>
-
-                          </table>
+                      <div class="row my-2 justify-content-center">
+                        <div class="ol-table"
+                             id="copy-table"
+                             data-mdb-loading="true">
                         </div>
                       </div>
                       <div class="row">
@@ -557,7 +524,6 @@
                           </button>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
