@@ -1,13 +1,10 @@
 
-// Read database of prices
 import {priceBase} from "./firebase-module.js";
-import {calcTotal} from "./calc-invoice-module.js";
+import {calcTotal, formatCurrencyShort, calcAmount} from "./calc-invoice-module.js";
 import {formatCurrency} from "./validate-module.js";
 export {titleArr, priceAutocomplete, table, dataTableUpdate}
-const formatCurrencyShort = (input) => {
-    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0, minimumFractionDigits: 0}).format(input);
 
-}
+// Read database of prices
 const priceBaseRead = await priceBase.readData();
 const priceData = Object.values(priceBaseRead);
 const titleArr = priceData.map(item => item.title)
@@ -23,7 +20,7 @@ titleOptions.forEach((item, index) => {
     priceAutocomplete[`${titleArr[index]}`] = item
 
 })
-console.log(priceAutocomplete);
+
 // Create edit table
 const advancedColumns = [
     {
@@ -39,7 +36,7 @@ const advancedColumns = [
         inputType: 'select',
         options: titleArr,
         defaultValue: 'Pro Package 4',
-        sort: false,
+        // sort: false,
     },
     {
         label: 'Qty',
@@ -60,12 +57,11 @@ const advancedColumns = [
         label: 'Unit Price',
         field: 'price',
         width: 20,
-        sort: false,
+        // sort: false,
 
     },
     {
         sort: false,
-        editable: false,
         label: 'Amount',
         field: 'amount',
     },
@@ -106,12 +102,11 @@ const table = new TableEditor(
     },
     {
         sm: true,
-        // pagination: false,
     },
 );
 
+// Create print table
 const copyColumns = [
-
     {
         label: 'Title',
         field: 'title',
@@ -134,6 +129,7 @@ const copyColumns = [
         field: 'amount',
     },
 ];
+
 const copyTable = new mdb.Datatable(
     document.getElementById('copy-table'),
     { columns: copyColumns, },
@@ -155,29 +151,24 @@ function dataTableUpdate(table, data) {
     );
     table._element.querySelector('table').classList.add('table-striped');
 }
+
 dataTableUpdate(copyTable, advancedRows);
 
-console.log('copyTable', copyTable._element.querySelector('tbody'));
-
-let arr = [];
 
 const tableEditor = document.getElementById('table-edit');
 tableEditor.addEventListener('update.mdb.tableEditor', () => {
-    arr = table._rows;
-    console.log(table._rows);
-    dataTableUpdate(copyTable, table._rows);
-
-
+    dataTableUpdate(copyTable, table.computedRows);
 })
 
 // Make prices autocomplete
 
 tableEditor.addEventListener('render.mdb.tableEditor', () => {
-
+    dataTableUpdate(copyTable, table.computedRows);
+console.log('render.mdb.tableEditor')
     const currencyInput = document.querySelector('[data-mdb-field="price"] input');
     const titleSelect = document.querySelector('.table-editor__input-select');
     if(currencyInput) {
-        currencyInput.addEventListener('input', (e) => {
+        currencyInput.addEventListener('input', () => {
             currencyInput.value = formatCurrency(currencyInput.value)
         })
     }
@@ -186,7 +177,6 @@ tableEditor.addEventListener('render.mdb.tableEditor', () => {
         titleSelect.addEventListener('optionSelect.mdb.select', (e) => {
             let price = priceAutocomplete[e.target.value].price;
             let qty = document.querySelector('[data-mdb-field="qty"] input').value;
-            console.log(e.target.value);
             document.querySelector('[data-mdb-field="quantity"] input').value = priceAutocomplete[e.target.value].quantity
             document.querySelector('[data-mdb-field="quantity"] input').dispatchEvent(new Event('input'));
             document.querySelector('[data-mdb-field="price"] input').value = price;
@@ -202,26 +192,15 @@ tableEditor.addEventListener('render.mdb.tableEditor', () => {
     });
 });
 
-function calcAmount(price, qty) {
-    let p = parseFloat(price.replace(/[^0-9\.]+/g,""));
-    let q = parseInt(qty);
-    let preTotal = formatCurrencyShort(p * q);
-    return preTotal;
-}
-
 /*- ATTACHES AN EVENT HANDLER TO AN ELEMENT-*/
 
-tableEditor.addEventListener('exit.mdb.tableEditor', () => calcTotal(tableEditor, table._rows));
+tableEditor.addEventListener('exit.mdb.tableEditor', () => calcTotal(tableEditor, table.computedRows));
 
-tableEditor.addEventListener('update.mdb.tableEditor', () => calcTotal(tableEditor, table._rows));
+tableEditor.addEventListener('update.mdb.tableEditor', () => calcTotal(tableEditor, table.computedRows));
 
-// tableEditor.querySelector('thead').addEventListener('click',  () => {
-//         dataTableUpdate(copyTable, table._rows);
-//         console.log(table);
-//     }
-// );
+
 const change = document.querySelectorAll('[data-change="change"]');
 
 for (let i = 0; i < change.length; i++) {
-    change[i].addEventListener('change', () => calcTotal(tableEditor, table._rows));
+    change[i].addEventListener('change', () => calcTotal(tableEditor, table.computedRows));
 }
