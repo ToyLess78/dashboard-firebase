@@ -65,6 +65,11 @@ const advancedColumns = [
         label: 'Amount',
         field: 'amount',
     },
+    {
+        sort: false,
+        label: '',
+        field: 'productId',
+    },
 ];
 
 const advancedRows = [
@@ -75,6 +80,7 @@ const advancedRows = [
         quantity: priceAutocomplete[titleArr[0]].quantity,
         price: priceAutocomplete[titleArr[0]].price,
         amount: priceAutocomplete[titleArr[0]].price,
+        productId: priceAutocomplete[titleArr[0]].id
     },
     {
         ul: '',
@@ -83,6 +89,8 @@ const advancedRows = [
         quantity: priceAutocomplete[titleArr[1]].quantity,
         price: priceAutocomplete[titleArr[1]].price,
         amount: priceAutocomplete[titleArr[1]].price,
+        productId: priceAutocomplete[titleArr[1]].id
+
     },
     {
         ul: '',
@@ -91,6 +99,8 @@ const advancedRows = [
         quantity: priceAutocomplete[titleArr[2]].quantity,
         price: priceAutocomplete[titleArr[2]].price,
         amount: priceAutocomplete[titleArr[2]].price,
+        productId: priceAutocomplete[titleArr[2]].id
+
     },
 ];
 
@@ -102,6 +112,7 @@ const table = new TableEditor(
     },
     {
         sm: true,
+        noFoundMessage: ''
     },
 );
 
@@ -128,6 +139,11 @@ const copyColumns = [
         label: 'Amount',
         field: 'amount',
     },
+    {
+        sort: false,
+        label: '',
+        field: 'productId',
+    },
 ];
 
 const copyTable = new mdb.Datatable(
@@ -136,6 +152,7 @@ const copyTable = new mdb.Datatable(
     { loading: true,
         borderless: true,
         pagination: false,
+
     }
 );
 function dataTableUpdate(table, data) {
@@ -147,7 +164,9 @@ function dataTableUpdate(table, data) {
                 amount: calcAmount(item.price, item.qty)
             })),
         },
-        { loading: false }
+        { loading: false,
+            noFoundMessage: ''
+        }
     );
     table._element.querySelector('table').classList.add('table-striped');
 }

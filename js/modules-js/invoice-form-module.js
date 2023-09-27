@@ -1,5 +1,6 @@
 import {table} from "./invoice-tables-module.js";
-
+import {simpleValidation} from "./validate-module.js";
+simpleValidation()
 const saveButton = document.querySelector('#form-save-btn'),
     canselButton = document.querySelector('#form-cansel-btn'),
     printContainer = document.querySelector('#print-container');

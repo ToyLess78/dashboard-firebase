@@ -14,7 +14,7 @@ function calcTotal(upgradeTable, data) {
     let subTotal = 0;
     let discountSum = 0;
     let taxSum = 0;
-    if (noFoundTd.textContent !== 'No matching results found') {
+    if (noFoundTd.textContent !== '') {
         data.forEach((row) => {
             let price = parseFloat(row.price.replace(/[^0-9\.]+/g,""));
             let qty = parseInt(row.qty);
@@ -59,7 +59,6 @@ function updateOutput(elementId, value, text) {
 function calcAmount(price, qty) {
     let p = parseFloat(price.replace(/[^0-9\.]+/g,""));
     let q = parseInt(qty);
-    console.log('table.rows', table.rows, table, 'computedRows', table.computedRows);
     return formatCurrencyShort(p * q);
 }
 
