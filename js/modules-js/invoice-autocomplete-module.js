@@ -1,5 +1,13 @@
-import {customerBase, firstData} from "./firebase-module.js";
+import {customerBase, firstData, invoiceBase} from "./firebase-module.js";
 
+const invoicesData = await invoiceBase.readData();
+const arrInvoices = Object.values(invoicesData);
+
+const newInvoiceId = () => {
+    const idArr = arrInvoices.map(el=> el.id);
+    const newId = `#${Math.max(...idArr)+1}`;
+    return newId;
+}
 
 /*- GET INPUT AND OUTPUT INVOICE ID VALUE -*/
 
@@ -11,6 +19,10 @@ inputId.addEventListener("input", () => {
     outputId1.textContent = inputId.value;
     outputId2.textContent = inputId.value;
 });
+
+inputId.value = newInvoiceId();
+inputId.dispatchEvent(new Event('input'));
+
 
 /*- GET INPUT AND OUTPUT DATE VALUE -*/
 

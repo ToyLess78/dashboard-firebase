@@ -14,7 +14,7 @@ function calcTotal(upgradeTable, data) {
     let subTotal = 0;
     let discountSum = 0;
     let taxSum = 0;
-    if (noFoundTd.textContent !== '') {
+    if (noFoundTd.textContent !== ' ') {
         data.forEach((row) => {
             let price = parseFloat(row.price.replace(/[^0-9\.]+/g,""));
             let qty = parseInt(row.qty);
@@ -52,7 +52,6 @@ function calculateTax(subTotal, taxPercent) {
 
 function updateOutput(elementId, value, text) {
     const element = document.getElementById(elementId);
-    console.log(element.textContent)
     element.innerHTML = value > 0 ? `<span class="me-4" data-price-object>${text}</span><span data-price-object>${formatCurrencyShort(value)}</span>` : `<span class="me-4" data-price-object><span data-price-object></span></span>`;
 }
 

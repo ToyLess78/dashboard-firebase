@@ -1,4 +1,4 @@
-export {createVariable, getDateTime, getDate, setTableActions, setCutActions, getTime};
+export {createVariable, getDateTime, getDate, setTableActions, setCutActions, getTime, dateFormat};
 
 /*- CREATE ARRAY FROM MAIN VARIABLES -*/
 function createVariable(parent, idArray, variableArr) {

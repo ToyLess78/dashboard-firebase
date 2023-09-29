@@ -1,6 +1,6 @@
 // import {Customer} from "./customer-form-validate-modules-js";
 
-export {app, db, get, ref, firstData, set, child, push, remove, Firebase, customerBase, customerStorage, teamBase, teamStorage, priceBase, exampleBase, priceStorage, mainAnalyticsBase}
+export {app, db, get, ref, firstData, set, child, push, remove, Firebase, customerBase, customerStorage, teamBase, teamStorage, priceBase, exampleBase, priceStorage, mainAnalyticsBase, invoiceBase}
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import { getDatabase, ref, child, get, set, push, onValue, remove, update} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
 import { getStorage, ref as stRef, uploadString, getDownloadURL, deleteObject, listAll } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js";
@@ -62,7 +62,9 @@ const customerBase = new Firebase('customer/');
 const teamBase = new Firebase('team/');
 const priceBase = new Firebase('price/');
 const exampleBase = new Firebase('example/');
-const mainAnalyticsBase = new Firebase('mainAnalytics/')
+const mainAnalyticsBase = new Firebase('mainAnalytics/');
+const invoiceBase = new Firebase('invoice/')
+
 
 
 // Get a reference to the storage service, which is used to create references in your storage bucket

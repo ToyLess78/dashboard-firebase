@@ -12,13 +12,13 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/invoice.css">
   <style>
-    [data-img]:hover {
+    .data-img:hover {
       z-index: 1000;
       width: 85px;
       height: 85px;
       top: -20px;
     }
-    [data-img] {
+    .data-img {
       width: 45px; height: 45px; background-color: var(--main-bg-color); cursor: pointer;
     }
   </style>
@@ -242,30 +242,62 @@
         <!-- Container wrapper -->
       </nav>
       <!-- Navbar -->
+      <!-- Section: Main Invoice Table -->
+      <section id="main-invoice"
+               class="mb-2 collapse"
+               data-mdb-toggle="animation"
+               data-mdb-animation="slide-in-up"
+               data-mdb-animation-start="onLoad">
+        <div class="d-flex justify-content-end mb-4">
+          <div class="form-outline">
+            <input
+                    data-mdb-search
+                    data-mdb-target="#datatable"
+                    type="text"
+                    id="search_datatable"
+                    class="form-control"
+            />
+            <label class="form-label" for="search_datatable">Search</label>
+          </div>
+          <button class="btn-outline-primary btn-sm ms-3 collapse" id="hide-row-btn"
+                  data-mdb-target="#datatable"
+                  data-mdb-toggle="tooltip" title="Hide Select">
+            <i class="fas fa-eye-slash text-outline"></i>
+          </button>
+          <button class="btn-outline-primary btn-sm ms-3 collapse" id="show-row-btn"
+                  data-mdb-target="#datatable"
+                  data-mdb-toggle="tooltip" title="Show All">
+            <i class="fas fa-eye text-outline"></i>
+          </button>
+          <button class="btn btn-primary btn-sm ms-3 collapse show"
+                  id="form-open-btn" data-mdb-add-entry data-mdb-target="#datatable">
+            <i class="fa fa-plus"></i>
+          </button>
+
+          <hr class="mt-3"/>
+
+        </div>
+
+        <div id="main-container">
+          <div id="datatable"
+               class="table-responsive overflow-auto row-radius id-hide"
+               data-mdb-selectable="true"
+               data-mdb-multi="true"
+               data-mdb-loading="true"></div>
+        </div>
+      </section>
+      <!-- Section: Main Invoice Table-->
 
       <!-- Section: Form Editor-->
-      <section class="mb-4">
+      <section id="add-invoice"
+               class="mb-2 collapse show"
+               data-mdb-toggle="animation"
+               data-mdb-animation="slide-in-right"
+               data-mdb-animation-start="onLoad">
         <div class="row g-4">
           <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 hidden-arrow d-print-none">
             <div id="card-1" class=" p-2  bg-card rounded-6 h-100">
-<!--              <div class="row col-2">-->
-<!--                <div class="col-1 position-relative">-->
-<!--                  <img src="https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpL?alt=media&amp;token=db8af874-1f9e-4055-9690-34104a6cb4be" alt="badge" style="width: 45px; height: 45px; background-color: var(&#45;&#45;main-bg-color);" class="rounded-4 shadow-3-strong">-->
-<!--                </div>-->
-<!--                <div class="col-1 position-relative">-->
-
-<!--                <img src="https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpD?alt=media&amp;token=37bbf5e1-4f9c-4444-9d61-2866167021ce" alt="badge" style="width: 45px; height: 45px; background-color: var(&#45;&#45;main-bg-color);" class="rounded-4 shadow-3-strong">-->
-<!--                  </div>-->
-<!--                <div class="col-1 position-relative">-->
-<!--                  <img src="https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpH?alt=media&amp;token=ded1aab2-3aa4-48d1-bf93-10276dcf4df1" alt="badge" style="width: 45px; height: 45px; background-color: var(&#45;&#45;main-bg-color);" class="rounded-4 shadow-3-strong">-->
-<!--                </div>-->
-<!--              </div>-->
-
-<!--              <div class="row position-relative" style="height: 45px;">-->
-<!--                <img src="https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpL?alt=media&amp;token=db8af874-1f9e-4055-9690-34104a6cb4be" alt="badge" style="left: 0px;" class="rounded-4 shadow-3-strong position-absolute p-0" data-img>-->
-<!--                <img src="https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpD?alt=media&amp;token=37bbf5e1-4f9c-4444-9d61-2866167021ce" alt="badge" style="left: 15px;" class="rounded-4 shadow-3-strong position-absolute p-0" data-img>-->
-<!--                <img src="https://firebasestorage.googleapis.com/v0/b/dasboard-bb88c.appspot.com/o/price%2F-NcCirURxGMHHRavKkpH?alt=media&amp;token=ded1aab2-3aa4-48d1-bf93-10276dcf4df1" alt="badge" style="left: 30px;" class="rounded-4 shadow-3-strong position-absolute p-0" data-img>-->
-<!--              </div>-->
+              <div id="div"></div>
 
               <!-- Card -->
               <form class="mb-2 pt-2 needs-validation" novalidate>
@@ -287,8 +319,12 @@
                   <div class="row">
                     <div class="col-md-6 mb-5">
                       <div class="form-outline">
-                        <input type="text" id="invoiceId" class="form-control form-control-lg" value="#876370" size=""
-                          data-mdb-input-mask="#999999" minlength="7" maxlength="7" />
+                        <input type="text"
+                               id="invoiceId"
+                               class="form-control form-control-lg"
+                               data-mdb-input-mask="#999999"
+                               minlength="7"
+                               maxlength="7"/>
                         <label class="form-label" for="invoiceId">Invoice Id</label>
                       </div>
                     </div>
@@ -365,7 +401,6 @@
                         <input type="number" id="discount" min="0" class="form-control form-icon-trailing" value="5"
                           style="width: 90px;" data-change="change" />
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -378,7 +413,6 @@
               </form>
             </div>
           </div>
-
           <!-- Card -->
           <div class="col-lg-6 mb-4 mb-lg-0">
             <div id="card-2" class="p-2  bg-card rounded-6 h-100">
@@ -386,13 +420,12 @@
               <div class="card-body">
                 <div id="print-container" class="container mb-5 mt-3">
                   <div class="row d-flex align-items-baseline d-print-none">
-                    <div class="col-md-10">
+                    <div class="col-md-9">
                       <p style="color: var(--grey-text-color);font-size: 20px;">Invoice <strong>ID:
-                          <strong id="id-output1" data-price-object>#876370</strong></strong>
+                          <strong id="id-output1" data-price-object></strong></strong>
                       </p>
                     </div>
-                    <div class="col-md-2 text-end">
-
+                    <div class="d-flex justify-content-end col-md-3">
                       <a onclick="window.print()" role="button">
                         <svg width="25" height="26" viewBox="0 0 20 21" fill="var(--main-indigo-color)"
                           xmlns="http://www.w3.org/2000/svg">
@@ -407,6 +440,7 @@
                             fill="var(--main-indigo-color)" />
                         </svg>
                       </a>
+                        <button type="button" class="btn-close ms-3" id="form-close-btn" aria-label="Close"></button>
                     </div>
                     <hr>
                   </div>
@@ -432,8 +466,7 @@
                         <div class="col-md-5">
                           <ul class="list-unstyled">
                             <li class="grey-text">To: <span id="name-output" data-customer-id=""
-                                style="color: var(--main-indigo-color);">John
-                                Smith</span>
+                                style="color: var(--main-indigo-color);" data-price-object>John Smith</span>
                             </li>
                             <li class="grey-text">
                               <svg class="trailing" width="14" height="20" viewBox="0 0 23 28"
@@ -441,13 +474,13 @@
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                   d="M0 11.6152C0 5.19177 5.20054 0 11.4911 0C17.7995 0 23 5.19177 23 11.6152C23 14.852 21.8595 17.857 19.9823 20.404C17.9113 23.2136 15.3588 25.6614 12.4857 27.5828C11.8281 28.0269 11.2347 28.0604 10.513 27.5828C7.62347 25.6614 5.07094 23.2136 3.01774 20.404C1.13915 17.857 0 14.852 0 11.6152ZM7.7041 11.9774C7.7041 14.1293 9.40533 15.8217 11.4913 15.8217C13.5786 15.8217 15.2962 14.1293 15.2962 11.9774C15.2962 9.84237 13.5786 8.06756 11.4913 8.06756C9.40533 8.06756 7.7041 9.84237 7.7041 11.9774Z" />
                               </svg>
-                              <span id="address-output">Street, City</span>
+                              <span id="address-output" data-price-object>Street, City</span>
                             </li>
                             <li class="grey-text"><i class="fas fa-phone" style="color: var(--main-indigo-color);"></i>
-                              <span id="phone-output">+38(099)-999-99-99</span>
+                              <span id="phone-output" data-price-object>+38(099)-999-99-99</span>
                             </li>
                             <li class="grey-text"><i class="fas fa-at" style="color: var(--main-indigo-color);"></i>
-                              <span id="email-output">Example@gmail.com</span>
+                              <span id="email-output" data-price-object>example@gmail.com</span>
                             </li>
                           </ul>
                         </div>
@@ -456,8 +489,7 @@
                         <div class="col-md-4">
                           <ul class="list-unstyled">
                             <li class="grey-text"><i class="fas fa-circle" style="color: var(--main-indigo-color);"></i>
-                              <span class="fw-bold">ID:</span><span id="id-output2">
-                                #876370</span>
+                              <span class="fw-bold">ID:</span><span id="id-output2" data-price-object></span>
                             </li>
                             <li class="grey-text"><i class="fas fa-circle" style="color: var(--main-indigo-color);"></i>
                               <span class="fw-bold">Date: <span id="date-output" data-price-object>
@@ -482,18 +514,18 @@
                         </div>
                         <div class="col-md-7">
                           <ul class="list-unstyled me-4" id="output">
-                            <li class="grey-text ms-3 text-end" id="sub-total"><span class="me-4">SubTotal</span><span data-price-object>$1,110</span>
+                            <li class="grey-text ms-3 text-end" id="sub-total"><span class="me-4">SubTotal</span><span data-price-object></span>
                             </li>
-                            <li class="grey-text ms-3 mt-2 text-end" id="tax-output"><span class="me-4" data-price-object>Tax(15%)</span><span data-price-object>$167</span>
+                            <li class="grey-text ms-3 mt-2 text-end" id="tax-output"><span class="me-4" data-price-object>Tax(15%)</span><span data-price-object></span>
                             </li>
                             <li class="grey-text ms-3 mt-2 text-end" id="discount-output">
-                              <span class="me-4" data-price-object>Discount(5%)</span><span data-price-object>$56</span>
+                              <span class="me-4" data-price-object>Discount(5%)</span><span data-price-object></span>
                             </li>
 
                           </ul>
                           <p class="text-end me-3" id="total-amount"><span class=" me-3">
                               Total
-                              Amount</span><span style="font-size: 25px;" data-price-object>$1,221</span>
+                              Amount</span><span style="font-size: 25px;" data-price-object></span>
                           </p>
                         </div>
                       </div>
@@ -517,7 +549,6 @@
         </div>
       </section>
     </div>
-
   </main>
 
   <script src="./js/theme.js"></script>
@@ -525,6 +556,7 @@
   <script src="Basic-Components/js/components/table-editor.min.js"></script>
   <script src="Basic-Components/js/components/inputmask.min.js"></script>
   <script src="./invoice-js/date.js"></script>
+  <script type="module" src="js/modules-js/invoice-main-table-module.js"></script>
   <script type="module" src="js/modules-js/invoice-autocomplete-module.js"></script>
 <script type="module" src="js/modules-js/invoice-tables-module.js"></script>
 <script type="module" src="js/modules-js/invoice-form-module.js"></script>

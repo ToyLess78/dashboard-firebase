@@ -2,7 +2,7 @@
 import {priceBase} from "./firebase-module.js";
 import {calcTotal, formatCurrencyShort, calcAmount} from "./calc-invoice-module.js";
 import {formatCurrency} from "./validate-module.js";
-export {titleArr, priceAutocomplete, table, dataTableUpdate}
+export {titleArr, priceAutocomplete, table, dataTableUpdate, priceBaseRead}
 
 // Read database of prices
 const priceBaseRead = await priceBase.readData();
@@ -15,11 +15,13 @@ const titleOptions = priceData.map(item => {
         quantity: item.quantity.replace('per ', ''),
     }
 })
+console.log('titleOptions', titleOptions);
 const priceAutocomplete = {};
 titleOptions.forEach((item, index) => {
     priceAutocomplete[`${titleArr[index]}`] = item
 
 })
+console.log('priceAutocomplete', priceAutocomplete);
 
 // Create edit table
 const advancedColumns = [
@@ -50,25 +52,24 @@ const advancedColumns = [
         label: '',
         field: 'quantity',
         defaultValue: 'year'
-
     },
     {
         defaultValue: '$200',
         label: 'Unit Price',
         field: 'price',
         width: 20,
-        // sort: false,
-
     },
     {
         sort: false,
         label: 'Amount',
         field: 'amount',
+        defaultValue: '$200',
     },
     {
         sort: false,
         label: '',
         field: 'productId',
+        defaultValue: '-NcCirURxGMHHRavKkpD',
     },
 ];
 
@@ -90,7 +91,6 @@ const advancedRows = [
         price: priceAutocomplete[titleArr[1]].price,
         amount: priceAutocomplete[titleArr[1]].price,
         productId: priceAutocomplete[titleArr[1]].id
-
     },
     {
         ul: '',
@@ -100,7 +100,6 @@ const advancedRows = [
         price: priceAutocomplete[titleArr[2]].price,
         amount: priceAutocomplete[titleArr[2]].price,
         productId: priceAutocomplete[titleArr[2]].id
-
     },
 ];
 
@@ -112,7 +111,7 @@ const table = new TableEditor(
     },
     {
         sm: true,
-        noFoundMessage: ''
+        noFoundMessage: ' '
     },
 );
 
@@ -152,7 +151,6 @@ const copyTable = new mdb.Datatable(
     { loading: true,
         borderless: true,
         pagination: false,
-
     }
 );
 function dataTableUpdate(table, data) {
@@ -165,7 +163,7 @@ function dataTableUpdate(table, data) {
             })),
         },
         { loading: false,
-            noFoundMessage: ''
+            noFoundMessage: ' '
         }
     );
     table._element.querySelector('table').classList.add('table-striped');
@@ -173,8 +171,9 @@ function dataTableUpdate(table, data) {
 
 dataTableUpdate(copyTable, advancedRows);
 
-
 const tableEditor = document.getElementById('table-edit');
+calcTotal(tableEditor, table.computedRows);
+
 tableEditor.addEventListener('update.mdb.tableEditor', () => {
     dataTableUpdate(copyTable, table.computedRows);
 })
@@ -183,7 +182,8 @@ tableEditor.addEventListener('update.mdb.tableEditor', () => {
 
 tableEditor.addEventListener('render.mdb.tableEditor', () => {
     dataTableUpdate(copyTable, table.computedRows);
-console.log('render.mdb.tableEditor')
+console.log('render.mdb.tableEditor', 'copyTable.rows', copyTable.rows, 'copyTable.computedRows', copyTable.computedRows)
+
     const currencyInput = document.querySelector('[data-mdb-field="price"] input');
     const titleSelect = document.querySelector('.table-editor__input-select');
     if(currencyInput) {
@@ -194,12 +194,16 @@ console.log('render.mdb.tableEditor')
     if(titleSelect) {
         titleSelect.setAttribute('data-mdb-filter', 'true');
         titleSelect.addEventListener('optionSelect.mdb.select', (e) => {
+            console.log('priceAutocomplete', priceAutocomplete[e.target.value])
             let price = priceAutocomplete[e.target.value].price;
             let qty = document.querySelector('[data-mdb-field="qty"] input').value;
             document.querySelector('[data-mdb-field="quantity"] input').value = priceAutocomplete[e.target.value].quantity
             document.querySelector('[data-mdb-field="quantity"] input').dispatchEvent(new Event('input'));
             document.querySelector('[data-mdb-field="price"] input').value = price;
+            document.querySelector('[data-mdb-field="productId"] input').value = priceAutocomplete[e.target.value].id;
+            document.querySelector('[data-mdb-field="productId"] input').dispatchEvent(new Event('input'));
             document.querySelector('[data-mdb-field="amount"] input').value = calcAmount(price, qty);
+            document.querySelector('[data-mdb-field="amount"] input').dispatchEvent(new Event('input'));
             document.querySelector('[data-mdb-field="price"] input').dispatchEvent(new Event('input'));
         })
     }
@@ -223,3 +227,4 @@ const change = document.querySelectorAll('[data-change="change"]');
 for (let i = 0; i < change.length; i++) {
     change[i].addEventListener('change', () => calcTotal(tableEditor, table.computedRows));
 }
+
