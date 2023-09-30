@@ -244,7 +244,7 @@
       <!-- Navbar -->
       <!-- Section: Main Invoice Table -->
       <section id="main-invoice"
-               class="mb-2 collapse"
+               class="mb-2 collapse show"
                data-mdb-toggle="animation"
                data-mdb-animation="slide-in-up"
                data-mdb-animation-start="onLoad">
@@ -252,7 +252,7 @@
           <div class="form-outline">
             <input
                     data-mdb-search
-                    data-mdb-target="#datatable"
+                    data-mdb-target="#main-datatable"
                     type="text"
                     id="search_datatable"
                     class="form-control"
@@ -260,17 +260,17 @@
             <label class="form-label" for="search_datatable">Search</label>
           </div>
           <button class="btn-outline-primary btn-sm ms-3 collapse" id="hide-row-btn"
-                  data-mdb-target="#datatable"
+                  data-mdb-target="#main-datatable"
                   data-mdb-toggle="tooltip" title="Hide Select">
             <i class="fas fa-eye-slash text-outline"></i>
           </button>
           <button class="btn-outline-primary btn-sm ms-3 collapse" id="show-row-btn"
-                  data-mdb-target="#datatable"
+                  data-mdb-target="#main-datatable"
                   data-mdb-toggle="tooltip" title="Show All">
             <i class="fas fa-eye text-outline"></i>
           </button>
           <button class="btn btn-primary btn-sm ms-3 collapse show"
-                  id="form-open-btn" data-mdb-add-entry data-mdb-target="#datatable">
+                  id="form-open-btn" data-mdb-add-entry data-mdb-target="#main-datatable">
             <i class="fa fa-plus"></i>
           </button>
 
@@ -279,7 +279,7 @@
         </div>
 
         <div id="main-container">
-          <div id="datatable"
+          <div id="main-datatable"
                class="table-responsive overflow-auto row-radius id-hide"
                data-mdb-selectable="true"
                data-mdb-multi="true"
@@ -290,7 +290,7 @@
 
       <!-- Section: Form Editor-->
       <section id="add-invoice"
-               class="mb-2 collapse show"
+               class="mb-2 collapse"
                data-mdb-toggle="animation"
                data-mdb-animation="slide-in-right"
                data-mdb-animation-start="onLoad">

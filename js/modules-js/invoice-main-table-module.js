@@ -12,7 +12,7 @@ console.log('newArr', invoicesArray);
 
 const columns = [
     {label: 'Invoice Id', field: 'id'},
-    // {label: 'Items', field: 'items'},
+    {label: 'Items', field: 'items', sort: false, width: 150},
     {label: 'Name', field: 'name'},
     {label: 'Email', field: 'email'},
     {label: 'Date', field: 'date'},
@@ -38,7 +38,7 @@ function updateInvoicesTable(table, data) {
         {
             rows: data.map((invoice) => ({
                 ...invoice,
-                // items: previewItemsCards(invoice),
+                items: previewItemsCards(invoice),
                 id: `#${invoice.id}`,
                 actions: setTableActions(invoice?.id),
             })),
@@ -47,9 +47,16 @@ function updateInvoicesTable(table, data) {
     );
 };
 
-const asyncTable = new mdb.Datatable(document.getElementById('datatable'),
+const asyncTable = new mdb.Datatable(document.getElementById('main-datatable'),
     {columns},
     {loading: true}
 );
+const mainDatatable = document.getElementById('main-datatable');
+
+document.getElementById('main-datatable').addEventListener("mousemove", (e) => {
+    let x = e.pageX;
+    let y = e.pageY;
+    console.log(e.target, x, y)
+})
 // fill datatable
 updateInvoicesTable(asyncTable, invoicesArray);

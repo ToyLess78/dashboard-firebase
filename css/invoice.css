@@ -75,13 +75,13 @@ table .form-outline .form-control {
 
 #table-edit tr th:nth-child(6),
 #table-edit tr td:nth-child(6) {
-    /*display: none;*/
+    display: none;
 }
 #table-edit tr th:nth-child(7),
 #table-edit tr td:nth-child(7) {
-    /*display: none;*/
+    display: none;
 }
 #copy-table tr th:nth-child(5),
 #copy-table tr td:nth-child(5) {
-    /*display: none;*/
+    display: none;
 }

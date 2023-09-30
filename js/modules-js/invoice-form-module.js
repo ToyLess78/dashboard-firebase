@@ -1,6 +1,6 @@
 import {priceBaseRead, table} from "./invoice-tables-module.js";
 import {simpleValidation} from "./validate-module.js";
-import {exampleBase, invoiceBase} from "./firebase-module.js";
+import {exampleBase, invoiceBase, doubleBase, priceBase} from "./firebase-module.js";
 import {dateFormat} from "./main-module.js";
 simpleValidation()
 const saveButton = document.querySelector('#form-save-btn'),
@@ -23,7 +23,7 @@ saveButton.addEventListener('click', async () => {
     const id = +arrPriceValues[0].slice(1);
     const invoice = new Invoice(customerId.dataset.customerId, arrPriceValues[1], arrPriceValues[2], arrPriceValues[3], arrPriceValues[4], arrPriceValues[6], arrPriceValues[7], arrPriceValues.slice(-1)[0], table.computedRows, arrPriceValues, productIds, id);
 console.log(invoice)
-    // await invoiceBase.addItemToDatabase(invoice, id);
+    // await exampleBase.addItemToDatabase(invoice, baseId);
 
 
 })
@@ -43,8 +43,38 @@ class Invoice {
         this.id = id;
     }
 }
+let objBase = await  exampleBase.readData();
+let objData = Object.values(objBase)
+console.log('Data length:', objData)
+let shuffled = objData
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value)
 
+console.log('shuffled', shuffled)
+
+let invoice = await invoiceBase.readData()
+let invArr = Object.values(invoice)
+console.log('invArr', invArr);
+const doubleArr = []
+// shuffled.forEach(async (el, i) => {
+//     let orig = invArr[i]
+//     let ids = orig.id
+//     el.id = ids
+//     el.date = orig.date
+//     el.status = orig.status
+//     el.values[0] = `#${ids}`
+//     el.values[5] = `#${ids}`
+//     el.values[6] = orig.date
+//     el.values[7] = orig.status
+//
+//     doubleArr.push(el)
+//     await doubleBase.addItemToDatabase(el, ids);
+//
+// })
+// console.log('doubleArr', doubleArr);
 // let newArr = []
+// id date status values[0], [5] = `#${id}` values[6] = date values[7] = status
 // table.rows.forEach(el => {
 //     let arr = []
 //     arr.length = el.qty
