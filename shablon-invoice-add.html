@@ -19,7 +19,16 @@
       top: -20px;
     }
     .data-img {
-      width: 45px; height: 45px; background-color: var(--main-bg-color); cursor: pointer;
+      z-index: 100;
+      width: 45px;
+      height: 45px;
+      background-color: var(--main-bg-color);
+      cursor: pointer;
+    }
+    #title-text {
+      color: var(--main-indigo-color);
+      position: absolute;
+      z-index: 1001
     }
   </style>
 </head>
@@ -278,13 +287,15 @@
 
         </div>
 
-        <div id="main-container">
+        <div id="main-container position-relative">
+
           <div id="main-datatable"
                class="table-responsive overflow-auto row-radius id-hide"
                data-mdb-selectable="true"
                data-mdb-multi="true"
                data-mdb-loading="true"></div>
         </div>
+        <small id="title-text"></small>
       </section>
       <!-- Section: Main Invoice Table-->
 
