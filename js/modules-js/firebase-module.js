@@ -7,13 +7,7 @@ import { getStorage, ref as stRef, uploadString, getDownloadURL, deleteObject, l
 // TODO: Add SDKs for Firebase products that you want to use
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAF9iMIN3A-FJYkcKZbA-PVlADMns8Oa0Y",
-    authDomain: "dasboard-bb88c.firebaseapp.com",
-    databaseURL: "https://dasboard-bb88c-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "dasboard-bb88c",
-    storageBucket: "dasboard-bb88c.appspot.com",
-    messagingSenderId: "291924264953",
-    appId: "1:291924264953:web:f64dfb60ecb513a5b5df28"
+// Your Token Mast Be Here!
 };
 
 // Initialize Firebase
