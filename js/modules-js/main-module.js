@@ -10,7 +10,7 @@ function createVariable(parent, idArray, variableArr) {
 
 const dateTimeFormat= new Intl.DateTimeFormat("en-gb", {"timeZone":"Europe/Kyiv","hour12":false,"year":"numeric","month":"numeric","day":"numeric","hour":"numeric","minute":"numeric","second":"numeric"});
 const timeFormat = new Intl.DateTimeFormat("en-gb", {"timeZone":"Europe/Kyiv","hour12":false, "hour":"numeric","minute":"numeric"});
-const dateFormat=new Intl.DateTimeFormat("en-gb", {"timeZone":"Europe/Kyiv","year":"numeric","month":"numeric","day":"numeric"});
+const dateFormat= new Intl.DateTimeFormat("en-gb", {"timeZone":"Europe/Kyiv","year":"numeric","month":"numeric","day":"numeric"});
 function getDate(date) {
     const dateNow = dateFormat.format(date);
     return dateNow;
