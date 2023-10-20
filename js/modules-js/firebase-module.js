@@ -7,7 +7,7 @@ import { getStorage, ref as stRef, uploadString, getDownloadURL, deleteObject, l
 // TODO: Add SDKs for Firebase products that you want to use
 
 const firebaseConfig = {
-// Your Token Mast Be Here!
+// Your Token Firebase Must Be Here!
 };
 
 // Initialize Firebase
